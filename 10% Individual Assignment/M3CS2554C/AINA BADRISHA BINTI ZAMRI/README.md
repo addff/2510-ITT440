@@ -480,4 +480,7 @@ Overall, this assignment gave me hands-on exposure to real testing practices and
 - Microsoft Azure Architecture Center. (2023). *Performance Efficiency Checklist.* Retrieved from [https://learn.microsoft.com/en-us/azure/architecture/framework/scalability](https://learn.microsoft.com/en-us/azure/architecture/framework/scalability)  
 - Google Cloud. (2024). *Best Practices for Load Testing Web Applications.* Retrieved from [https://cloud.google.com/architecture](https://cloud.google.com/architecture)  
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aaxxyeon-bit/images/refs/heads/main/banner.png" alt="Banner" width="1000" height="300"/>
+</p>
 
