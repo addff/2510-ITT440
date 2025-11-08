@@ -57,6 +57,29 @@ It uses JavaScript for scripting, providing a simple yet powerful way to define 
 
 ### 4.1 Installation Steps
 
+### 4.1 Installation Steps
+
+Below are the key installation commands executed in **PowerShell**:
+
+powershell
+# 1️⃣ Install Chocolatey (Windows package manager)
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# 2️⃣ Install K6
+choco install k6 -y
+
+# 3️⃣ Check Installation
+k6 version
+
+# ✅ Output Example:
+![output_installation step.png VUs](output_installation step.png)
+
+
+
+
 ## 5. Test Scenario & Methodology
 
 **Spike Test Objective:**  
