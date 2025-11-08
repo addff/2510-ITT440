@@ -57,8 +57,6 @@ It uses JavaScript for scripting, providing a simple yet powerful way to define 
 
 ### 4.1 Installation Steps
 
-### 4.1 Installation Steps
-
 Below are the key installation commands executed in **PowerShell**:
 
 powershell
@@ -68,15 +66,49 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-# 2️⃣ Install K6
+# Install K6
 choco install k6 -y
 
-# 3️⃣ Check Installation
+# Check Installation
 k6 version
 
-# ✅ Output Example:
-![output_installation step.png VUs](output_installation step.png)
+## ✅ Output Example
 
+![Installation Output](output_installation%20step.png)
+
+## ⚙️ Step 3 — Install Node.js
+
+# Download and install Node.js (LTS version recommended)
+https://nodejs.org/en/download/
+
+# After installation, verify the version
+ node -v
+ npm -v
+
+## ✅ Output Example
+
+ v24.11.0
+ 11.6.1
+ 
+ ## 🧩Install Python
+ # Download Python (3.14 or latest stable)
+https://www.python.org/downloads/
+
+# During setup, make sure to:
+# ☑️ Check "Add Python to PATH"
+# ☑️ Check "pip" (Python package installer)
+
+## ✅ Check Installation:
+python --version
+pip --version
+
+## ✅ Install Required Libraries:
+pip install matplotlib pandas
+
+## ✅ Output Example
+Successfully installed matplotlib pandas
+
+### 📊 Graph Generation (Python)
 
 
 
