@@ -1,54 +1,61 @@
 <p align="center">
-<img width="202" height="202" alt="2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8" src="https://github.com/user-attachments/assets/1382fd86-1d9d-4035-a199-417cca9e308b" />
+<img width="150" height="150" alt="Fake Store API Logo" src="https://github.com/user-attachments/assets/1382fd86-1d9d-4035-a199-417cca9e308b" />
 </p>
 
-<h1 align="center">🔍 API Testing with Postman & FakeStoreAPI</h1>
+<h1 align="center">🔍 API Testing with Postman & Fake Store API</h1>
 
-**Name:** MUHAMMAD SYAHMI ISYRAF BIN MOHD SYAHER
-
+**Name:** MUHAMMAD SYAHMI ISYRAF BIN MOHD SYAHER  
 **Class:** M3CS2554A  
-
-**Course Code:** ITT440
-
-## 🎯 Title
-This project demonstrates **Spike Testing** using **Postman** with the **Fake Store API**. Imagine a flash sale on an online store where thousands of users rush in at once to get their item checkout. Can the system handle it without crashing?
-This project simulates that exact situation using Spike Testing with the Fake Store API. 
+**Course Code:** ITT440  
 
 ---
 
-## 🎯 Objective
-- To perform Spike Testing on an open REST API using Postman.  
-- To observe how response time and success rate behave under sudden, high request volume.  
-- To analyze API stability and reliability during load spikes.
+## 🎯 Project Title
+**Spike Testing with Postman on the Fake Store API**  
+
+Spike Testing is a type of performance testing used to evaluate how an API or system behaves under sudden, high loads. This project uses Postman to perform spike testing on the Fake Store API, simulating scenarios such as a flash sale where many users access the system simultaneously. The goal is to measure response times, success rates, and system stability during sudden traffic surges and recovery phases.
 
 ---
 
-## ⚙️ Tool & Target Site Selection
+## 🎯 Objectives
+- Perform **Spike Testing** on a REST API using Postman  
+- Measure **response time**, **success rate**, and stability under load  
+- Observe recovery after peak traffic  
+
+---
+
+## ⚙️ Tools & Target API
 **Tool:** Postman  
-**Target Site:** [Fake Store API](https://fakestoreapi.com)
+**API:** [Fake Store API](https://fakestoreapi.com)
 
-### ⚙️ Postman Configuration
-- Collection Runner with iteration delay: 0ms
-- Environment: Fake Store API Public Endpoint
-- Test Data: Static (no dynamic variables)
+**Why Fake Store API?**  
+- Provides dummy data for products, users, and carts—ideal for testing.
 
-### 🧠 Why Fake Store API?
-It provides dummy product, user, and cart data that is ideal for performance and reliability testing.
+**Why Postman?**  
+- Supports **Collection Runner** & **Newman CLI**  
+- Easy-to-use with **automation & scripting support**  
 
-### 🧠 Why Postman?
-It supports **Collection Runner** and **Newman CLI** for automated, repeated, or concurrent test executions. It is also **easy** to use.
+**Postman Configuration:**  
+- Iteration delay: 0ms  
+- Environment: Public endpoint  
+- Test Data: Static  
 
 ---
 
-## 🧪 Test Plan & Configuration
-- **Test Type:** Spike Testing  
-- **Request Method:** `GET`  
-- **Endpoint:** `https://fakestoreapi.com/products`  
-- **Test Duration:** 3 Phases  
-  1. **Normal Load** – 10 requests (baseline)  
-  2. **Spike Load** – 500 requests (sudden surge)  
-  3. **Recovery Load** – 10 requests (return to normal)
- - **Test Script**
+## 🧪 Test Plan
+**Test Type:** Spike Testing  
+**Request Method:** `GET`  
+**Endpoint:** `https://fakestoreapi.com/products`  
+
+**Phases**
+
+| Phase | Requests | Description |
+|-------|---------|-------------|
+| 🟢 Normal Load | 10 | Baseline performance |
+| 🔴 Spike Load | 500 | Sudden traffic surge |
+| 🟡 Recovery Load | 10 | Return to baseline |
+
+**Test Script**
 ```javascript
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
@@ -59,6 +66,7 @@ pm.test("Response time is below 1000ms", function () {
 });
 
 ```
+
 
 ### 🧠 Assertions
 - Verify `Status Code = 200`  
@@ -143,7 +151,7 @@ The Spike Testing conducted using the Fake Store API successfully demonstrated h
 ---
 
 ## Embedded YouTube Video Link
-[Click here to watch the demo](https://www.youtube.com/)
+[Click here to watch the demo](https://youtu.be/vOiJno2Y6ck)
 
 ## References
 - About: [Fake Store API Documentation](https://fakestoreapi.com)  
