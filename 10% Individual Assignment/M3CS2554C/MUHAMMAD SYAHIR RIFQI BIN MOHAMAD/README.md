@@ -1,4 +1,4 @@
-# Web Application Load Analysis on Vercel Infrastructure Using Apache JMeter (WIP)
+# Web Application Load Analysis on Vercel Infrastructure Using Apache JMeter
 
 **Author:** Muhammad Syahir Rifqi bin Mohamad Nizam
 
@@ -48,8 +48,8 @@ JMeter’s extensibility and reliability make it a go-to choice for performance 
 
 ## Test Environment Setup & Methodology
 
-**Environment Configuration:**  
-*nnti link video di sini*
+**VIDEO DEMO HERE!:**  
+*https://youtu.be/OgiiO7Och_I*
 
 - **Target App:** Vercel-hosted boilerplate web application (Next.js default)  
 - **Deployment:** Public URL via Vercel global CDN  
@@ -141,7 +141,7 @@ Run a third SOAK test with:
 
 ---
 
-## 🧠 Final Conclusion
+## Final Conclusion
 
 Both experiments demonstrate that the Next.js app on Vercel handles sustained traffic well, with minimal latency degradation and strong endpoint reliability. However, DNS resolution and misconfigured routes remain key areas for improvement. With targeted optimizations, the app is well-positioned for production-scale traffic.
 
