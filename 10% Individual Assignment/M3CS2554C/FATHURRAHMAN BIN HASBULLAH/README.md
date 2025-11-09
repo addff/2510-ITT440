@@ -360,7 +360,7 @@ Since this test was conducted on a **single laptop workstation** (192.168.1.24):
 
 ### 🎯 Conclusion
 <div style="text-align: justify;">
-The spike test reveals that the Drupal-based hosting environment faces <b>critical performance challenges</b> that must be addressed before production deployment. With baseline response times of 9 seconds escalating to 27 seconds under moderate load (200 concurrent users), the application is **not production-ready** for any significant user traffic.
+The spike test reveals that the Drupal-based hosting environment faces <b>critical performance challenges</b> that must be addressed before production deployment. With baseline response times of 9 seconds escalating to 27 seconds under moderate load (200 concurrent users), the application is <b>not production-ready</b> for any significant user traffic.
 </div>
 
 ---
