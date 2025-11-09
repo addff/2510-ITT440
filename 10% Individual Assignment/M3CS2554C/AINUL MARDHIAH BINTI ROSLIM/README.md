@@ -148,31 +148,47 @@ In addition, I can get the overall reports documentation to analyse the **Global
 
 In Global Gatling Documentation : -
 
-<img width="764" height="275" alt="image" src="https://github.com/user-attachments/assets/4988fb63-17b8-4cf6-892b-9c4ce7a25a9d" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4988fb63-17b8-4cf6-892b-9c4ce7a25a9d" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response time distribution
-<img width="763" height="280" alt="image" src="https://github.com/user-attachments/assets/b23321ad-00aa-47af-a1ab-e6deac220f29" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b23321ad-00aa-47af-a1ab-e6deac220f29" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response time percentiles
-<img width="763" height="282" alt="image" src="https://github.com/user-attachments/assets/e682bbd9-46d3-4d8c-a700-53f351b9dc4f" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e682bbd9-46d3-4d8c-a700-53f351b9dc4f" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Requests / sec
-<img width="762" height="282" alt="image" src="https://github.com/user-attachments/assets/ed61e7c0-4627-403f-9cfc-8c104f3977fb" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ed61e7c0-4627-403f-9cfc-8c104f3977fb" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response / sec
-<img width="761" height="281" alt="image" src="https://github.com/user-attachments/assets/5b373167-d4ac-4fa6-8fc9-8f86b376c5b1" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5b373167-d4ac-4fa6-8fc9-8f86b376c5b1" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 
 In Details bar graph for : -
 
 ### T01_GET_Login_Page
-<img width="767" height="298" alt="T01_GET_Login_Page" src="https://github.com/user-attachments/assets/63aa8840-c1a7-475a-9f40-87d7e9efb6ba" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/63aa8840-c1a7-475a-9f40-87d7e9efb6ba" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### T02_POST_Login_And_Access_Secure
-<img width="765" height="295" alt="T02_POST_Login_And_Access_Secure" src="https://github.com/user-attachments/assets/0450e2ad-9bf2-42e6-bb25-ee07f868e241" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0450e2ad-9bf2-42e6-bb25-ee07f868e241" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### T03_POST_Login_And_Access_Secure Redirect 1
-<img width="763" height="290" alt="T03_POST_Login_And_Access_Secure Redirect 1" src="https://github.com/user-attachments/assets/f3c27aa3-82b7-4aa9-b88e-8ef230582974" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f3c27aa3-82b7-4aa9-b88e-8ef230582974" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ---
 ## 📊 So, What can I say about the Findings...(Interpretation of results)
@@ -257,4 +273,6 @@ Subject Name : Network Programming
 
 Checked By : Sir Shahadan bin Saad
 
-![Untitled video - Made with Clipchamp (2)](https://github.com/user-attachments/assets/9ff6d5f4-f091-470e-8cc1-ae73e6aefb0b)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ff6d5f4-f091-470e-8cc1-ae73e6aefb0b" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
