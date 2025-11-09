@@ -1,4 +1,4 @@
-# Spike Testing on Open Library website using Apache JMeter
+![Screenshot_20251109-211718_Video Player](https://github.com/user-attachments/assets/6cc92811-ce84-4fa8-b1eb-1d3562bb70dc)# Spike Testing on Open Library website using Apache JMeter
 
 ### Name : Juratu binti Abdullah 
 ### Matric Number : 2023268582 
@@ -67,7 +67,22 @@ Apache JMeter was selected because it is a **widely used open-source performance
 | 6 | Observe response times, throughput, and error rates during the spike. |
 | 7 | Export reports and analyze the results. |
 
+
 ### Test Results & Analysis
+
+### Result Graph, Tbale and Charts 
+
+![Summary report screenshot](https://github.com/user-attachments/assets/d48aeb03-9529-425f-9f82-f0275d84ba21)
+- Result from 'Sumarry Report' 
+
+![Screenshot_20251109-211745_Video Player](https://github.com/user-attachments/assets/fbf8350a-dcae-47b8-a194-de2b4a19563f)
+- Result from 'View Result Tree'
+
+![Screenshot_20251109-211718_Video Player](https://github.com/user-attachments/assets/3e5fa43b-201b-4f3e-aa8d-e2d53daa8836)
+- Result from 'View Result in Table' 
+
+
+
 
 After executing the spike test, the following key metrics were observed:
 
