@@ -171,7 +171,7 @@ Step 4 — View Results
 
 | Issue | Observation | Impact |
 |------|-------------|--------|
-| **Response Time Increased** | Response time rose from ~888 ms (50 VU) to ~10s (100 VU). | Slower user experience under heavier traffic. |
+| **Response Time Increased** | Response time rose from 888 ms (50 VU) to 10s (100 VU). | Slower user experience under heavier traffic. |
 | **Throughput Decreased** | Fewer requests were completed during the heavy test. | System cannot handle many concurrent users efficiently. |
 | **Possible Backend Resource Limits** | Server performance drops when load increases. | Indicates CPU / Memory / Database constraints. |
 | **No Caching Detected** | Same data fetched repeatedly without caching. | Increases unnecessary server work. |
@@ -192,5 +192,10 @@ Step 4 — View Results
 
 ## 🏁 Conclusion  
 
-Based on the results, the performance threshold of the FakeStoreAPI appears to be around 50 concurrent users. At this level, the system operates efficiently with quick response times and stable throughput. However, when the load increases to 100 concurrent users, the response time deteriorates sharply. This indicates limited scalability and suggests that the system may require optimization or resource scaling to support heavier traffic loads.
+Based on the results, the performance threshold of the FakeStoreAPI appears to be around 50 concurrent users. At this level, the system operates efficiently with quick response times and stable throughput. However, when the load increases to 100 concurrent users, the response time deteriorates sharply. This indicates limited scalability and suggests that the system may require optimization or resource scaling to support heavier traffic loads.  
+
+---
+## 🎥 Demonstration Video
+Below is the link for the demonstration video for the load testing  
+https://youtu.be/k5N3uuRyptU?si=Bwy-XnpSgZuY4_R7
 
