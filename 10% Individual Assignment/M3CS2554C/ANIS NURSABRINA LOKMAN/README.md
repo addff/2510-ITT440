@@ -56,7 +56,7 @@ The test plan in JMeter consisted of:
 ---
 
 ### 🖼️ Summary Report Output
-![Summary Report](images/summary_report.png)
+![Summary Report]()
 
 > The summary report lists the average, min, max response times, number of samples, and throughput values.  
 > The service page displayed the highest latency and reduced throughput under high user load.
