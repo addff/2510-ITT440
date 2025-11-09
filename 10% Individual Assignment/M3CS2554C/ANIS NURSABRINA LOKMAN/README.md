@@ -18,6 +18,7 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 
 
 ## ⚙️ Test Configuration And Methadology
+![Summary Report](./about.png)
 | Configuration | Description |
 |----------------|--------------|
 | **Tool** | Apache JMeter 5.6.3 |
