@@ -104,6 +104,9 @@ https://youtu.be/w56v21HV2TE
 | Response<br>time trend | 📉 Steady decrease over time <br>(system stabilized) | 📈 Sharp spike <br>(Unstable) |
 | System behavior | 🧊 Cold start,<br> then smooth recovery | 🔥 Overload event,<br> temporary bottleneck |
 
+<img width="430" height="201" alt="image" src="https://github.com/user-attachments/assets/43c9cd5c-e81c-436f-a00f-55377de24fdc" />
+
+
 **Bottlenecks:**
 | Bottlenecks type | Evidence from graph  | Interpretation |
 |-------------------------------|---------------------------------|--------------|
