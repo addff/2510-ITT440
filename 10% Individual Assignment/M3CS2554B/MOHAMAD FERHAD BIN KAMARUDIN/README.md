@@ -41,8 +41,8 @@ The experiment used the Snapchat API because it offers a robust and scalable pla
 | **Network**       | 100 Mbps broadband                       |
 | **Target API**    | `https://developers.snap.com/api/home`                |
 | **Test Duration** | 240 seconds                              |
-| **Virtual Users** | 125 created, 120 completed             |
-| **Arrival Rate**  | 20 requests/sec                          |
+| **Virtual Users** | 960 created, 0 completed             |
+| **Arrival Rate**  | 30 requests/sec                          |
 
 ---
 
@@ -60,7 +60,7 @@ The experiment used the Snapchat API because it offers a robust and scalable pla
 | **Target System / API Endpoint**     | `https://developers.snap.com/api/home`                                                                                                                             |
 | **Test Duration**                    | 4 minutes (240 seconds)                                                                                                                                          |
 | **Load Model**                       | Stepwise ramp-up (10 → 20 virtual users per second)                                                                                                              |
-| **Number of Virtual Users (VUs)**    | 125 created                                                                                                                                                     |
+| **Number of Virtual Users (VUs)**    | 960 created                                                                                                                                                     |
 | **Test Scenario Description**        | Each virtual user sends a `GET` request to `/api/users?page=2`, simulating typical client behavior retrieving paginated user data.                               |
 | **KPIs Measured**                    | - Response Time (min, mean, p95, p99)  <br> - Throughput (requests/sec) <br> - Error Rate <br> - Virtual User Completion                                         |
 | **Performance Thresholds (Targets)** | - Average Response Time ≤ 500 ms  <br> - Error Rate ≤ 2%  <br> - 95% Responses < 1s                                                                              |
@@ -100,19 +100,19 @@ scenarios:
 | **Metric**                         | **Result** | **Interpretation**                                                                    |
 | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | **Total Requests Sent**            | 5,760      | Total number of HTTP requests executed during the test.                               |
-| **Requests per Second**            | ~29/sec    | Indicates stable throughput at moderate concurrency.                                  |
-| **Virtual Users Created**          | 125      | Number of concurrent simulated users.                                                 |
-| **Virtual Users Completed**        | 120      | Almost all users successfully completed their sessions.                               |
-| **Virtual Users Failed**           | 5          | Minimal failures, likely due to transient connection resets.                          |
+| **Requests per Second**            | ~30/sec    | Indicates stable throughput at moderate concurrency.                                  |
+| **Virtual Users Created**          | 960      | Number of concurrent simulated users.                                                 |
+| **Virtual Users Completed**        | 0     | Almost all users successfully completed their sessions.                               |
+| **Virtual Users Failed**           | 960          | Minimal failures, likely due to transient connection resets.                          |
 | **HTTP 4xx Errors (404)**          | 1920      | Most requests hit non-existent endpoint — indicates misconfiguration or invalid path. |
-| **Connection Errors (ECONNRESET)** | 5          | Occurred under heavy concurrency, minor network/socket resets.                        |
-| **Minimum Response Time**          | 216 ms     | Fastest response recorded.                                                            |
-| **Maximum Response Time**          | 2,240 ms   | Longest response observed during peak load.                                           |
-| **Average (Mean) Response Time**   | 278 ms     | Average response time remained well under 300 ms.                                     |
-| **95th Percentile (p95)**          | 488 ms     | 95% of requests completed in under 0.5 seconds.                                       |
-| **99th Percentile (p99)**          | 889 ms     | Small number of outlier requests during high concurrency.                             |
-| **Average Session Length**         | 2,702 ms   | Average duration per virtual user session.                                            |
-| **Downloaded Bytes**               | 0          | No response body due to 404 responses.                                                |
+| **Connection Errors (ECONNRESET)** | 960          | Occurred under heavy concurrency, minor network/socket resets.                        |
+| **Minimum Response Time**          | 15 ms     | Fastest response recorded.                                                            |
+| **Maximum Response Time**          | 82 ms   | Longest response observed during peak load.                                           |
+| **Average (Mean) Response Time**   | 17 ms     | Average response time remained well under 300 ms.                                     |
+| **95th Percentile (p95)**          | 49 ms     | 95% of requests completed in under 0.5 seconds.                                       |
+| **99th Percentile (p99)**          | 95 ms     | Small number of outlier requests during high concurrency.                             |
+| **Average Session Length**         | 174 ms   | Average duration per virtual user session.                                            |
+| **Downloaded Bytes**               | 68mb         | No response body due to 404 responses.                                                |
 
 ```
 
@@ -122,15 +122,15 @@ scenarios:
 
 | Metric | Observation | Interpretation |
 |--------|--------------|----------------|
-| **Response Time (mean)** | 278 ms | Acceptable for most API calls (<300 ms). |
-| **p95 Response Time** | 487 ms | Indicates 95% of requests completed below 0.5s — good stability. |
-| **Errors (ECONNRESET)** | 5 | Minimal network resets due to concurrency spikes. |
-| **HTTP 404 Errors** | 5984 | Suggests requests to a non-existent endpoint or query mismatch. |
-| **User Completion Rate** | 2992/3000 (99.7%) | Excellent session completion rate under load. |
+| **Response Time (mean)** | 17 ms | Acceptable for most API calls (<300 ms). |
+| **p95 Response Time** | 49 ms | Indicates 95% of requests completed below 0.5s — good stability. |
+| **Errors (ECONNRESET)** | 960 | Minimal network resets due to concurrency spikes. |
+| **HTTP 404 Errors** | 960 | Suggests requests to a non-existent endpoint or query mismatch. |
+| **User Completion Rate** | 0/960 (0.00%) | Excellent session completion rate under load. |
 
 ###  Observed Bottlenecks
 - 404 responses indicate the API endpoint was incorrect or rate-limited under stress.  
-- Slight response latency spike at high concurrency (p99 = 889 ms).  
+- Slight response latency spike at high concurrency (p99 = 95 ms).  
 - Minor connection resets suggest socket timeout under heavy load.
 
 ---
@@ -141,7 +141,7 @@ scenarios:
 2. **Enable caching or CDN** to reduce backend load.  
 3. **Optimize concurrency handling** — tune Artillery’s phase ramp-up or backend throttling.  
 4. **Monitor API rate-limiting** via logs or HTTP headers.  
-5. **Add soak and stress tests** for extended evaluation of performance stability.
+5. **Add load and stress tests** for extended evaluation of performance stability.
 
 ---
 
