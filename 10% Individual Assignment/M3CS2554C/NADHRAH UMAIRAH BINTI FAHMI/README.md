@@ -265,5 +265,7 @@ Overall, this experience enhanced my technical skills in performance evaluation,
 
 ---
 
-### 🎥 **VIDEO DEMONSTRATION (TO BE EMBEDDED)**
+### 🎥 **VIDEO DEMONSTRATION**
+[🎥 Watch the Video Demonstration on YouTube](https://youtu.be/OCTLjkpVJVg)
+
 
