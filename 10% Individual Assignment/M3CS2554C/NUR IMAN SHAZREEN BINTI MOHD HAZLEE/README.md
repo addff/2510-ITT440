@@ -23,7 +23,7 @@ The core objectives of this performance analysis are:
  1. To evaluate the overall load speed and efficiency of the target GitHub repository page using industry-standard metrics, including Google's Core Web Vitals. 
  2. To establish a quantifiable performance baseline by determining the **Performance Score** and **Structure Score**.
  3. To identify and interpret specific performance indicators such as **LCP, TBT, CLS, and TTI**.
- 4. To pinpoint structual and content-related bottlenecks, such as slow asset delivery or inefficient code practices, by analyzing the GTMetrix Structure Audits.
+ 4. To pinpoint structual and content-related bottlenecks, such as slow asset delivery or inefficient code practices, by analyzing the GTmetrix Structure Audits.
  5. To provide a concise summary of findings and initial recommendations for performance improvement. 
 
 ---
@@ -38,7 +38,7 @@ Key metrics, particularly the **Core Web Vitals (LCP, FID/TBT, CLS)**, are used 
 |---------|------------|
 |**User-centric Metrics** | Clear scoring based on metrics that reflect the actual user experience. |
 |**Actionable Diagnostics** | Detailed structure audits, complete with **Impact Levels** (Low, Medium, High) and specific potential savings, allowing for targeted optimization efforts. |
-|**Waterfall Chart** | A visua breakdown of every single resource request (CSS, JS, images), crucial for identifying specific slow-loading files. | 
+|**Waterfall Chart** | A visual breakdown of every single resource request (CSS, JS, images), crucial for identifying specific slow-loading files. | 
 
 ---
 ### 🚁 5. Test Environment Setup 🚁
