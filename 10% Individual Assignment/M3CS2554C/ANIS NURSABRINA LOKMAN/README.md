@@ -12,10 +12,12 @@
  
 
 
+## 😵‍💫 What is Stress Testing?
+Stress test is the process of gradually increasing user load beyond expected limits to evaluate how a system performs under peak or excessive pressure. It helps identify the maximum capacity the application can handle before performance degrades or failures occur.
+
 ## 🧰 Objective
 The objective of this stress test is to evaluate the performance, stability, and breaking point of the Moodle website when subjected to a heavy number of concurrent users.  
 This test aims to identify bottlenecks, response delays, and potential resource exhaustion when the server is under maximum stress.
-
 
 
 ## ⚙️ Test Configuration And Methadology
@@ -106,13 +108,17 @@ The Moodle website can better handle higher loads with reduced response time by 
 
 ---
 
-## 📈 Conclusion
-The Moodle demo website performed reliably under moderate load but showed signs of degradation as the number of users increased.  
-Response times remained stable for lighter requests but rose significantly for resource-intensive operations, confirming a performance bottleneck under stress conditions.  
 
-The test successfully identified the website’s performance limit and provided insights for future optimization and scaling strategies.
+## 🧠 **Conclusion**
+
+Overall, the results highlight that **Moodle can handle moderate loads effectively**, but **performance degradation occurs** when the number of concurrent users increases sharply.  
+Optimization efforts should focus on **server tuning, caching, and database efficiency** to enhance scalability and reduce latency during peak usage.
+
+ **In conclusion**, the test successfully identified performance limits, bottlenecks, and improvement areas for Moodle, making it a useful reference for future optimization and capacity planning.
 
 ---
 
 ## 👩‍💻 Demonstration Video
+
+
 
