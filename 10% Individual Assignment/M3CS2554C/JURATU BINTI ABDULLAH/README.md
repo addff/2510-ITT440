@@ -70,7 +70,7 @@ Apache JMeter was selected because it is a **widely used open-source performance
 
 ### Test Results & Analysis
 
-### Result Graph, Tbale and Charts 
+### Result Graph, Table and Charts 
 
 ![Summary report screenshot](https://github.com/user-attachments/assets/d48aeb03-9529-425f-9f82-f0275d84ba21)
 - Result from 'Sumarry Report' 
