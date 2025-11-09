@@ -64,11 +64,9 @@ JMeter can also run in both GUI and command-line (Non-GUI) mode, which makes it 
 ## 5. Results
 
 ### Load Test
-![Load Test Graph](Report/LoadT_report/Response_Times_Over_Time.png)
-![Load Test Graph](Report/LoadT_report/Througput_Over_Time.png)
-![Load Test Graph](Report/LoadT_report/Active_Threads_Over_Time.png)
-![Load Test Graph](Report/LoadT_report/Connect_Time_Over_Time.png)
-![Load Test Graph](Report/LoadT_report/Summary_Report.png)
+
+![Load Test Graph Summary Report]<img width="1540" height="702" alt="Summary_Report" src="https://github.com/user-attachments/assets/eb5a395b-ff07-4db8-a546-1cca8e7dbf4d" />
+
 - **Average Response Time:** 7.06s  
 - **Throughput:** 0.51 requests/sec  
 - **Error Rate:** 0%
@@ -76,11 +74,9 @@ JMeter can also run in both GUI and command-line (Non-GUI) mode, which makes it 
 - **Network(Send):** 0.06 KB/sec
 
 ### Stress Test
-![Stress Test Graph](Report/StressT_report/Response_Times_Over_Time.png)
-![Stress Test Graph](Report/StressT_report/Throughput_Over_Time.png)
-![Stress Test Graph](Report/StressT_report/Active_Threads_Over_Time.png)
-![Stress Test Graph](Report/StressT_report/Connect_Time_Over_Time.png)
-![Stress Test Graph](Report/StressT_report/Summary_Report.png)
+
+![Stress Test Graph Summary Report]<img width="1607" height="785" alt="Summary_Report" src="https://github.com/user-attachments/assets/d8badf33-66a6-45c1-91c4-a8ef9df928e4" />
+
 - **Average Response Time:** 5.91s  
 - **Throughput:** 72.33 requests/sec  
 - **Error Rate:** 47.22%
@@ -88,11 +84,9 @@ JMeter can also run in both GUI and command-line (Non-GUI) mode, which makes it 
 - **Network(Send):** 4.21 KB/sec
 
 ### Soak Test
-![Soak Test Graph](Report/SoakT_report/Response_Times_Over_Time.png)
-![Soak Test Graph](Report/SoakT_report/Bytes_Throughput_Over_Time.png)
-![Soak Test Graph](Report/SoakT_report/Active_Threads_Over_Time.png)
-![Soak Test Graph](Report/SoakT_report/Connect_Time_Over_Time.png)
-![Soak Test Graph](Report/SoakT_report/Summary_Report.png)
+
+![Soak Test Graph Summary Report]<img width="1577" height="742" alt="Summary_Report" src="https://github.com/user-attachments/assets/74e3759e-f571-4fc3-99f4-74aaed19f743" />
+
 - **Average Response Time:** 3.8s  
 - **Throughput:** 16.03 requests/sec 
 - **Error Rate:** 0.42%  
