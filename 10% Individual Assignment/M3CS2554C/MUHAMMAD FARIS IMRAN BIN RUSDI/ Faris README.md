@@ -70,23 +70,24 @@ Artillery was chosen for stress testing because it is lightweight, flexible, and
 2. **Create a YAML Test File**
    
     nano name file.yml
-     
-   ```yaml
-   config:
-  target: "https://pokeapi.co"        # API base URL
+   
+    Put the configuration below into file
+```yaml
+config:
+  target: "https://pokeapi.co"        # Base URL of the API
   phases:
-    - duration: 60                    # Phase 1: Warm-up (normal load)
-      arrivalRate: 10                 # 10 new users per second
-      name: Warm up
-    - duration: 60                    # Phase 2: Increased load
-      arrivalRate: 30                 # 30 users/sec
-      name: Moderate load
-    - duration: 90                    # Phase 3: High load (stress)
-      arrivalRate: 60                 # 60 users/sec - pushes beyond limit
-      name: Stress test
-    - duration: 60                    # Phase 4: Extreme load (break point)
-      arrivalRate: 100                # 100 users/sec to cause failure
-      name: Break point
+    - name: "Warm-up"
+      duration: 60                     # seconds
+      arrivalRate: 10                  # 10 new users per second
+    - name: "Moderate load"
+      duration: 60
+      arrivalRate: 30                  # 30 users/sec
+    - name: "Stress test"
+      duration: 90
+      arrivalRate: 60                  # 60 users/sec, pushes beyond normal limits
+    - name: "Break point"
+      duration: 60
+      arrivalRate: 100                 # 100 users/sec, likely to cause failures
 
   defaults:
     headers:
@@ -98,18 +99,8 @@ scenarios:
       - get:
           url: "/api/v2/pokemon/{{ id }}"
     variables:
-      id:
-        - 1
-        - 4
-        - 7
-        - 25
-        - 150
-        - 200
-        - 250
-        - 400
-        - 500
-        - 1000
-   ```
+      id: [1, 4, 7, 25, 150, 200, 250, 400, 500]
+
     write and save the code 
 4. **Run the Test**
 
