@@ -56,14 +56,14 @@ The test plan in JMeter consisted of:
 ---
 
 ### 📈 Graph Results Viewer
-![Graph Results](images/graph_results.png)
+![Graph Results](./graph1.png)
 
 > The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress
 
 ---
 
 ### ⏱️ Response Time Graph
-![Response Time Graph](./Summaryreport.png)
+![Response Time Graph](./graph.png)
 
 > The graph shows response times for each request during the 30-second stress test.  
 > The main and login pages maintained stable performance, while the service page showed increasing response time.
