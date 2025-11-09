@@ -104,12 +104,13 @@ By simulating the impact of high server-side resource consumption and competitio
 ## 7.0 PERFORMANCE DATA ANALYSIS
 
 ### 7.1 Overall Scoring
-<p align="justify">
+<p align="justify"> Throughout the three test rounds, the overall GTmetrix grade fluctuated, suggesting performance instability under low stress:
 <ul> 
- <li> Performance Scoring: 67% </li>
- <li> Structure Score: 79% </li>
- <li> Fully Loaded Time: 8.7s </li>
-</ul> </p>
+ <li> Round 1: B (92%) </li>
+ <li> Round 2: B (94%) </li>
+ <li> Round 3: B (89%) </li>
+</ul> 
+Following a slight improvement in Round 2, this regression in Round 3 indicates that the application's performance is brittle and susceptible to being adversely affected by repeated loads, even from a single user. </p>
 
 <p align="center">
 <img width="954" height="685" alt="GRADE" src="https://github.com/user-attachments/assets/462b02a3-78fc-4f1a-bc58-452e6ac86abd" /> </p>
@@ -117,24 +118,23 @@ By simulating the impact of high server-side resource consumption and competitio
 ### 7.2 Core web Vitals (User Experience Metrics)
 <p align="justify">
 <ul> 
- <li> Largest Contentful Paint (LCP): 2.5s </li>
- <li> Total Blocking Time (TBT): 236ms </li>
- <li> Cumulative Layout Shift (CLS): 0 </li>
+ <li> In Round 3, the Largest Contentful Paint (LCP) regressed from 1.3s which is good, in Round 1 to 1.6s shows that it needs some improvement. This suggests that when under stress, the main content renders more slowly. </li>
+ <li> Total Blocking Time (TBT): Exhibited notable fluctuations. After improving from 121 ms in Round 1 to 86 ms in Round 2, it deteriorated to 125 ms in Round 3. This indicates main thread blocking and uneven JavaScript execution. </li>
+ <li> Regardless of load conditions, Cumulative Layout Shift (CLS) remained at a perfect 0 throughout all rounds, demonstrating exceptional visual stability. </li>
 </ul> 
-The page is visually stable (excellent CLS score) and loads its main content acceptably. Interactivity is crucial, though, because the high TBT suggests that the page is unresponsive for an extended period of time after loading.</p>
+</p>
 <p align="center">
 <img width="954" height="685" alt="WEB VITALS" src="https://github.com/user-attachments/assets/a982f35f-9ec2-4579-980b-c41427bd6d2b" /> </p>
 <hr>
 
 ## 8.0 RESULT INTERPRETATION
 
-<p align="justify"> The stress test revealed several performance issues:
+<p align="justify"> The findings support the original theory. With a "Fast to Show, Slow to Use" profile, the Joomla demo site clearly shows performance degradation under stress. The page's interactivity (TTI) is subpar and gets worse in the final test, even though it is still visually stable (CLS). The main conclusions are:
 <ol>
- <li> Slow LCP: showing that the main content is being rendered slowly. </li>
- <li> High TBT: suggesting that the main thread be blocked by a poorly optimied JavaScript execution </li>
- <li> Long FUlly Loaded Time: 8.7s, this indicate there are elements that use a lot of resources and the slow server response. </li>
+ <li> Slow Interactivity: Throughout all tests, the Time to Interactive (TTI) remained extremely high (~4 seconds), and in Round 3, it deteriorated to 4.2 seconds. </li>
+ <li> JavaScript Bottleneck: Client-side script execution is identified as the main bottleneck, and the high and erratic Total Blocking Time (TBT) is the direct cause of the slow TTI. </li>
+ <li> Structural Deficiencies: An excessive amount of HTTP requests (more than 150 per page) is one of the underlying architectural problems that are reflected in the consistently low "Structure" score (averaging 78%). </li>
 </ol>
-Under repeated process, the site showed a very much consistent degradation in performance metrics, especially in TBT and LCP which indicates a poor stress tolerance.
 </p>
 <hr>
 
@@ -142,10 +142,39 @@ Under repeated process, the site showed a very much consistent degradation in pe
 
 <p align="justify"> 
 <ol>
- <li> Backend Duration: 1.3s, this shows delays in server-side processing. </li>
- <li> Large Image Files: several images over 100KB contribute to slow loading. </li>
- <li> Render-Blocking Resources: CSS and JavaScript files delaying page rendering. </li>
- <li> Third-Party scripts: Google TAg MAnager and reCAPTCHA add a very significant overhead. </li>
+ <li> Primary Bottleneck: Excessive and Blocking JavaScript </li>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>long TTI (~4s) and high TBT (~120ms). Two sizable Google Tag Manager scripts (about 229 KB in total) and several jQuery libraries were regularly displayed in the Waterfall Chart as loading ahead of schedule and preventing the main thread from running.</td>
+   <td>fter the page first paints, users are unable to interact with it for more than 4 seconds, which results in a subpar user experience.</td>
+  </tr>
+ </table>
+ <li> Secondary Bottleneck: High Number of HTTP Requests </li>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>152-155 requests are made for each page load. The Structure score (77–79%) was continuously low.</td>
+   <td>The Fully Loaded Time (a fixed 7.9s) rises with each request, adding overhead and needlessly taxing the server and network.</td>
+  </tr>
+ </table>
+ <li> Potential Failure Point: Server-Side Performance </li>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>The average Time to First Byte (TTFB) was 450 ms, which is slower than optimal. Server-side resource contention is also suggested by the Round 3 regression in LCP and FCP.</td>
+   <td>Every subsequent stage of the page loading process is delayed by slower server response times.</td>
+  </tr>
+ </table>
 </ol>
 </p>
 <p align="center">
@@ -154,9 +183,15 @@ Under repeated process, the site showed a very much consistent degradation in pe
 
 ## 10.0 SUMMARY
 
-<p align="justify"> The GTMetrix stress test of https://launch.joomla.org/ revealed a notable performance snags under load, especially in Largest Contentful Paint (LCP) and Total Blocking Time (TBT). Render-blocking Scripts and resource-heavy content cause the application to perform poorly under stress, resulting in a less than ideal user experince. Overall it is recommended to enhance server response times, postponing non-essential JavaScript and optimizing images. Under high-load circumstances, these modification would improve stability and website smooth opration. </p>
+<p align="justify"> The target Joomla application's serious performance flaws were successfully found by this stress test analysis. Despite having a stable visual design, the website has serious problems with interactivity because of poorly optimised JavaScript and an ineffective page structure with excessive requests. Under the strain of repeated testing, the performance was found to be unstable and regressed. The following top suggestions are put forth to address these problems:
+<ul>
+ <li> Defer Non-Critical JavaScript: To avoid main thread blocking, load analytics and third-party scripts asynchronously. </li>
+ <li> Reduce HTTP Requests: To cut down on the overall number of requests, combine CSS/JS files and make use of image sprites. </li>
+ <li> Optimise images by converting big PNG files to more contemporary WebP formats. </li>
+ <li> Improve TTFB and offload the delivery of static assets by implementing caching and a CDN. </li>
+</ul>
 
-
+Even with higher load conditions, the Joomla demo site can provide a faster, more dependable, and consistent user experience by putting these changes into practice. </p>
 <hr>
 
 <!-- [ <p align="justify">  </p> ]paragraph -->
