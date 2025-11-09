@@ -1,4 +1,5 @@
 # 🧪 Apache JMeter Load Testing on Laravel 10 Web Application
+[**VIDEO LINK**](https://drive.google.com/drive/folders/1S-7GMCLzYHVUQN-1Y1Ny6w-cYDLO6_OT?usp=sharing)
 
 ### Prepared for: MR. SHAHADAN BIN SAAD
 
@@ -8,7 +9,7 @@
 
 **Group: M3CDCS2554C**  
 
-**Course: ITT440 - Network Programming**
+**Course: ITT440 (Network Programming)**
 
 ## 📘 Overview
 This project demonstrates a **Load Test** conducted using **Apache JMeter** on a **self-hosted Laravel 10 web application**.  
@@ -79,9 +80,10 @@ Users perform a typical workflow:
 | `/expenses/create` | GET | Form page |
 
 ### **JMeter Components**
-- **Thread Group:** 100 Virtual Users  
-- **Ramp-Up Time:** 60 seconds  
-- **Loop Count:** 10 iterations  
+- **Thread Group:** 50 Virtual Users
+> I limited to 50 users since I tested it on a locally hosted website  
+- **Ramp-Up Time:** 30 seconds  
+- **Loop Count:** 5 iterations  
 - **HTTP Request Sampler:** For each endpoint  
 - **Listener:** Summary Report, View Results Tree  
 - **HTML Dashboard Report:** For visual analytics  
@@ -102,5 +104,69 @@ Users perform a typical workflow:
 4. Save the .jmx file
 5. Run the test in **non-GUI mode** for performance (make sure the directory has been changed in the terminal):
    ```
-   jmeter -n -t [jmx file] -l [results file]
+   jmeter -n -t [jmx file] -l [results file] -e -o report
+
+---
+
+## Results
+
+> The results may vary from testing on actual pre-existing websites since the environment of hosting differs.
+
+
+### <ins>Throughput</ins> 
+
+### Hits Per Second
+
+<img width="1635" height="520" alt="Hits Per Second" src="https://github.com/user-attachments/assets/488edc39-db5d-42df-a4e8-ec3a860133b5" />
+
+### Codes Per Second
+
+<img width="1635" height="524" alt="Codes Per Second" src="https://github.com/user-attachments/assets/cc376340-ea91-40b9-b15a-77075501cb71" />
+
+### Transactions Per Second
+
+<img width="1634" height="522" alt="Transactions Per Second" src="https://github.com/user-attachments/assets/d9ecd476-c055-480c-a140-4b1455555d1c" />
+
+### Total Transactions Per Second
+
+<img width="1637" height="522" alt="Total Transactions Per Second" src="https://github.com/user-attachments/assets/2f4c8062-1b54-477d-9476-8fe1f6ff9bfc" />
+
+
+### Response Time vs Request
+
+<img width="1638" height="524" alt="Response Time vs Request" src="https://github.com/user-attachments/assets/e2a17721-383f-46eb-9450-78208bf33bab" />
+
+### Latency vs Request
+
+<img width="1639" height="517" alt="Latency vs Request" src="https://github.com/user-attachments/assets/d6cfd96c-a1ee-4802-94bc-b362018364ff" />
+
+
+### <ins>Response Times</ins>
+
+### Response Time Percentiles
+
+<img width="1640" height="523" alt="Response Time Percentiles" src="https://github.com/user-attachments/assets/ff33d637-c870-4154-9ba8-af362d5875a2" />
+
+
+### Response Time Overview
+
+<img width="1640" height="523" alt="Response Time Overview" src="https://github.com/user-attachments/assets/07a07ee1-f441-4ae1-b3ec-9feaa72032f6" />
+
+### Time Vs Threads
+
+<img width="1636" height="525" alt="Time vs Threads" src="https://github.com/user-attachments/assets/da92f9ec-b394-45c1-a14e-579c7ec059f4" />
+
+### Response Time Distribution
+
+<img width="1645" height="530" alt="Response Time Distribution" src="https://github.com/user-attachments/assets/88760593-af6d-45a3-a1c8-c267148e4edf" />
+
+## Future Recommendations
+
+1. The middleware logic in the Laravel can be optimised for efficiency
+2. The server needs to have backup in case of downtime
+3. Database queries should be optimized for efficiency and security
+
+---
+❤️Thank you © MOHAMMED ZUHAYR | 2025163001 | ITT440 | M3CS2554C | 2510
+
    
