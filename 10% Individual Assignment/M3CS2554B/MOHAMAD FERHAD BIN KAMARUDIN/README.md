@@ -153,7 +153,7 @@ The performance evaluation confirms the API's robustness under moderate concurre
 
 ##  **Demonstration Video**
 
-➡️ [YouTube Demo – [Click to Watch Demonstration Video](https://youtu.be/erqsgZyYCng)
+➡️ [YouTube Demo – [Click to Watch Demonstration Video](https://youtu.be/erqsgZyYCng)]
 
 ---
 
