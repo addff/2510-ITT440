@@ -1,4 +1,4 @@
-![Screenshot_20251109-211718_Video Player](https://github.com/user-attachments/assets/6cc92811-ce84-4fa8-b1eb-1d3562bb70dc)# Spike Testing on Open Library website using Apache JMeter
+# Spike Testing on Open Library website using Apache JMeter
 
 ### Name : Juratu binti Abdullah 
 ### Matric Number : 2023268582 
