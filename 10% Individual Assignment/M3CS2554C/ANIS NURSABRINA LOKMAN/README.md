@@ -45,32 +45,33 @@ The test plan in JMeter consisted of:
 
 ---
 
-## 🧾 Sample Output Data
-
-### 🖼️ Response Time Graph
-![Response Time Graph](./Summaryreport.png)
-
-> The graph shows response times for each request during the 30-second stress test.  
-> The main and login pages maintained stable performance, while the service page showed increasing response time.
-
----
+## ✍🏿 Sample Output Data
 
 ### 🖼️ Summary Report Output
-![Summary Report]()
+![Summary Report](./Summaryreport.png)
 
 > The summary report lists the average, min, max response times, number of samples, and throughput values.  
 > The service page displayed the highest latency and reduced throughput under high user load.
 
 ---
 
-### 🖼️ Graph Results Viewer
+### 📈 Graph Results Viewer
 ![Graph Results](images/graph_results.png)
 
-> The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress.
+> The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress
 
 ---
 
-## 📊 Results Summary
+### ⏱️ Response Time Graph
+![Response Time Graph](./Summaryreport.png)
+
+> The graph shows response times for each request during the 30-second stress test.  
+> The main and login pages maintained stable performance, while the service page showed increasing response time.
+
+
+---
+
+## 📝 Results Summary
 | Page | Response Time (Start) | Response Time (End) | Observation |
 |------|-----------------------|---------------------|--------------|
 | **Main Page** | 1400 ms | 1100 ms | Stable performance |
