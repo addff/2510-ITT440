@@ -95,8 +95,8 @@ https://nodejs.org/en/download/
 https://www.python.org/downloads/
 
 # During setup, make sure to:
-# ☑️ Check "Add Python to PATH"
-# ☑️ Check "pip" (Python package installer)
+☑️ Check "Add Python to PATH"
+☑️ Check "pip" (Python package installer)
 
 ## ✅ Check Installation:
 python --version
@@ -109,6 +109,7 @@ pip install matplotlib pandas
 Successfully installed matplotlib pandas
 
 ### 📊 Graph Generation (Python)
+![Code Graph](graph%20code.png)
 
 
 
@@ -259,6 +260,46 @@ The findings validate the hypothesis that **Shopist.io’s performance decreases
 
 ## 11. 🎥 Video Demonstration
 
-###
+This video provides a complete walkthrough of the **Comprehensive Web Application Performance Testing & Analysis Using K6 on Shopist.io** project.
+
+### 🎯 Demonstration Includes:
+- Step-by-step **installation of Chocolatey, Node.js, and Python**
+- Running **K6 Spike Test scripts** for 50, 100, and 200 Virtual Users
+- Executing the **Python Graph Generator** to visualize performance results
+- Explanation of the **Response Time**, **Requests per Second**, and **Failure Rate** graphs
+- Final summary of findings and conclusions
+
+---
+
+### ▶️ Watch the Presentation
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://youtu.be/PqRt-iVkirA)
+
+> 🔗 *Click the image above to open the full demonstration video on YouTube.*
+
+---
+
+## 12. References
+
+1. Grafana Labs. *K6 Load Testing Tool Documentation.*  
+   https://k6.io/docs/
+
+2. Node.js Foundation. *Node.js Downloads.*  
+   https://nodejs.org/en/download/
+
+3. Python Software Foundation. *Python 3.14 Documentation.*  
+   https://www.python.org/doc/
+
+4. Chocolatey Software. *Installing K6 on Windows using Chocolatey.*  
+   https://community.chocolatey.org/packages/k6
+
+5. Shopist.io. *E-commerce Demo Website.*  
+   https://shopist.io
+
+6. Pandas Development Team. *Pandas User Guide.*  
+   https://pandas.pydata.org/
+
+7. Matplotlib Developers. *Matplotlib Visualization Library.*  
+   https://matplotlib.org/stable/
+
 
 
