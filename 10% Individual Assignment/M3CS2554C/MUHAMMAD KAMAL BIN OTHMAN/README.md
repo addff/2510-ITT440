@@ -171,6 +171,10 @@ In conclusion, the website https://tools-httpstatus.pickup-services.com/ showed 
 
 ## https://www.youtube.com/watch?v=OszLN6ys1mQ
 
+### **JUSTIFICATION**
+
+I selected Siege over alternatives like Apache JMeter or Grafana K6 because it is beginner-friendly and also provides realistic user simulation with random delays (-d5 parameter), supports concurrent connections (-c50), and generates complete transaction reports. The test plan focused on multiple HTTP status endpoints (200, 206, 302, 404) to simulate real-world user behavior and identify how different server responses impact performance under load. Based on the output we observed, we recommend that this website improve their availability when many users access the website simultaneously. In addition, this approach follows the specific standard recommendation for comprehensive web application performance testing, aligning with industry best practices.
+
 ### **REFERENCES**
 
 Fulmer, J. E. (2023). Siege: An HTTP/HTTPS load testing and benchmarking tool (Version 4.0.5) [Computer software]. JoeDog Software. https://github.com/JoeDog/siege
@@ -182,7 +186,3 @@ Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., & Ber
 Fulmer, J. E. (2023). Siege source code repository [Source code]. GitHub. https://github.com/JoeDog/siege
 
 Molenaar, J. (2022). Web performance testing and benchmarking methodologies. In K. Johnson (Ed.), Modern DevOps practices (pp. 145-167). O'Reilly Media.
-
-### **JUSTIFICATION**
-
-I selected Siege over alternatives like Apache JMeter or Grafana K6 because it is beginner-friendly and also provides realistic user simulation with random delays (-d5 parameter), supports concurrent connections (-c50), and generates complete transaction reports. The test plan focused on multiple HTTP status endpoints (200, 206, 302, 404) to simulate real-world user behavior and identify how different server responses impact performance under load. Based on the output we observed, we recommend that this website improve their availability when many users access the website simultaneously. In addition, this approach follows the specific standard recommendation for comprehensive web application performance testing, aligning with industry best practices.
