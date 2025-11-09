@@ -108,11 +108,8 @@ The main objectives of this project are as follows:
 
 ---
 
-## ▶️ How to Run the Test
+🎯 Conclusion
 
-```bash
-# Set base URL (optional)
-export BASE_URL="http://localhost/wordpress"
-
-# Run the smoke test
-k6 run --summary-export=results/smoke_summary.json scripts/smoke.js
+The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
+All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
+This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
