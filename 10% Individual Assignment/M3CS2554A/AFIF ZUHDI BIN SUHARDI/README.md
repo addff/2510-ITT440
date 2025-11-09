@@ -6,6 +6,7 @@
 ### - **Course:** ITT440
 ### - **Name:** AFIF ZUHDI BIN SUHARDI
 ### - **Matrix Number:** 2024757603
+### - **Youtube Video:** 
 
 # 🔍 Introduction
 This project demonstrates **comprehensive stress testing** on RasoOnline.com using the **Vegeta load testing tool**.  
@@ -111,7 +112,7 @@ generate_all_charts.bat
 
 # 📈 Test Results & Analysis
 
-## 📊 Raw Test Result Output (Example)
+## 📊 Raw Test Result Output 
 ```json
 {
     "rate": 10,
@@ -225,34 +226,12 @@ The RasoOnline website maintained exceptional performance and stability under st
 - **Automated Visualization:** Python scripts for chart generation
 - **HTML Dashboard:** Interactive web-based results presentation
 
-## 🔧 Script Architecture
-```
-rasoonline-stress-test/
-├── run_tests.bat          # Automated test suite
-├── load_test_menu.bat     # Interactive test menu
-├── raso_ramp.ps1          # Progressive load testing
-├── fill_excel.ps1         # Excel results automation
-├── generate_charts.ps1    # PowerShell chart generator
-├── generate_python_charts.py # Python visualization
-├── generate_all_charts.bat # Batch chart generator
-├── url.txt               # Test endpoints configuration
-├── results.xlsx          # Consolidated test results
-├── python_charts/        # Generated visualizations
-│   ├── latency_vs_rps_scatter.png
-│   ├── performance_dashboard.png
-│   ├── progressive_stress_analysis.png
-│   ├── full_site_comparison.png
-│   ├── response_time_distribution.png
-│   ├── success_rate.png
-│   └── performance_summary.png
-└── dashboard.html        # Interactive HTML dashboard
-```
-
 # 📺 References
 
 - **Tool:** Vegeta Load Testing Tool (https://github.com/tsenart/vegeta)
 - **Target Website:** https://rasoonline.com/
 - **Test Environment:** Windows PowerShell with Excel COM Automation
-- **YouTube Video:** [Your Video Link Here]
+- **YouTube Video:** []
 ```
+
 
