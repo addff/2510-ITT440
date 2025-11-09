@@ -52,7 +52,7 @@ JMeter’s extensibility and reliability make it a go-to choice for performance 
 **VIDEO DEMO HERE!:**  
 *https://youtu.be/OgiiO7Och_I*
 
-- **Target App:** Vercel-hosted boilerplate web application (Next.js default)  
+- **Target App:** [Vercel-hosted boilerplate web application (Next.js default)](https://nextjs-boilerplate-pearl-nine-83.vercel.app/)  
 - **Deployment:** Public URL via Vercel global CDN  
 - **Client:** JMeter running on local machine (LAN)  
 - **Monitoring Tools:** Apache JMeter  
