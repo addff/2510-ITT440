@@ -71,17 +71,14 @@ vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report 
 ## 📊 Raw Test Result Output (Example)
 ```json
 {
-  "latencies": { 
-    "mean": 32677327, 
-    "95th": 39475471, 
-    "99th": 105399035 
-  },
-  "requests": 9600,
-  "rate": 80.00685605418481,
-  "throughput": 79.98541959117176,
-  "success": 1,
-  "status_codes": { "200": 9600 },
-  "errors": []
+    "rate": 10,
+    "p99": 509,
+    "errors": 0,
+    "success": 300,
+    "min": 139,
+    "p95": 235,
+    "max": 912,
+    "mean": 173.69666666666666
 }
 ```
 
@@ -89,15 +86,33 @@ vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report 
 
 | **Metric Category** | **Specific Metric** | **Value** |
 |----------------------|---------------------|-----------|
-| **Requests** | Total Requests | 9600 |
-|  | Request Rate | 80.01 req/sec |
-|  | Throughput | 79.99 req/sec |
-| **Latencies** | Mean Latency | 32.68 ms |
-|  | 95th Percentile | 39.48 ms |
-|  | 99th Percentile | 105.40 ms |
+| **Requests** | Total Requests | 300 |
+|  | Request Rate | 10 req/sec |
+|  | Throughput | 10 req/sec |
+| **Latencies** | Mean Latency | 173.70 ms |
+|  | 95th Percentile | 235 ms |
+|  | 99th Percentile | 509 ms |
 | **Success Metrics** | Success Rate | 100% |
-|  | HTTP 200 Count | 9600 requests |
+|  | HTTP 200 Count | 300 requests |
 | **Error Analysis** | Error Set | No errors |
+
+## 🖼️ Generated Charts
+
+The test run produced charts saved in the `python_charts/` directory. You can open these PNG files to view visual summaries:
+
+- `python_charts/response_time_distribution.png` — mean, p95, p99, min, max bars
+- `python_charts/success_rate.png` — success vs errors pie chart
+- `python_charts/performance_summary.png` — actual throughput vs target rate
+
+To regenerate charts after running tests:
+
+```powershell
+# Run PowerShell-based test (example)
+.\powershell_test.ps1
+
+# Generate charts from results
+c:\Python313\python.exe c:\tools\generate_charts.py
+```
 
 # 📊 Performance Analysis
 
@@ -113,16 +128,17 @@ vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report 
 
 | **Percentile** | **Response Time** | **Assessment** |
 |----------------|-------------------|----------------|
-| Mean | 32.68 ms | Excellent |
-| 95th | 39.48 ms | Outstanding |
-| 99th | 105.40 ms | Good |
-| Maximum | [Your Max Value] | [Your Assessment] |
+| Mean | 173.70 ms | Moderate |
+| 95th | 235 ms | Acceptable |
+| 99th | 509 ms | Noticeable tail latency |
+| Maximum | 912 ms | High tail latency; investigate if persistent |
 
 ## 🎯 Latency Performance
-- **Best Case:** 32.68 ms mean → Exceptional responsiveness
-- **95th Percentile:** <40 ms → 95% of users get sub-40ms responses
-- **99th Percentile:** ~105 ms → Acceptable tail latency under stress
-- **Consistency:** Minimal deviation across percentiles
+- **Best Case (observed):** 139 ms min → reasonable baseline
+- **Mean:** 173.70 ms → moderate response times at 10 RPS
+- **95th Percentile:** 235 ms → 95% of requests return within this bound
+- **99th Percentile:** 509 ms → tail latency is elevated for a small fraction of requests
+- **Consistency:** Some variability in tail; investigate occasional high latencies
 
 ## 📈 Data Transfer Efficiency
 - **Throughput Efficiency:** 99.98% success under sustained 80 req/sec
@@ -159,9 +175,11 @@ vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report 
 - **Consistent Performance:** Stable throughput and response times
 
 ### ⚡ Outstanding Performance Under Load
-- **Mean Latency:** 32.68 ms (Excellent under stress)
-- **95th Percentile:** 39.48 ms (Outstanding)
-- **High Efficiency:** 79.99/80 req/sec achieved
+**Observed Performance (10 RPS test):**
+- **Mean Latency:** 173.70 ms (moderate)
+- **95th Percentile:** 235 ms (acceptable)
+- **99th Percentile:** 509 ms (elevated tail latency)
+- **Throughput:** 10/10 req/sec achieved (100% of target)
 
 ### 📊 Stress Test Grade: **Excellent**
 - **Reliability:** 100% ✅
