@@ -10,7 +10,7 @@
 ## 🧩 Introduction
 
 This project focuses on **Stress Testing a web API** using **Artillery.io** to analyze its performance, stability, and reliability under extreme load conditions.
-The main goal is to identify the **breaking point** of the system — how much traffic it can handle before performance starts to degrade.
+The main goal is to identify the **breaking point** of the system , how much traffic it can handle before performance starts to degrade.
 
 Stress testing helps developers and organizations ensure that the system can withstand unexpected spikes in user requests and still maintain acceptable performance levels.
 
