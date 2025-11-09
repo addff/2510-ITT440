@@ -73,45 +73,45 @@ Artillery was chosen for stress testing because it is lightweight, flexible, and
    
     Put the configuration below into file
 ```yaml
-config:
-  target: "https://pokeapi.co"        # Base URL of the API
-  phases:
-    - name: "Warm-up"
-      duration: 60                     # seconds
-      arrivalRate: 10                  # 10 new users per second
-    - name: "Moderate load"
-      duration: 60
-      arrivalRate: 30                  # 30 users/sec
-    - name: "Stress test"
-      duration: 90
-      arrivalRate: 60                  # 60 users/sec, pushes beyond normal limits
-    - name: "Break point"
-      duration: 60
-      arrivalRate: 100                 # 100 users/sec, likely to cause failures
+  config:
+    target: "https://pokeapi.co"        # Base URL of the API
+    phases:
+      - name: "Warm-up"
+        duration: 60                     # seconds
+        arrivalRate: 10                  # 10 new users per second
+      - name: "Moderate load"
+        duration: 60
+        arrivalRate: 30                  # 30 users/sec
+      - name: "Stress test"
+        duration: 90
+        arrivalRate: 60                  # 60 users/sec, pushes beyond normal limits
+      - name: "Break point"
+        duration: 60
+        arrivalRate: 100                 # 100 users/sec, likely to cause failures
 
-  defaults:
-    headers:
-      Accept: "application/json"
+    defaults:
+      headers:
+        Accept: "application/json"
 
-scenarios:
-  - name: "Get Pokemon Info"
-    flow:
-      - get:
-          url: "/api/v2/pokemon/{{ id }}"
-    variables:
-      id:
-          - 1
-          - 4
-          - 7
-          - 25
-          - 150
-          - 200
-          - 250
-          - 400
-          - 500
+  scenarios:
+    - name: "Get Pokemon Info"
+      flow:
+        - get:
+            url: "/api/v2/pokemon/{{ id }}"
+      variables:
+        id:
+            - 1
+            - 4
+            - 7
+            - 25
+            - 150
+            - 200
+            - 250
+            - 400
+            - 500
 
    ```
-write and save the code 
+   write and save the code 
 
 3. **Run the Test**
 
