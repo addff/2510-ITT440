@@ -157,17 +157,3 @@ The performance evaluation confirms the API's robustness under moderate concurre
 
 ---
 
-##  **Repository Structure**
-
-```
-/artillery-performance-test
-│
-├── artillery.yml
-├── results/
-│   └── summary-report.txt
-├── screenshots/
-│   └── artillery-dashboard.png
-├── README.md  ← (This Report)
-└── video/
-    └── performance-demo.mp4
-```
