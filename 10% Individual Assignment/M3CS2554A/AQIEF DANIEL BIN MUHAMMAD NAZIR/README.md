@@ -124,8 +124,7 @@ All tested endpoints would return HTTP 200 OK with no failures (0%).
 
 The p95 latency would remain below 800 ms, demonstrating that caching successfully reduces load time.
 
-## The optimized environment would maintain stable responses even when serving multiple virtual users simultaneously.
-If these criteria were met, the WordPress configuration could be considered optimized and ready for heavier testing phases in future studies.
+The optimized environment would maintain stable responses even when serving multiple virtual users simultaneously.
 
 ---
 
