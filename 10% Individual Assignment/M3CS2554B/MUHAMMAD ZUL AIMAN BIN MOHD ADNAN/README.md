@@ -121,4 +121,5 @@ vegeta report -type=plot < results.bin
 
 This soak test successfully validated **JokeAPI’s** ability to maintain stability and performance under sustained load, providing high confidence for production integration and user-facing applications.
 
-<img width="2560" height="1477" alt="vegeta-plot" src="https://github.com/user-attachments/assets/5363c7b1-37c9-4a64-99df-eff400c72a08" />
+<img width="2557" height="914" alt="image" src="https://github.com/user-attachments/assets/304e3683-4f46-4edd-8a62-7f1173cb6212" />
+
