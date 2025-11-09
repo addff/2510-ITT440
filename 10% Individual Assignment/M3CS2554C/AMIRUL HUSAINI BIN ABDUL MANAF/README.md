@@ -66,7 +66,23 @@ It can be install in python whether in Windows or Linux operating system.
 <br>
 
 ## 🚀 Test Environment Setup and Methodology.
-<img width="602" height="317" alt="image" src="https://github.com/user-attachments/assets/e38af6f9-c438-4aea-9e9e-7af2bae86841" />
+
+After finish the installation, open the Locust web interface using the command
+
+  ```bash
+  locust -f yourscript.py -H https://dummyjson.com
+  ```
+
+<img width="696" height="164" alt="image" src="https://github.com/user-attachments/assets/7f40ca6f-2e52-412d-89ac-8d9cd30e463d" />  
+
+<br>
+
+<br>Then, the open the web interface at the given port number (eg. http://localhost:8089)
+
+<br>
+
+<img width="691" height="411" alt="image" src="https://github.com/user-attachments/assets/df28a326-a546-4cff-86eb-d87f92a54695" />
+
 
 Here, we can input these information:
 - number of users
@@ -77,12 +93,12 @@ Here, we can input these information:
 
 ## 📊 Raw Data Presentation
 
-<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/796a81b2-ed2a-4868-a964-0736791a0023" />
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/796a81b2-ed2a-4868-a964-0736791a0023" />
 
 <p align="justify"> Figure 1: Locust web interface displaying test execution and live statistics for 50 users. </p>
 <br> <br>
 
-<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/6c3066ca-39cd-43dc-80e9-e55f345c6384" />
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/6c3066ca-39cd-43dc-80e9-e55f345c6384" />
 
 <p align="justify"> Figure 2: Locust web interface displaying test execution and live statistics for 5 users. </p>
 <br> 
@@ -91,7 +107,7 @@ Here, we can input these information:
 
 To observe scalability, two tests were conducted. One with 5 concurrent users (light load) and another with 50 users (mid-heavy load).
 
-| Users     | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
+| Users      | Avg Time (ms)  | 95% Time (ms)  | Requests/s  | Failures  |
 |------------|----------------|----------------|-------------|-----------|
 | 5 Users    | 576            | 820            | 574         | 0         |
 | 50 Users   | 244            | 840            | 6601        | 0         |
@@ -139,3 +155,13 @@ When the user count increased from 5 to 50, the average response time changed fr
 
 <p>Below is the link for the demonstration video for the load testing<p> 
 https://www.youtube.com/watch?v=ky-4WzHMrb0&t=30s
+  
+<br>
+
+## 📚 References
+
+- https://locust.io/
+- https://www.geeksforgeeks.org/python/load-testing-using-locust/
+- https://dummyjson.com/
+
+  
