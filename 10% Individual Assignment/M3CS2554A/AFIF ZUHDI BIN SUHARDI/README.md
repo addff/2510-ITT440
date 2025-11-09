@@ -6,7 +6,7 @@
 ### - **Course:** ITT440
 ### - **Name:** AFIF ZUHDI BIN SUHARDI
 ### - **Matrix Number:** 2024757603
-### - **Youtube Video:** 
+### - **Youtube Video:** https://youtu.be/CBrPDaLlC5Y
 
 # 🔍 Introduction
 This project demonstrates **comprehensive stress testing** on RasoOnline.com using the **Vegeta load testing tool**.  
@@ -257,8 +257,9 @@ The RasoOnline website maintained exceptional performance and stability under st
 - **Tool:** Vegeta Load Testing Tool (https://github.com/tsenart/vegeta)
 - **Target Website:** https://rasoonline.com/
 - **Test Environment:** Windows PowerShell with Excel COM Automation
-- **YouTube Video:** []
+- **YouTube Video:** https://youtu.be/CBrPDaLlC5Y
 ```
+
 
 
 
