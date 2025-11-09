@@ -56,7 +56,7 @@ This API returns a list of users and is ideal for testing simultaneous GET reque
 | **Timer** | Synchronizing Timer (forces all users to send requests together) |
 | **Assertion** | Response Code = 200 |
 | **Listener** | Summary Report |
-| **System Used** | Windows 10, 8GB RAM, Intel Core i5 |
+| **System Used** | Windows 10, 8GB RAM, Ryzen 5 |
 | **Network** | Stable 50 Mbps Internet connection |
 
 ---
