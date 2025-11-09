@@ -8,12 +8,12 @@
 
 **CLASS:** CDCS2554C
 
-**TITLE:**  LOAD TESTING USING LOCUST TO WEBSITE HTTPS://DUMMYJSON.COM  
+**TITLE:**  LOAD TESTING USING LOCUST TO WEBSITE HTTPS://DUMMYJSON.COM
 <br>
 
 ## **INTRODUCTION TO WEB APPLICATION PERFORMANCE TESTING & ANALYSIS**
 <p align="justify">
-Web application performance testing is a type of non-functional testing that evaluates the behavior, stability, speed, and scalability of a web application under various workloads and conditions. It aims to identify performance bottlenecks and ensure the application can handle expected user loads while providing a positive user experience. </p>
+Web application performance testing is a type of non-functional testing that evaluates the behavior, stability, speed, and scalability of a web application under various workloads and conditions. It aims to identify performance bottlenecks and ensure the application can handle expected user loads while providing a positive user experience.</p>
 <br>
 
 ## 💡 Testing Environment & Objective
@@ -25,6 +25,7 @@ This experiment was performed in a Linux environment, specifically Kali Linux, w
 
 ### Objective
 The main goal of this testing is to assess the performance and stability of the DummyJSON web API under concurrent user load using Locust load testing tool.
+
 <br>
 
 ## 🧰 Tool Selection : LOCUST
@@ -32,7 +33,7 @@ The main goal of this testing is to assess the performance and stability of the 
 <img width="500" height="188" alt="image" src="https://github.com/user-attachments/assets/02b93a21-34ec-4e25-b89e-3d1b4e581633" />  
 
 <p align="justify">
-Locust is an open-source, Python-based load testing tool designed for performance testing of web applications and APIs. It allows users to define the behavior of virtual users using standard Python code, offering flexibility and extensibility compared to tools relying on graphical user interfaces or domain-specific languages. </p>
+Locust is an open-source, Python-based load testing tool designed for performance testing of web applications and APIs. It allows users to define the behavior of virtual users using standard Python code, offering flexibility and extensibility compared to tools relying on graphical user interfaces or domain-specific languages.</p>
 
 It can be install in python whether in Windows or Linux operating system.
 - For Windows: can install at the website https://locust.io/
@@ -75,7 +76,8 @@ Here, we can input these information:
 <br>
 
 ## 📊 Raw Data Presentation
-<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/1ca721cb-b481-486f-9f35-132db27810bb" />  
+
+<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/796a81b2-ed2a-4868-a964-0736791a0023" />
 
 <p align="justify"> Figure 1: Locust web interface displaying test execution and live statistics for 50 users. </p>
 <br> <br>
@@ -85,16 +87,19 @@ Here, we can input these information:
 <p align="justify"> Figure 2: Locust web interface displaying test execution and live statistics for 5 users. </p>
 <br> 
 
-### Result Summary Table
-| Endpoint        | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
-|-----------------|---------------|---------------|-------------|-----------|
-| /products       |        93.68       |        570       |       4.1      |     0     |
-| /products/[id]  |        88.78       |        480       |       11.4     |     0     |
-| /posts          |        548.89      |        1600      |       7.7      |     0     |  
+## 📈 Comparison Test (5 vs 50 Users)
 
+To observe scalability, two tests were conducted. One with 5 concurrent users (light load) and another with 50 users (mid-heavy load).
 
-This is the web interface of the LOCUST that is easier to run and monitor. 
-<br><br>
+| Users     | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
+|------------|----------------|----------------|-------------|-----------|
+| 5 Users    | 576            | 820            | 574         | 0         |
+| 50 Users   | 244            | 840            | 6601        | 0         |
+
+<p align="justify">
+When the user count increased from 5 to 50, the average response time changed from  576 ms to 260 ms, while the 95th percentile response time reached 840 ms. This shows that as concurrent user load increases, the API experiences higher latency but remains stable without any failures.
+</p>
+
 
 ## 📝 Interpretation of Results and Identified Bottlenecks
 
@@ -122,18 +127,15 @@ This is the web interface of the LOCUST that is easier to run and monitor.
 
 - Introduce asynchronous request handling for better concurrency.
 
-- Use distributed Locust workers for large-scale testing.
-
 - Perform stress testing with higher user counts (100+ users).
 <br> 
 
-## Conclusion
+## 🔖 Conclusion
 
-<p align="justify"> In conclusion, conducting load testing using Locust provided valuable insights into API performance behavior under concurrent user loads. The experiment showed how system responsiveness changes with increasing traffic and helped identify potential areas for optimization. Overall, the process was both educational and enjoyable, enhancing my understanding of performance analysis and system scalability. </p>
-<br> 
+<p align="justify"> To sum up, load testing with Locust provided helpful data on the behavior of API performance under concurrent user loads.  The experiment assisted in finding possible areas for optimization and demonstrated how system responsiveness changes with increasing traffic.  Overall, it was an interesting and educational exercise that improved my knowledge of system scalability and performance analysis. </p>
+<br>
 
 ## Demonstration Video
-Below is the link for the demonstration video for the load testing 
+
+<p>Below is the link for the demonstration video for the load testing<p> 
 https://www.youtube.com/watch?v=ky-4WzHMrb0&t=30s
-
-
