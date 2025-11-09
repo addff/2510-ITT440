@@ -73,25 +73,42 @@ Artillery was chosen for stress testing because it is lightweight, flexible, and
      
    ```yaml
    config:
-     target: "https://pokeapi.co/api/v2"
-     phases:
-       - duration: 60
-         arrivalRate: 10
-         name: "Warm up"
-       - duration: 60
-         arrivalRate: 30
-         name: "Moderate load"
-       - duration: 90
-         arrivalRate: 50
-         name: "Stress test"
-       - duration: 60
-         arrivalRate: 100
-         name: "Break point"
-   scenarios:
-     - name: "Get Pokemon Info"
-       flow:
-         - get:
-             url: "/pokemon/1"
+  target: "https://pokeapi.co"        # API base URL
+  phases:
+    - duration: 60                    # Phase 1: Warm-up (normal load)
+      arrivalRate: 10                 # 10 new users per second
+      name: Warm up
+    - duration: 60                    # Phase 2: Increased load
+      arrivalRate: 30                 # 30 users/sec
+      name: Moderate load
+    - duration: 90                    # Phase 3: High load (stress)
+      arrivalRate: 60                 # 60 users/sec - pushes beyond limit
+      name: Stress test
+    - duration: 60                    # Phase 4: Extreme load (break point)
+      arrivalRate: 100                # 100 users/sec to cause failure
+      name: Break point
+
+  defaults:
+    headers:
+      Accept: "application/json"
+
+scenarios:
+  - name: "Get Pokemon Info"
+    flow:
+      - get:
+          url: "/api/v2/pokemon/{{ id }}"
+    variables:
+      id:
+        - 1
+        - 4
+        - 7
+        - 25
+        - 150
+        - 200
+        - 250
+        - 400
+        - 500
+        - 1000
    ```
     write and save the code 
 4. **Run the Test**
