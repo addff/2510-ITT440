@@ -47,6 +47,8 @@ vegeta attack -targets=targets.txt -rate=50 -duration=30s > results.bin
 vegeta report < results.bin
 vegeta report -type=json < results.bin > jokeapi_metrics.json
 vegeta report -type=plot < results.bin
+vegeta plot -title "result" results.bin > results.html
+results.html
 ```
 
 ### 📊 Performance Test Summary
