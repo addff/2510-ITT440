@@ -9,6 +9,9 @@
 
 ## 🧩 Introduction
 
+   <img width="1024" height="277" alt="image" src="https://github.com/user-attachments/assets/4d351fb5-5bc2-4d1f-85f7-942a62064738" />
+
+
 This project focuses on **Stress Testing a web API** using **Artillery.io** to analyze its performance, stability, and reliability under extreme load conditions.
 The main goal is to identify the **breaking point** of the system , how much traffic it can handle before performance starts to degrade.
 
@@ -24,6 +27,12 @@ Stress testing helps developers and organizations ensure that the system can wit
 * To document findings using **data, charts, and summaries** for future optimization.
 
 ---
+
+🧪 Why Artillery for Stress Testing
+
+Artillery was chosen for stress testing because it is lightweight, flexible, and easy to use. It can simulate realistic user traffic, identify performance bottlenecks, and generate clear reports. Its support for multiple protocols and integration with the Artillery Cloud Dashboard makes it ideal for analyzing system performance efficiently.
+
+--
 
 ## 🧰 Tool Selection
 
