@@ -9,7 +9,7 @@
 
 ## 🧩 Introduction
 
-   <img width="1024" height="277" alt="image" src="https://github.com/user-attachments/assets/4d351fb5-5bc2-4d1f-85f7-942a62064738" />
+   <img width="1024" height="277" alt="image" src="https://github.com/user-attachments/assets/4d351fb5-5bc2-4d1f-85f7-942a62064738" n/>
 
 
 This project focuses on **Stress Testing a web API** using **Artillery.io** to analyze its performance, stability, and reliability under extreme load conditions.
