@@ -197,5 +197,11 @@ Based on the results, the performance threshold of the FakeStoreAPI appears to b
 ---
 ## 🎥 Demonstration Video
 Below is the link for the demonstration video for the load testing  
-https://youtu.be/k5N3uuRyptU?si=Bwy-XnpSgZuY4_R7
+https://youtu.be/k5N3uuRyptU?si=Bwy-XnpSgZuY4_R7  
+
+## 📔 References  
+Grafana Labs. (n.d.). Grafana k6 | Open source load testing tool. Retrieved November 9, 2025, from https://grafana.com/oss/k6/  
+Moradian, M. (2019, June 17). Beginner’s guide to load testing with k6 [Blog post]. Medium. https://medium.com/swlh/beginners-guide-to-load-testing-with-k6-85ec614d2f0d  
+Grafana Labs. (2021, August 26). How to do performance testing with k6 [Video]. YouTube. https://youtu.be/ghuo8m7AXEM  
+
 
