@@ -36,6 +36,20 @@ The experiment used Siege because this open-source tool can easily handle hundre
 
 ---
 
+## STEP OF TESTING
+
+| Step | Description |
+|---------|-----------|
+| Step 1: Launch the Flask Server  | Local web application was running using the command python3 app.py. This is the simulated Liquipedia.net server locally on http://127.0.0.1:5000|
+| Step 2: Verify web routes | Open the browser and visit the following URLs: http://localhost:5000/ `http://localhost:5000/dota2, `http://localhost:5000/valorant to verify each page run smoothly before testing|
+| Step 3: Prepare URL File | Create a text file named urls.txt containing the list of target URLs for the stress test. Example: `http://localhost:5000/ , `http://localhost:5000/dota2 , http://localhost:5000/valorant |
+| Step 4: Run Initial Low-Load Test | Execute siege -c 10 -t 1M http://localhost:5000/ to perform a one-minute test with 10 concurrent users. This provides a testing for normal performance. |
+| Step 5: Run Medium-Load Test | Increase the concurrency to 50 users using the command siege -c 50 -t 1M -f urls.txt. Observe how the system handles moderate simultaneous requests. |
+| Step 6: Run High-Load Test | Perform a high concurrency test by increasing to 200 users using siege -c 200 -t 1M -f urls.txt. Monitor CPU, memory, and latency impact using htop during the test. |
+| Step 7: Collect and Save Logs| Siege automatically saves results to the log file located in /var/log/siege.log. Copy the data for further analysis and record transaction rate, throughput, and average response time. |
+| Step 8: Analyze Test Results | Use Pandas in Python to read and summarize data, then Matplotlib to visualize response time trends against concurrency levels. |
+| Step 9: Interpret the Findings | Compare the results from low, medium, and high concurrency tests to determine how server performance changes with increasing user load |
+| Step 10: Summarize and Document | Compile all observations, metrics, graphs, and conclusions into the final report or GitHub README for submission and presentation |
 
 ## Target Web Application (Liquipedia - Local Flask App)
 
