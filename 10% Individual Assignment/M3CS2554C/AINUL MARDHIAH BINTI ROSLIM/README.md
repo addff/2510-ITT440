@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/27b67417-2968-4809-aaa3-82fc21498634" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
+
 # 🔥Can It Handle the Heat? A Load Test Article by Ainul's Network Programming 101 ✨
 
 ## 🎯 Executive Summary: Gatling Load Test Baseline
