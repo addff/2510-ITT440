@@ -99,11 +99,19 @@ scenarios:
       - get:
           url: "/api/v2/pokemon/{{ id }}"
     variables:
-      id: [1, 4, 7, 25, 150, 200, 250, 400, 500]
-
-    write and save the code 
+      id:
+          - 1
+          - 4
+          - 7
+          - 25
+          - 150
+          - 200
+          - 250
+          - 400
+          -500
 
    ```
+write and save the code 
 
 3. **Run the Test**
 
