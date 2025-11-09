@@ -102,6 +102,7 @@ The experiment used Liquipedia as reference because Liquipedia is a well-known e
 | 50 | 0.31 |  149.78 |
 | 100 | 0.32 |  296.15 |
 
+
 The stress test results show that the local Flask server simulated liquipedia.net handled all requests successfully because all test has 100% success rate across all concurrency levels. Firstly, 10 concurrent users has 
 the average response time was 0.27 seconds with a transaction rate of 36.71 transactions per second. This show that the system was stable under light load. Next, concurrency increased to 50 users, the average response 
 time slightly to 0.31 seconds and the transaction rate increased to 149.78 trans/sec. So, the server efficiently handled more requests without a significant slowdown. At 100 concurrent users, the average response time 
