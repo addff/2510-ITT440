@@ -50,19 +50,6 @@ The test plan in JMeter consisted of:
 
 ---
 
-## 📊 4. Results Summary
-| Page | Response Time (Start) | Response Time (End) | Observation |
-|------|-----------------------|---------------------|--------------|
-| **Main Page** | 1400 ms | 1100 ms | Stable performance |
-| **Login Page** | 900 ms | 900 ms | Consistent and efficient |
-| **Service Page** | 4100 ms | 5000 ms | Increased response time – potential bottleneck |
-
-**Average Throughput:** Stable  
-**Error Rate:** None detected  
-**Performance Trend:** Gradual degradation under heavy load, especially on service page.
-
----
-
 ## 🧾 5. Sample Output Data
 
 ### 🖼️ a. Response Time Graph
@@ -85,6 +72,19 @@ The test plan in JMeter consisted of:
 ![Graph Results](images/graph_results.png)
 
 > The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress.
+
+---
+
+## 📊 4. Results Summary
+| Page | Response Time (Start) | Response Time (End) | Observation |
+|------|-----------------------|---------------------|--------------|
+| **Main Page** | 1400 ms | 1100 ms | Stable performance |
+| **Login Page** | 900 ms | 900 ms | Consistent and efficient |
+| **Service Page** | 4100 ms | 5000 ms | Increased response time – potential bottleneck |
+
+**Average Throughput:** Stable  
+**Error Rate:** None detected  
+**Performance Trend:** Gradual degradation under heavy load, especially on service page.
 
 ---
 
