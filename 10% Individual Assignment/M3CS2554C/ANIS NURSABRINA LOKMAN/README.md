@@ -1,9 +1,9 @@
-#                                                                                    🧬 WEB PERFORMANCE TESTING 🧬
+# 🧬 WEB PERFORMANCE TESTING 🧬
 
 
 **Name:** Anis Nursabrina Lokman  
 **Student ID:** 2025900087  
-**Group:** M3CDCS2554C
+**Group:** 4C
 **Course Code:** ITT440 - Network Programming  
 **Tool Used:** Apache JMeter  
 **Testing Type:** Stress Testing  
@@ -11,13 +11,13 @@
  
 
 
-## 🧰 1. Objective
+## 🧰 Objective
 The objective of this stress test is to evaluate the performance, stability, and breaking point of the Moodle website when subjected to a heavy number of concurrent users.  
 This test aims to identify bottlenecks, response delays, and potential resource exhaustion when the server is under maximum stress.
 
 
 
-## ⚙️ 2. Test Configuration
+## ⚙️ Test Configuration And Methadology
 | Configuration | Description |
 |----------------|--------------|
 | **Tool** | Apache JMeter 5.6.3 |
@@ -30,7 +30,7 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 
 ---
 
-## 🧩 3. Test Plan Setup
+## 🧩 Test Plan Setup
 The test plan in JMeter consisted of:
 - A **Thread Group** configured with 300 users, simulating high-traffic access to the Moodle website.  
 - **Three HTTP Samplers** to simulate requests:
@@ -45,9 +45,9 @@ The test plan in JMeter consisted of:
 
 ---
 
-## 🧾 5. Sample Output Data
+## 🧾 Sample Output Data
 
-### 🖼️ a. Response Time Graph
+### 🖼️ Response Time Graph
 ![Response Time Graph](images/response_time_graph.png)
 
 > The graph shows response times for each request during the 30-second stress test.  
@@ -55,7 +55,7 @@ The test plan in JMeter consisted of:
 
 ---
 
-### 🖼️ b. Summary Report Output
+### 🖼️ Summary Report Output
 ![Summary Report](images/summary_report.png)
 
 > The summary report lists the average, min, max response times, number of samples, and throughput values.  
@@ -63,14 +63,14 @@ The test plan in JMeter consisted of:
 
 ---
 
-### 🖼️ c. Graph Results Viewer
+### 🖼️ Graph Results Viewer
 ![Graph Results](images/graph_results.png)
 
 > The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress.
 
 ---
 
-## 📊 4. Results Summary
+## 📊 Results Summary
 | Page | Response Time (Start) | Response Time (End) | Observation |
 |------|-----------------------|---------------------|--------------|
 | **Main Page** | 1400 ms | 1100 ms | Stable performance |
@@ -83,7 +83,7 @@ The test plan in JMeter consisted of:
 
 ---
 
-## 🔍 6. Analysis
+## 🔍 Analysis
 The stress test revealed that the Moodle website could maintain stable performance for basic operations (main and login pages) even under 100 concurrent users.  
 However, as load persisted, the service page experienced a noticeable increase in response time from **4.1 seconds to 5.0 seconds**, indicating resource exhaustion or server-side bottlenecks.
 
@@ -91,7 +91,7 @@ This behavior suggests that Moodle’s heavier modules require more server proce
 
 ---
 
-## 🧠 7. Interpretation
+## 🧠 Interpretation
 | Observation | Interpretation |
 |--------------|----------------|
 | Stable response for login & main pages | Server handles light operations efficiently |
@@ -101,7 +101,7 @@ This behavior suggests that Moodle’s heavier modules require more server proce
 
 ---
 
-## 💡 8. Recommendations
+## 💡 Recommendations
 1. Optimize backend queries or add caching for the service module.  
 2. Increase memory and CPU allocation for the web server.  
 3. Implement load balancing for high-traffic environments.  
@@ -109,7 +109,7 @@ This behavior suggests that Moodle’s heavier modules require more server proce
 
 ---
 
-## 📈 9. Conclusion
+## 📈 Conclusion
 The Moodle demo website performed reliably under moderate load but showed signs of degradation as the number of users increased.  
 Response times remained stable for lighter requests but rose significantly for resource-intensive operations, confirming a performance bottleneck under stress conditions.  
 
@@ -117,7 +117,7 @@ The test successfully identified the website’s performance limit and provided 
 
 ---
 
-## 👩‍💻 10. Version Verification
+## 👩‍💻 Version Verification
 To confirm JMeter installation and version:
 
 ```bash
