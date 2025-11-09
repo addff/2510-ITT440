@@ -101,5 +101,6 @@ Users perform a typical workflow:
    - Loop Count: `10`
 4. Save the .jmx file
 5. Run the test in **non-GUI mode** for performance (make sure the directory has been changed in the terminal):
-   '''
+   ```
    jmeter -n -t [jmx file] -l [results file]
+   
