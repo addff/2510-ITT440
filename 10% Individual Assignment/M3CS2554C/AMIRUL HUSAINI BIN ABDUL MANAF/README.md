@@ -104,11 +104,16 @@ This is the web interface of the LOCUST that is easier to run and monitor.
 ## 📖 Recommendations For Improvement 
 <p align="justify"> Although the DummyJSON API demonstrated stable behavior under moderate load, the following recommendations can help enhance performance and scalability if this were a production API: </p>
 
+- Conduct stress testing with higher user counts for scalability assessment.
+- Use caching for frequently accessed resources
+- Optimize database queries using indexing
+
 ## Conclusion
 
-To conclude, from the testing I learn about the load testing...very fun lol 🙂
+In a nutshell, conducting load testing using Locust provided valuable insights into API performance behavior under concurrent user load. The experiment was both educational and enjoyable, as it deepened my understanding of performance analysis and server optimization.
 
 ## Demonstration Video
-
+Below is the link for the demonstration video for the load testing 
+https://www.youtube.com/watch?v=ky-4WzHMrb0&t=30s
 
 
