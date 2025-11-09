@@ -8,10 +8,9 @@
 ---
 
 ## **💻Introduction**
-This project focuses on evaluating the performance of a public API, **Reqres.in**, using a load testing approach.  
-Load testing helps determine how well a system performs under specific user loads and ensures that it can handle concurrent requests without degradation.  
+The goal of this project is to employ load testing to assess the performance of the public API Reqres.in. Load testing guarantees that a system can manage concurrent requests without degradation and assists in determining how well it operates under particular user loads.
 
-The goal of this test is to measure **response time, throughput, and stability** when multiple users access the API simultaneously. The test was conducted using **BlazeMeter**, a cloud-based performance testing tool that provides easy configuration, monitoring, and reporting.
+Measuring response time, throughput, and stability when numerous users access the API at once is the aim of this test. BlazeMeter, a cloud-based performance testing application that offers simple configuration, monitoring, and reporting, was used to conduct the test.
 
 ---
 
@@ -26,7 +25,7 @@ The project aims to:
 **Endpoint tested:**
 GET https://reqres.in/api/users?page=2
 
-This endpoint was selected because it returns a paginated list of user data in JSON format, making it ideal for performance testing as it involves real HTTP request–response cycles. Since Reqres.in is designed for safe testing, it provides a stable and controlled environment for load testing without affecting any production systems.
+This endpoint was chosen because it contains actual HTTP request-response cycles and provides a paginated list of user data in JSON format, making it perfect for performance testing. Reqres.in offers a reliable and regulated environment for load testing without impacting any production systems because it is made for safe testing.
 
 **Screenshot of API response:**
 
@@ -40,11 +39,11 @@ This endpoint was selected because it returns a paginated list of user data in J
 The tool selected for this project is **BlazeMeter**, an online performance testing platform that supports **Apache JMeter** scripts and cloud-based execution.
 
 **Reasons for choosing BlazeMeter:**
-1. **Ease of Use:** Provides an intuitive interface for designing and executing tests without requiring local setup.
-2. **Scalability:** Supports testing from the cloud with hundreds of concurrent users.
-3. **Detailed Analytics:** Automatically generates detailed reports with response time percentiles, throughput, and error rates.
-4. **Integration Ready:** Compatible with CI/CD tools for automated testing.
-5. **Free Tier:** The free plan supports up to 50 concurrent users, which fits the project’s scope.
+1. **Ease of Use:** Offers a user-friendly interface for creating and running tests without the need for local setup.
+2. **Scalability:** Allows hundreds of concurrent users to test from the cloud.
+3. **Detailed Analytics:** Automatically produces comprehensive reports that include error rates, throughput, and response time percentiles.
+4. **Integration Ready:** Suitable for automated testing with CI/CD tools.
+5. **Free Tier:** Up to 50 concurrent users are supported under the free plan, which is appropriate given the scope of the project.
 
 BlazeMeter was selected for its simplicity, flexibility, and professional reporting capabilities.
 
@@ -65,7 +64,7 @@ BlazeMeter was selected for its simplicity, flexibility, and professional report
 | **Expected Response Code** | 200 OK |
 | **Success Criteria** | 95% of requests under 500 ms, error rate < 1% |
 
-During the test, BlazeMeter simulated 50 concurrent virtual users for 10 minutes, continuously sending GET requests to the Reqres API endpoint. Metrics such as response time, throughput, and errors were automatically collected through BlazeMeter’s reporting system.
+BlazeMeter continually sent GET queries to the Reqres API endpoint for 10 minutes at a time while simulating 50 concurrent virtual users. BlazeMeter's reporting system automatically captured metrics like response time, throughput, and errors.
 
 ---
 
@@ -110,12 +109,11 @@ The Reqres API maintained excellent performance under a steady load of 50 virtua
 - The **error rate** of 0% confirms the API handled the load flawlessly.
 
 ### **Scalability**
-The test results suggest that Reqres.in can easily scale to handle at least 50 concurrent users without performance degradation.  
-Future tests with higher VUs (e.g., 100–200) could help identify the breaking point where response time increases or errors appear.
+According to the test results, Reqres.in can simply scale to support at least 50 concurrent users without experiencing any performance issues. Higher VUs (e.g., 100–200) in future tests may assist determine the breaking point at which errors or an increase in response time occur.
 
 ### **Consistency**
-During the 10-minute test, response times remained stable with no spikes or slowdowns.  
-Throughput and bandwidth usage were consistent, indicating predictable and reliable system performance across all simulated users.
+There were no spikes or slowdowns in response times over the course of the 10-minute test.  
+All simulated users showed consistent throughput and bandwidth usage, indicating dependable and predictable system performance.
 
 ---
 
@@ -138,20 +136,20 @@ The collected data shows that the Reqres API is **highly stable and responsive**
 
 **Key Observations:**
 - Response times consistently under 120 ms.
-- No failed requests.
-- Throughput maintained at ~480 requests/second.
-- Bandwidth usage steady around 46 MB/s.
+- No requests were unsuccessful.
+- The throughput was kept at about 480 requests/second.
+- The average bandwidth use is 46 MB/s.
 
 **Interpretation:**
-These metrics demonstrate that Reqres.in’s backend infrastructure efficiently handles simultaneous GET requests.  
-The performance remains stable across all simulated users, which is a strong indicator of good backend optimization and API reliability.
+These numbers show how effectively Reqres.in's backend infrastructure manages many GET requests at once.  
+All simulated users get consistent performance, which is a clear sign of great backend optimisation and dependable APIs.
 
 ---
 
 ## **📁Conclusion and Improvement**
 
 ### **Conclusion**
-The BlazeMeter load test confirmed the excellent stability and performance of the Reqres API. With 50 virtual users and zero errors, the system maintained an average response time below 100 ms. It is showing outstanding efficiency and responsiveness.
+The Reqres API's outstanding performance and stability were validated by the BlazeMeter load test. The system maintained an average response time of less than 100 ms with 50 virtual users and no failures. It is demonstrating exceptional reactivity and efficiency.
 
 ### **Recommendations for Improvement**
 1. **Increase Load Scale:** Perform stress testing with more users to find the performance threshold.  
