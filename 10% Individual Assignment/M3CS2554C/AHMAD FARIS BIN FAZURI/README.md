@@ -103,7 +103,7 @@ Figure 1: Transaction Time Comparison
  
 Figure 2: Data transfered overviewed
 
-Faris Komander K036, [09/11/2025 23:58]
+
 * X-axis: Concurrent users (10, 50, 100)
 * Y-axis: Data transfered in MB
 
