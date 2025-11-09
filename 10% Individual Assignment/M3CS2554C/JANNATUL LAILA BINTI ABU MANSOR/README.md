@@ -61,7 +61,7 @@
     <li><p align="justify"><strong> Browser: Google Chrome </li></strong>
     <li><p align="justify"><strong> Connection Speed: Cable (5Mbps down, 1Mbps up). </li></strong>
     <li><p align="justify"><strong> Target Application URL: Public Joomla Demo Site https://launch.joomla.org/ </li></strong>
-    <li><p align="justify"><strong> Test Rounds: Three consecutive tests were performed to simulate sustained load and identify trends or degradation, labeled as Round 1, Round 2, and Round 3. </li></strong>
+    <li><p align="justify"><strong> Test Rounds: Three consecutive tests were performed to simulate sustained load and identify trends or degradation, <br> labeled as Round 1, Round 2, and Round 3. </li></strong>
     <li><p align="justify"><strong> Type of Test: Stress testing using performance trend tracking and repeated analysis </li></strong> </ol> </p>
  <hr>
  
@@ -168,9 +168,16 @@ ROUND 3 <BR>
 <hr>
 
 ## 9.0 IDENTIFICATION OF BOTTLENECKS AND FAILURE POINTS
+![photo_4_2025-11-09_20-52-00](
 
 <p align="justify"> The Waterfall Chart from the last stress test (Round 3), which is displayed below, provides a clear visual representation of the performance bottlenecks found in this analysis. The primary and secondary bottlenecks, as well as the possible server-side failure point, are directly demonstrated by this single chart.</p>
+ROUND 1 <BR>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/118e626f-94e7-426e-8adc-40bf266f776b" /> </p>
+ ROUND 2 <BR>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/0a3a0463-9182-4fa3-a09b-d0c2edd0f38f" /> </p>
+ ROUND 3 <BR>
  <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/4f919137-7e5d-4d14-8c8f-5ff92e71ebe9" /> </p>
+ 
 <p align="justify"> Waterfall Chart from Round 3 stress test, highlighting the key bottlenecks:
  <ul>
   <li> Large, blocking JavaScript. </li>
@@ -231,6 +238,10 @@ Even with higher load conditions, the Joomla demo site can provide a faster, mor
 ## PRESENTATION LINK
 
 https://youtu.be/DIq83zXCypQ?si=lYWstGQSQYtb2sEm
+<HR>
+<HR>
+<HR>
+
 
 <!-- [ <p align="justify">  </p> ]paragraph -->
 <!-- [ <ul> <li><p align="justify"><strong>  </li></strong>  </ul> ] bullet points --> 
