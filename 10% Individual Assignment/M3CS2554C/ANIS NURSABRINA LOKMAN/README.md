@@ -22,7 +22,7 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 |----------------|--------------|
 | **Tool** | Apache JMeter 5.6.3 |
 | **Target** | Moodle |
-| **Number of Threads (Users)** | 300 concurrent users |
+| **Number of Threads (Users)** | 300 for each page |
 | **Ramp-up Period** | 30 seconds |
 | **Loop Count** | 1 |
 | **Sampler Type** | HTTP Requests (Main page, Login page, Service page) |
@@ -65,7 +65,8 @@ The test plan in JMeter consisted of:
 ![Response Time Graph](./graph.png)
 
 > The graph shows response times for each request during the 30-second stress test.  
-> The main and login pages maintained stable performance, while the service page showed increasing response time.
+> The main page (black line) response time showing moderate stability.
+> The login page (red line) response time suggests good performance, efficient and lightweight.
 
 
 ---
@@ -77,35 +78,21 @@ The test plan in JMeter consisted of:
 | **Login Page** | ~800 ms | ~900 ms | Consistent and efficient |
 | **Service Page** | ~4200 ms | ~5900 ms | Increased response time – potential bottleneck |
 
-**Average Throughput:** Stable  
-**Error Rate:** None detected  
-**Performance Trend:** Gradual degradation under heavy load, especially on service page.
-
 ---
 
-## 🔍 Analysis
-The stress test revealed that the Moodle website could maintain stable performance for basic operations (main and login pages) even under 100 concurrent users.  
-However, as load persisted, the service page experienced a noticeable increase in response time from **4.1 seconds to 5.0 seconds**, indicating resource exhaustion or server-side bottlenecks.
-
-This behavior suggests that Moodle’s heavier modules require more server processing power or database optimization.
-
----
-
-## 🧠 Interpretation
-| Observation | Interpretation |
+## 🧠 Interpretation from summary report output
+| Metric | Observation |
 |--------------|----------------|
-| Stable response for login & main pages | Server handles light operations efficiently |
-| Gradual increase in service page response time | Indication of bottleneck and high CPU/DB usage |
-| Performance drops after ~80 concurrent users | Server nearing its stress threshold |
-| No major request failures | Application remained stable under stress |
+| Bottleneck | Service page is the slowest-performing page under load (Avg 5276 ms, Max 6683 ms) |
+| Best Performance | Login page are the fast and consistent even during stress (Avg 818 ms) |
+| System Stability | 0% error rate the server handled all request succesfully |
+| Throughput Trend | Stable overall handling 13.5 request/sec (total) |
+| Performance Issuse | High variation on Service Page |
 
 ---
 
-## 💡 Recommendations
-1. Optimize backend queries or add caching for the service module.  
-2. Increase memory and CPU allocation for the web server.  
-3. Implement load balancing for high-traffic environments.  
-4. Regularly perform stress and load tests to track performance trends.  
+## 💡 Recommendations for improvement
+The Moodle website can better handle higher loads with reduced response time by improving caching, optimizing the database, and upgrading hardware resource. These will optimise the prevention of bottlenecks and ensurea consistent user experience even heavy traffic periods.  
 
 ---
 
@@ -117,8 +104,5 @@ The test successfully identified the website’s performance limit and provided 
 
 ---
 
-## 👩‍💻 Version Verification
-To confirm JMeter installation and version:
+## 👩‍💻 Demonstration Video
 
-```bash
-"C:\Program Files\apache-jmeter-5.6.3\bin\jmeter.bat" --version
