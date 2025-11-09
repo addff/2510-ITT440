@@ -9,6 +9,7 @@
 **CLASS:** CDCS2554C
 
 **TITLE:**  LOAD TESTING USING LOCUST TO WEBSITE HTTPS://DUMMYJSON.COM
+
 <br>
 
 ## **INTRODUCTION TO WEB APPLICATION PERFORMANCE TESTING & ANALYSIS**
@@ -87,8 +88,9 @@ After finish the installation, open the Locust web interface using the command
 Here, we can input these information:
 - number of users
 - ramp up (users started per second)
-- host
+- host (target)
 - run time
+Then, click the START button and wait for the test to finish.
 <br>
 
 ## 📊 Raw Data Presentation
@@ -115,7 +117,7 @@ To observe scalability, two tests were conducted. One with 5 concurrent users (l
 <p align="justify">
 When the user count increased from 5 to 50, the average response time changed from  576 ms to 260 ms, while the 95th percentile response time reached 840 ms. This shows that as concurrent user load increases, the API experiences higher latency but remains stable without any failures.
 </p>
-
+<br>
 
 ## 📝 Interpretation of Results and Identified Bottlenecks
 
@@ -154,11 +156,9 @@ When the user count increased from 5 to 50, the average response time changed fr
 ## Demonstration Video
 
 <p>Below is the link for the demonstration video for the load testing<p> 
-https://www.youtube.com/watch?v=ky-4WzHMrb0&t=30s
-  
-<br>
+[https://www.youtube.com/watch?v=ky-4WzHMrb0&t=30s]
 
-## 📚 References
+## <br>📚 References
 
 - https://locust.io/
 - https://www.geeksforgeeks.org/python/load-testing-using-locust/
