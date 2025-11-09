@@ -90,7 +90,11 @@ The experiment used Liquipedia as reference because Liquipedia is a well-known e
 
 <img width="656" height="453" alt="image" src="https://github.com/user-attachments/assets/5233ab7a-a96f-4746-9dd5-8b7e70213605" />
 
-<img width="700" height="361" alt="image" src="https://github.com/user-attachments/assets/da999181-b9cb-4fce-b6c4-35d540b9988a" />
+<img width="700" height="361" alt="image" src="https://github.com/user-attachments/assets/da999181-b9cb-4fce-b6c4-35d540b9988a" />\
+
+<img width="624" height="447" alt="image" src="https://github.com/user-attachments/assets/2c4c2acf-91ee-4048-af53-1ed477f5c36e" />
+
+<img width="624" height="442" alt="image" src="https://github.com/user-attachments/assets/a7417df6-1eca-431a-8a59-e5169489db5c" />
 
 ---
 ## Result and Analysis
