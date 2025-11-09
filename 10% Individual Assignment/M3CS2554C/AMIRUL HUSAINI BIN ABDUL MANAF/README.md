@@ -1,5 +1,7 @@
 # Comprehensive Web Application Performance Testing & Analysis
 
+<br>
+
 **NAME:** AMIRUL HUSAINI BIN ABDUL MANAF
 
 **STUDENT ID:** 2025137953
@@ -7,11 +9,12 @@
 **CLASS:** CDCS2554C
 
 **TITLE:**  LOAD TESTING USING LOCUST TO WEBSITE HTTPS://DUMMYJSON.COM  
-
+<br>
 
 ## **INTRODUCTION TO WEB APPLICATION PERFORMANCE TESTING & ANALYSIS**
 <p align="justify">
 Web application performance testing is a type of non-functional testing that evaluates the behavior, stability, speed, and scalability of a web application under various workloads and conditions. It aims to identify performance bottlenecks and ensure the application can handle expected user loads while providing a positive user experience. </p>
+<br>
 
 ## 💡 Testing Environment & Objective
 
@@ -21,7 +24,8 @@ Web application performance testing is a type of non-functional testing that eva
 This experiment was performed in a Linux environment, specifically Kali Linux, which provides a stable and secure platform for running performance testing tools such as Locust.
 
 ### Objective
-The main goal of this testing is to assess the performance and stability of the DummyJSON web API under concurrent user load using Locust load testing tool.  
+The main goal of this testing is to assess the performance and stability of the DummyJSON web API under concurrent user load using Locust load testing tool.
+<br>
 
 ## 🧰 Tool Selection : LOCUST
 
@@ -51,13 +55,14 @@ It can be install in python whether in Windows or Linux operating system.
      ```bash
      locust --version
      ```
-     
+<br>     
 
 ## 🔑 Main Features of LOCUST
 
 - A user-friendly web-based UI.
 - Python-based scripting -> Using standard Python code, offering high flexibility and customizability for simulating complex user behaviors,
 - Real-time monitoring -> provides an intuitive, web-based user interface for real-time monitoring of test progress, displaying key metrics such as response times, error rates, and throughput.
+<br>
 
 ## 🚀 Test Environment Setup and Methodology.
 <img width="602" height="317" alt="image" src="https://github.com/user-attachments/assets/e38af6f9-c438-4aea-9e9e-7af2bae86841" />
@@ -67,9 +72,18 @@ Here, we can input these information:
 - ramp up (users started per second)
 - host
 - run time
+<br>
 
 ## 📊 Raw Data Presentation
-<img width="602" height="179" alt="image" src="https://github.com/user-attachments/assets/1ca721cb-b481-486f-9f35-132db27810bb" />  
+<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/1ca721cb-b481-486f-9f35-132db27810bb" />  
+
+<p align="justify"> Figure 1: Locust web interface displaying test execution and live statistics for 50 users. </p>
+<br> <br>
+
+<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/6c3066ca-39cd-43dc-80e9-e55f345c6384" />
+
+<p align="justify"> Figure 2: Locust web interface displaying test execution and live statistics for 5 users. </p>
+<br> 
 
 ### Result Summary Table
 | Endpoint        | Avg Time (ms) | 95% Time (ms) | Requests/s | Failures |
@@ -79,17 +93,15 @@ Here, we can input these information:
 | /posts          |        548.89      |        1600      |       7.7      |     0     |  
 
 
-<img width="630" height="164" alt="image" src="https://github.com/user-attachments/assets/8eba9e8a-824a-489c-8574-7145b32eee79" />  
-
-
 This is the web interface of the LOCUST that is easier to run and monitor. 
-
+<br><br>
 
 ## 📝 Interpretation of Results and Identified Bottlenecks
 
 <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/1e57b317-6aa0-4595-a8c1-026807ae3091" />  
 
 <p align="justify"> The DummyJSON API demonstrated stable and consistent performance under a 5-minute simulated load in Locust. All endpoints responded successfully without any failure or timeout. Although average response times were within acceptable limits, certain endpoints like `/products/[id]` showed higher response times at the upper percentiles, suggesting potential areas for backend optimization. </p>
+<br>
 
 ### ⚠️ Identified Bottlenecks
 
@@ -99,18 +111,26 @@ This is the web interface of the LOCUST that is easier to run and monitor.
 | 2   | Response time variability         | Aggregated avg = **244.18 ms**, 95th = **1900 ms** — large tail latency     | Backend processing spikes or uneven load       | Profile backend, optimize heavy queries, consider request queueing |
 | 3   | Increasing latency with users     | Latency rose during peak **RPS ≈ 23.2**                                     | Limited server resources or sync/blocking I/O  | Scale resources, use async handlers, or add load balancing        |
 
-
+<br>
 
 ## 📖 Recommendations For Improvement 
-<p align="justify"> Although the DummyJSON API demonstrated stable behavior under moderate load, the following recommendations can help enhance performance and scalability if this were a production API: </p>
+<p align="justify"> Although the DummyJSON API performed well under moderate load, the following improvements can further enhance scalability and performance if this were a production-level system: </p>
 
-- Conduct stress testing with higher user counts for scalability assessment.
-- Use caching for frequently accessed resources
-- Optimize database queries using indexing
+- Implement caching for frequently accessed endpoints.
+
+- Optimize database queries using proper indexing.
+
+- Introduce asynchronous request handling for better concurrency.
+
+- Use distributed Locust workers for large-scale testing.
+
+- Perform stress testing with higher user counts (100+ users).
+<br> 
 
 ## Conclusion
 
-In a nutshell, conducting load testing using Locust provided valuable insights into API performance behavior under concurrent user load. The experiment was both educational and enjoyable, as it deepened my understanding of performance analysis and server optimization.
+<p align="justify"> In conclusion, conducting load testing using Locust provided valuable insights into API performance behavior under concurrent user loads. The experiment showed how system responsiveness changes with increasing traffic and helped identify potential areas for optimization. Overall, the process was both educational and enjoyable, enhancing my understanding of performance analysis and system scalability. </p>
+<br> 
 
 ## Demonstration Video
 Below is the link for the demonstration video for the load testing 
