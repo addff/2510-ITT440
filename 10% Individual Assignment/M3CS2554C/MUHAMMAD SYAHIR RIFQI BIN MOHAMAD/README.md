@@ -67,7 +67,7 @@ Two test durations were executed against the same Vercel-hosted app:
 
 ---
 
-## 📊 Raw Data Comparison
+## Raw Data Comparison
 
 | Metric                  | Experiment 1 | Experiment 2 |
 |-------------------------|--------------|--------------|
@@ -82,7 +82,7 @@ Two test durations were executed against the same Vercel-hosted app:
 
 ---
 
-## 📈 Endpoint-Level APDEX
+## Endpoint-Level APDEX
 
 | Endpoint               | Exp. 1 APDEX | Exp. 2 APDEX |
 |------------------------|--------------|--------------|
@@ -129,7 +129,7 @@ Two test durations were executed against the same Vercel-hosted app:
 - Enable DNS caching in JMeter and consider using a CDN (e.g., Cloudflare) for DNS failover  
 - Implement retry logic for transient errors like timeouts and DNS failures
 
-### 📈 Proposed Next Steps
+### Proposed Next Steps
 
 Run a third SOAK test with:
 
