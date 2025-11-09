@@ -75,62 +75,51 @@ vegeta report -type=plot < results.bin
 | **Error Analysis**  | Error Set                 | None                 |
 
 
-🔍 Performance Insights
-🧱 System Stability
-✅ 100% success rate
+## 🔍 Performance Insights
 
-🧠 No degradation during sustained load
+### 🧱 System Stability
+- ✅ 100% success rate  
+- 🧠 No degradation during sustained load  
+- 🔄 Consistent performance throughout test duration  
 
-🔄 Consistent performance throughout test duration
+### ⚡ Response Time Consistency
+- 📉 Tight latency distribution  
+- 🎯 95% of requests under 400ms  
+- 📊 Balanced load handling with minimal variance  
 
-⚡ Response Time Consistency
-📉 Tight latency distribution
+### 🚀 Throughput Optimization
+- 📈 Near-perfect throughput matching  
+- ⏱ Low wait times = minimal system overhead  
+- 🧪 Efficient resource utilization  
 
-🎯 95% of requests under 400ms
+### 📈 Scalability Indicators
+- 🔁 Linear performance scaling  
+- 🧩 No bottlenecks or contention  
+- 🧠 Stable memory and connection handling  
 
-📊 Balanced load handling with minimal variance
+---
 
-🚀 Throughput Optimization
-📈 Near-perfect throughput matching
+## 🎯 Key Findings
 
-⏱ Low wait times = minimal system overhead
+### ✅ Exceptional Reliability
+- Perfect Success Rate: 100.00%  
+- Zero Errors  
+- Consistent Throughput  
 
-🧪 Efficient resource utilization
+### ⚡ Outstanding Performance
+- Rapid Response Times  
+- 95% of requests under 400ms  
+- Optimal Throughput Efficiency  
 
-📈 Scalability Indicators
-🔁 Linear performance scaling
+### 📊 Performance Grade
+- **Reliability**: ✅  
+- **Responsiveness**: ⚡  
+- **Consistency**: 📈  
+- **Throughput**: 🎯  
 
-🧩 No bottlenecks or contention
+---
 
-🧠 Stable memory and connection handling
+## ✅ Conclusion
 
-🎯 Key Findings
-✅ Exceptional Reliability
-
-Perfect Success Rate: 100.00%
-
-Zero Errors
-
-Consistent Throughput
-
-⚡ Outstanding Performance
-
-Rapid Response Times
-
-95% of requests under 400ms
-
-Optimal Throughput Efficiency
-
-📊 Performance Grade
-
-Reliability: ✅
-
-Responsiveness: ⚡
-
-Consistency: 📈
-
-Throughput: 🎯
-
-✅ Conclusion
-This soak test successfully validated JokeAPI’s ability to maintain stability and performance under sustained load, providing high confidence for production integration and user-facing applications.
+This soak test successfully validated **JokeAPI’s** ability to maintain stability and performance under sustained load, providing high confidence for production integration and user-facing applications.
 
