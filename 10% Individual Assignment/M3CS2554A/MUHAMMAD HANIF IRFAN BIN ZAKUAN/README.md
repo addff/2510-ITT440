@@ -97,7 +97,6 @@ The experiment used Liquipedia as reference because Liquipedia is a well-known e
 | Concurrency | Average Response Time (s) | Transaction Rate(trans/sec) |
 
 |---------|-----------|-----------|
-
 | 10 | 0.27 |  36.71 |
 | 50 | 0.31 |  149.78 |
 | 100 | 0.32 |  296.15 |
