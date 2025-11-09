@@ -115,25 +115,25 @@ Since this project focuses on a single-user-friendly test type (Smoke Test), k6�
 
 ---
 
-###💡 Hypothesis
+💡 Hypothesis
 
-## It was hypothesized that applying optimization plugins such as WP Super Cache and Autoptimize to the WordPress site would significantly improve its performance.
+It was hypothesized that applying optimization plugins such as WP Super Cache and Autoptimize to the WordPress site would significantly improve its performance.
 Specifically, the expectation was that:
 
-## All tested endpoints would return HTTP 200 OK with no failures (0%).
+All tested endpoints would return HTTP 200 OK with no failures (0%).
 
-## The p95 latency would remain below 800 ms, demonstrating that caching successfully reduces load time.
+The p95 latency would remain below 800 ms, demonstrating that caching successfully reduces load time.
 
 ## The optimized environment would maintain stable responses even when serving multiple virtual users simultaneously.
 If these criteria were met, the WordPress configuration could be considered optimized and ready for heavier testing phases in future studies.
 
 ---
 
-### 🎯 Conclusion
+🎯 Conclusion
 
-## The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
-## All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
-## This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
+The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
+All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
+This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
 
 ---
 
