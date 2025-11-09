@@ -21,8 +21,9 @@ This test helps identify how the application handles simultaneous requests, whet
 
 ---
 
+<img width="720" height="244" alt="image" src="https://github.com/user-attachments/assets/8a0042e0-e19f-4b52-83a3-80cd185d4d18" />
+
 ## 🧩 Tool Selection Justification
-<img width="720" height="244" alt="image" src="https://github.com/user-attachments/assets/656d8f1f-bb1f-4149-bdc9-af8c64c31d13" />
 **Apache JMeter** was chosen for this test because:
 - It is a **free, open-source, and industry-standard** performance testing tool.  
 - Supports a wide range of test types including **load**, **stress**, **spike**, and **concurrency** testing.  
