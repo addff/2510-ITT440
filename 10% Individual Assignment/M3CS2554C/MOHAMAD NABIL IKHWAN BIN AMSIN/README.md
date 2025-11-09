@@ -129,6 +129,4 @@ Results showed stable performance with an **average response time of 180–250 m
 The findings confirm that the ReqRes API maintained excellent stability and responsiveness under concurrent load, proving the effectiveness of JMeter for realistic performance testing.
 
 
-## 🧮 Visual Results
-Include your JMeter result screenshots here:
 
