@@ -199,7 +199,7 @@ Overall, both tests successfully demonstrated **Artillery’s capability** to me
 ## 🎥 YouTube Demo Link
 
 📺 **Watch my Artillery Soak & Spike Test execution and report analysis here:**  
-*()*
+*(https://youtu.be/N2pUHLQ1Kt0?si=AwFdzE3TWMdEfprh)*
 
 ---
 
