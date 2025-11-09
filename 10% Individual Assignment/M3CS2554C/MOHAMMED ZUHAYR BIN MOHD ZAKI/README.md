@@ -47,11 +47,19 @@ The objective is to evaluate the application’s performance under expected user
 
 ---
 
-## 🧠 Test Type
+## 🌐 Web pages that are tested
 
-| Type | Description | Reason |
-|------|--------------|--------|
-| **Load Test** | Simulates normal to moderately high concurrent user load. | To observe how the Laravel application performs under realistic conditions. |
+**Laravel default page**
+
+<img width="1920" height="1080" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/d454d8fd-6230-4f81-b327-09e776cbe0cf" />
+
+**Home page**
+
+<img width="1920" height="1080" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/164eddd9-82bc-4407-a210-006ec7bed529" />
+
+**Form page**
+
+<img width="1920" height="1080" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/e48e6e47-8132-4bad-a4d6-30670fa06599" />
 
 ---
 
