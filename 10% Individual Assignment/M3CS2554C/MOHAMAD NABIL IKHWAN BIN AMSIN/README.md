@@ -121,12 +121,17 @@ To further optimize performance under concurrency:
 ---
 
 ## 🧾 Summary
-
 This project demonstrates an **advanced concurrency test** using **Apache JMeter** on the public **ReqRes API**.  
 The test simulated **100 concurrent users** performing both **GET** and **POST** requests to evaluate the API’s ability to handle simultaneous traffic.  
 
 Results showed stable performance with an **average response time of 180–250 ms**, **zero errors**, and consistent throughput of around **12–15 requests per second**.  
 The findings confirm that the ReqRes API maintained excellent stability and responsiveness under concurrent load, proving the effectiveness of JMeter for realistic performance testing.
+
+---
+
+## 🧾 Video Demonstration
+https://youtu.be/d-I5MVYkadg
+
 
 
 
