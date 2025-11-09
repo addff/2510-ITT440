@@ -29,6 +29,13 @@ The main objectives of this project are as follows:
 4. **To establish a baseline performance indicator** before conducting more advanced testing stages.  
 5. **To confirm that the optimized environment meets the ITT440 performance evaluation standards** for speed and reliability.
 
+⚙️ Tool Justification
+
+Grafana k6 was selected as the performance testing tool because it offers a developer-friendly scripting environment, clear threshold metrics, and easy automation compared to heavier tools such as JMeter or LoadRunner.
+It allows tests to be written in JavaScript, making it easy to customize scenarios for modern web applications.
+k6 also provides real-time feedback in the console and the ability to export JSON summaries, which simplifies analysis and integration into GitHub documentation.
+Since this project focuses on a single-user-friendly test type (Smoke Test), k6’s lightweight runtime and simple threshold configuration (p(95)<800, rate<=0.01) make it the most efficient choice.
+
 ---
 
 ## 🧰 Test Environment
@@ -108,11 +115,25 @@ The main objectives of this project are as follows:
 
 ---
 
-## 🎯 Conclusion
+###💡 Hypothesis
 
-### The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
-### All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
-### This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
+## It was hypothesized that applying optimization plugins such as WP Super Cache and Autoptimize to the WordPress site would significantly improve its performance.
+Specifically, the expectation was that:
+
+## All tested endpoints would return HTTP 200 OK with no failures (0%).
+
+## The p95 latency would remain below 800 ms, demonstrating that caching successfully reduces load time.
+
+## The optimized environment would maintain stable responses even when serving multiple virtual users simultaneously.
+If these criteria were met, the WordPress configuration could be considered optimized and ready for heavier testing phases in future studies.
+
+---
+
+### 🎯 Conclusion
+
+## The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
+## All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
+## This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
 
 ---
 
