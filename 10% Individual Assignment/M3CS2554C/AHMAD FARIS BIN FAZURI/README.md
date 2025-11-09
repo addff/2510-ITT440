@@ -84,19 +84,22 @@ Stress test
 
 * 100 users test
   
-  <img width="655" height="330" alt="image" src="https://github.com/user-attachments/assets/12f990c0-4d20-4fd2-8b67-a93f1c938979" />
+  <img width="985" height="498" alt="image_2025-11-10_00-07-45" src="https://github.com/user-attachments/assets/ae3d34d2-21a9-42ac-b8b9-8bb34f7971eb" />
+
 
   
 ### 📊RAW DATA PRESENTATION
 
-<img width="572" height="397" alt="image" src="https://github.com/user-attachments/assets/246a55ef-41a4-4505-92c2-eee4268a098c" />
+<img width="858" height="597" alt="image_2025-11-10_00-07-59" src="https://github.com/user-attachments/assets/0eed4b0b-c664-4890-9b9a-e53342a12dac" />
+
   
 Figure 1: Transaction Time Comparison  
 
 * X-axis: Concurrent users (10, 50, 100)
 * Y-axis: Average transaction time in seconds
 
-<img width="668" height="487" alt="image" src="https://github.com/user-attachments/assets/4c044c87-77cf-431a-9298-91ef34061af0" />
+<img width="1004" height="732" alt="image_2025-11-10_00-08-51" src="https://github.com/user-attachments/assets/c5c1a830-f630-4be6-ac68-738a24fc5629" />
+
  
 Figure 2: Data transfered overviewed
 
@@ -104,7 +107,8 @@ Faris Komander K036, [09/11/2025 23:58]
 * X-axis: Concurrent users (10, 50, 100)
 * Y-axis: Data transfered in MB
 
-<img width="715" height="482" alt="image" src="https://github.com/user-attachments/assets/44daf786-a1b6-4765-b78c-163c9b83e396" />
+<img width="1070" height="721" alt="image_2025-11-10_00-09-05" src="https://github.com/user-attachments/assets/6cca14b2-deca-4dce-8d3f-8ac485e3bacb" />
+
 
 Figure 3: Transaction Results Under Stress
 
