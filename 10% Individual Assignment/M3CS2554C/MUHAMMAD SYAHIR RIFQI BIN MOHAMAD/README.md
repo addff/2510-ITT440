@@ -2,6 +2,8 @@
 
 **Author:** Muhammad Syahir Rifqi bin Mohamad Nizam
 
+**Class:** M3CS2554C
+
 **Student ID Number:** 2025395389 
 
 **Date:** October 2025
