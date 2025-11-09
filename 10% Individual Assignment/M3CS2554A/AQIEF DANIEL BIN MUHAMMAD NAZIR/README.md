@@ -113,3 +113,25 @@ The main objectives of this project are as follows:
 The Smoke Test successfully validated the functionality and responsiveness of the optimized WordPress website.
 All endpoints were accessible, error rates remained 0%, and latency performance consistently stayed below 800 ms, meeting all testing thresholds.
 This confirms that the optimization process effectively improved the overall reliability and readiness of the system for real-world usage.
+
+---
+
+## 📸 Test Evidence (Smoke Test Only)
+
+### 🖥️ k6 Smoke Test Execution
+<img width="1163" height="968" alt="smoke test execution" src="https://github.com/user-attachments/assets/62ad705f-8333-4d86-8e12-f14e1127283e" />
+
+### 📁 Project Folder Structure
+![Folder Structure](images/folder_structure.png)
+
+### 📄 Smoke Test Script
+![Smoke Script](images/smoke_script.png)
+
+### 📊 JSON Summary Export
+![Smoke Summary](images/smoke_summary.png)
+
+### 🌐 WordPress Endpoints Tested
+![WordPress Endpoints](images/endpoints.png)
+
+---
+
