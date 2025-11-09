@@ -160,6 +160,8 @@ https://medium.com/@iqzaardiansyah/load-testing-modern-backend-applications-with
 
 ## 10. Video Link
 
+https://youtu.be/gYWj2haQBcc?feature=shared
+
 
 
 
