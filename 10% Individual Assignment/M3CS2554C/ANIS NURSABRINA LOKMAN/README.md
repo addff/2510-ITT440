@@ -1,5 +1,6 @@
-# 🧬 WEB PERFORMANCE TESTING 🧬
-
+<div align="center">
+<h1 style="font-size:40px; font-weight:bold;">🧬 WEB PERFORMANCE TESTING 🧬</h1>
+</div>
 
 **Name:** Anis Nursabrina Lokman  
 **Student ID:** 2025900087  
@@ -20,9 +21,12 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 ## ⚙️ Test Configuration And Methadology
 <p align="center">
   <img src="./about.png" width="600">
+</p>
 
-| Configuration | Description |
-|----------------|--------------|
+<div align="center">
+
+| **Configuration** | **Description** |
+|--------------------|-----------------|
 | **Tool** | Apache JMeter 5.6.3 |
 | **Target** | Moodle |
 | **Number of Threads (Users)** | 300 for each page |
@@ -31,7 +35,8 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 | **Sampler Type** | HTTP Requests (Main page, Login page, Service page) |
 | **Listeners Used** | Graph Results, Summary Report, Response Time Graph |
 
-</p>
+</div>
+
 
 ---
 
