@@ -90,13 +90,27 @@
       <li><p align="justify"><strong> The original hypothesis was that, as a feature-rich Content Management System (CMS), the Joomla demo site would perform worse under stress, mainly due to slower Time to Interactive and higher server response times (TTFB) caused by JavaScript. </li></strong> <!-- 3 -->
      </ul>
     </li></strong>
-<BR> <p align="center">
-<img width="954" height="685" alt="BROWSER TIMING" src="https://github.com/user-attachments/assets/6946ea31-4153-4bb0-beee-28f6d5109818" /> </p>
-  
+<BR>
+ROUND 1 <BR>
 <p align="center">
-<img width="954" height="685" alt="PERFORMANCE" src="https://github.com/user-attachments/assets/39af9551-714b-4e48-a2a1-6fc7755aff6b" /> </p>
-    <li><p align="justify"><strong> Stress simulation: Despite GTMetrix's inability to support conventional multi-user stress tests, load was simulated through repeated runs and performance analysis under cached and uncached conditions. </li></strong> <!-- 3 -->
-   <li><p align="justify"><strong> Data Collection: Metrics were recorded from GTMetrix reports and Lighthouse audits. </li></strong>
+<img width="954" height="685" alt="BROWSER TIMING 1" src="https://github.com/user-attachments/assets/34484dd2-a943-4448-aca1-bec29c2323e2"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 1" src="https://github.com/user-attachments/assets/72729dab-469d-4af0-a57a-d19d035b6c03" /> </p>
+
+ROUND 2 <BR>
+<p align="center">
+<img width="954" height="685" alt="BROWSER TIMING 2" src="https://github.com/user-attachments/assets/b228f941-dbe0-4daf-ac0e-8b5cf8168e69"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 2" src="https://github.com/user-attachments/assets/bd7fb3df-d4fe-407a-a802-f370ed694ad1" /> </p>
+
+ROUND 3 <BR>
+<p align="center">
+<img width="954" height="685" alt="BROWSER TIMING 3" src="https://github.com/user-attachments/assets/08af0c5e-c7d9-42c8-b1a1-7892d3c0ce94"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 3" src="https://github.com/user-attachments/assets/557b4b48-9413-4964-bc85-354890fe78bb" /> </p> 
+
+   <li><p align="justify"><strong> Stress simulation: Despite GTMetrix's inability to support conventional multi-user stress tests, load was simulated through repeated runs and performance analysis under cached and uncached conditions. </li></strong> <!-- 3 -->
+   <li><p align="justify"><strong> Data Collection: Metrics were recorded from GTMetrix reports and Lighthouse audits. </li></strong> <!-- 4 -->
  </ol>
 </p>
 <hr>
@@ -111,9 +125,15 @@
  <li><p align="justify"><strong> Round 3: B (89%) </li></strong>
 </ul> 
 Following a slight improvement in Round 2, this regression in Round 3 indicates that the application's performance is brittle and susceptible to being adversely affected by repeated loads, even from a single user. </p>
-
+ROUND 1 <br>
 <p align="center">
-<img width="954" height="685" alt="GRADE" src="https://github.com/user-attachments/assets/462b02a3-78fc-4f1a-bc58-452e6ac86abd" /> </p>
+<img width="954" height="685" alt="GRADE 1" src="https://github.com/user-attachments/assets/7959a16a-0691-4c8e-ad40-6ab634244eca" /> </p>
+ROUND 2 <br>
+<p align="center">
+<img width="954" height="685" alt="GRADE 2" src="https://github.com/user-attachments/assets/88049193-3b0f-4070-a4c5-33c6ba0de7d6" /> </p>
+ROUND 3 <br>
+<p align="center">
+<img width="954" height="685" alt="GRADE 3" src="https://github.com/user-attachments/assets/91b98430-145b-4f03-b433-9f8eaf7c2998" /> </p>
 
 ### 7.2 Core web Vitals (User Experience Metrics)
 <p align="justify">
@@ -123,8 +143,17 @@ Following a slight improvement in Round 2, this regression in Round 3 indicates 
  <li><p align="justify"><strong> Regardless of load conditions, Cumulative Layout Shift (CLS) remained at a perfect 0 throughout all rounds, demonstrating exceptional visual stability. </li></strong>
 </ul> 
 </p>
+ROUND 1 <br>
 <p align="center">
-<img width="954" height="685" alt="WEB VITALS" src="https://github.com/user-attachments/assets/a982f35f-9ec2-4579-980b-c41427bd6d2b" /> </p>
+<img width="954" height="685" alt="WEB VITALS 1" src="https://github.com/user-attachments/assets/c2c3b76c-07bd-42c0-bd65-48aa0307bf78" /> </p>
+
+ROUND 2 <BR>
+<p align="center">
+<img width="954" height="685" alt="WEB VITALS 2" src="https://github.com/user-attachments/assets/e8c6ba37-7d9a-478a-8a48-283138cc60b7" /> </p>
+
+ROUND 3 <BR>
+<p align="center">
+<img width="954" height="685" alt="WEB VITALS 3" src="https://github.com/user-attachments/assets/52109649-97fb-400a-aa5a-ae2a54a183d0" /> </p>
 <hr>
 
 ## 8.0 RESULT INTERPRETATION
@@ -140,7 +169,14 @@ Following a slight improvement in Round 2, this regression in Round 3 indicates 
 
 ## 9.0 IDENTIFICATION OF BOTTLENECKS AND FAILURE POINTS
 
-<p align="justify"> 
+<p align="justify"> The Waterfall Chart from the last stress test (Round 3), which is displayed below, provides a clear visual representation of the performance bottlenecks found in this analysis. The primary and secondary bottlenecks, as well as the possible server-side failure point, are directly demonstrated by this single chart.</p>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/4f919137-7e5d-4d14-8c8f-5ff92e71ebe9" /> </p>
+<p align="justify"> Waterfall Chart from Round 3 stress test, highlighting the key bottlenecks:
+ <ul>
+  <li> Large, blocking JavaScript. </li>
+  <li> High volume of requests. </li>
+  <li> Large, unoptimized images. </li>
+ </ul>
 <ol>
  <li><p align="justify"><strong> Primary Bottleneck: Excessive and Blocking JavaScript </li></strong>
  <table>
@@ -177,8 +213,6 @@ Following a slight improvement in Round 2, this regression in Round 3 indicates 
  </table>
 </ol>
 </p>
-<p align="center">
-<img width="954" height="685" alt="REQUEST" src="https://github.com/user-attachments/assets/e537c371-0aab-468a-912d-7e398bbce802" /> </p>
 <hr>
 
 ## 10.0 SUMMARY
