@@ -116,7 +116,7 @@ This confirms that the optimization process effectively improved the overall rel
 
 ---
 
-## 📸 Test Evidence (Smoke Test Only)
+## 📸 Smoke Test
 
 ### 🖥️ k6 Smoke Test Execution
 <img width="1163" height="968" alt="smoke test execution" src="https://github.com/user-attachments/assets/62ad705f-8333-4d86-8e12-f14e1127283e" />
@@ -125,13 +125,13 @@ This confirms that the optimization process effectively improved the overall rel
 ![Folder Structure](images/folder_structure.png)
 
 ### 📄 Smoke Test Script
-![Smoke Script](images/smoke_script.png)
+<img width="510" height="767" alt="smoke test script" src="https://github.com/user-attachments/assets/c7d83adb-920a-4402-8669-12a57783b689" />
 
 ### 📊 JSON Summary Export
-![Smoke Summary](images/smoke_summary.png)
+<img width="993" height="315" alt="summary smoke test" src="https://github.com/user-attachments/assets/4e2dfa6f-6f62-4039-b641-335d25ce3951" />
 
 ### 🌐 WordPress Endpoints Tested
-![WordPress Endpoints](images/endpoints.png)
+<img width="1917" height="1078" alt="evidence localhost" src="https://github.com/user-attachments/assets/3900e702-57d5-44fc-833e-53ef1cfad607" />
 
 ---
 
