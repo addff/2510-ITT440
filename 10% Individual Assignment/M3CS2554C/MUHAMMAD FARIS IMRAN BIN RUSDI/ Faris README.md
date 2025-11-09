@@ -102,15 +102,15 @@ scenarios:
       id: [1, 4, 7, 25, 150, 200, 250, 400, 500]
 
     write and save the code 
-4. **Run the Test**
+
+   ```
+
+3. **Run the Test**
 
    ```bash
    artillery run stress-test.yml --record --key <API KeyS>
 
-
-   ```
-
-5. **View Results**
+4. **View Results**
 
    * In the terminal (real-time stats)
    * On [Artillery Cloud Dashboard](https://app.artillery.io/)
