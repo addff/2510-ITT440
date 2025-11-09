@@ -18,7 +18,9 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 
 
 ## ⚙️ Test Configuration And Methadology
-![Summary Report](./about.png)
+<p align="center">
+  <img src="./about.png" width="600">
+
 | Configuration | Description |
 |----------------|--------------|
 | **Tool** | Apache JMeter 5.6.3 |
@@ -28,6 +30,8 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 | **Loop Count** | 1 |
 | **Sampler Type** | HTTP Requests (Main page, Login page, Service page) |
 | **Listeners Used** | Graph Results, Summary Report, Response Time Graph |
+
+</p>
 
 ---
 
