@@ -88,6 +88,7 @@ Here, we can input these information:
 - ramp up (users started per second)
 - host (target)
 - run time
+  
 Then, click the START button and wait for the test to finish.
 <br>
 
