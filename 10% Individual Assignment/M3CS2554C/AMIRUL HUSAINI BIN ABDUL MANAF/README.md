@@ -35,10 +35,15 @@ The main goal of this testing is to assess the performance and stability of the 
 
 <p align="justify">
 Locust is an open-source, Python-based load testing tool designed for performance testing of web applications and APIs. It allows users to define the behavior of virtual users using standard Python code, offering flexibility and extensibility compared to tools relying on graphical user interfaces or domain-specific languages.</p>
+<br>
 
-It can be install in python whether in Windows or Linux operating system.
-- For Windows: can install at the website https://locust.io/
-  
+## 🔑 Main Features of LOCUST
+
+- A user-friendly web-based UI.
+- Python-based scripting -> Using standard Python code, offering high flexibility and customizability for simulating complex user behaviors,
+- Real-time monitoring -> provides an intuitive, web-based user interface for real-time monitoring of test progress, displaying key metrics such as response times, error rates, and throughput.
+<br>
+
 ### Installation Guide For Linux:
 
    - **First, update system package:** 
@@ -58,13 +63,6 @@ It can be install in python whether in Windows or Linux operating system.
      locust --version
      ```
 <br>     
-
-## 🔑 Main Features of LOCUST
-
-- A user-friendly web-based UI.
-- Python-based scripting -> Using standard Python code, offering high flexibility and customizability for simulating complex user behaviors,
-- Real-time monitoring -> provides an intuitive, web-based user interface for real-time monitoring of test progress, displaying key metrics such as response times, error rates, and throughput.
-<br>
 
 ## 🚀 Test Environment Setup and Methodology.
 
