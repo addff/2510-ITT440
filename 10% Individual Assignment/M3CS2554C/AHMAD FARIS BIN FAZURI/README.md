@@ -75,10 +75,12 @@ Stress test
 ### 🗂TEST RESULTS
 * 10 users test
   
-  <img width="650" height="332" alt="image" src="https://github.com/user-attachments/assets/32de3bde-5b63-4ffc-87f0-6d78415152ce" />
+  <img width="839" height="496" alt="image_2025-11-10_00-07-14" src="https://github.com/user-attachments/assets/07a746d0-13fa-4cd8-a58f-493ac6017e2a" />
+
 * 50 users test
   
-  <img width="640" height="329" alt="image" src="https://github.com/user-attachments/assets/21c5a4d3-db35-4b8c-826e-e45a197d7746" />
+  <img width="958" height="495" alt="image_2025-11-10_00-07-29" src="https://github.com/user-attachments/assets/c6e88643-68ee-4d46-9122-9ffcb86b632b" />
+
 
 * 100 users test
   
