@@ -113,7 +113,13 @@ The stress test results show that the local Flask server simulated liquipedia.ne
 
 ---
 ## Conclusion
-The stress testing experiment conducted with Siege clearly showed how server performance varies at different levels of user concurrency. The findings show that the local Flask server handled increasing concurrency more efficiently . From hypothesis, the average response time remained nearly constant (0.27 s to 0.32 s) even as concurrent users increased from 10 to 100. Similarly, the success rate stayed at 100% so there no requests failed under higher load. Moreover, the transaction rate (throughput) increased substantially with higher concurrency which from 36.71 trans/sec at 10 users to 296.15 trans/sec at 100 users. These results indicate that the server scales well under load by maintaining both responsiveness and reliability. Therefore, the hypothesis is not accepted by predicted slower responses and reduced throughput but the actual data demonstrates that this local Flask setup handles concurrent requests efficiently, achieving higher throughput without significant performance degradation.
+
+The stress testing experiment conducted with Siege clearly showed how server performance varies at different levels of user concurrency. The findings show that the local Flask server handled increasing concurrency more
+efficiently . From hypothesis, the average response time remained nearly constant (0.27 s to 0.32 s) even as concurrent users increased from 10 to 100. Similarly, the success rate stayed at 100% so there no requests 
+failed under higher load. Moreover, the transaction rate (throughput) increased substantially with higher concurrency which from 36.71 trans/sec at 10 users to 296.15 trans/sec at 100 users. These results indicate that 
+the server scales well under load by maintaining both responsiveness and reliability. Therefore, the hypothesis is not accepted by predicted slower responses and reduced throughput but the actual data demonstrates that 
+this local Flask setup handles concurrent requests efficiently, achieving higher throughput without significant performance degradation.
+
 ---
 
 
