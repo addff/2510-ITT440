@@ -272,7 +272,7 @@ This video provides a complete walkthrough of the **Comprehensive Web Applicatio
 ---
 
 ### ▶️ Watch the Presentation
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://youtu.be/PqRt-iVkirA)
+[![Watch the video](https://img.youtube.com/vi/PqRt-iVkirA/0.jpg)](https://youtu.be/PqRt-iVkirA)
 
 > 🔗 *Click the image above to open the full demonstration video on YouTube.*
 
