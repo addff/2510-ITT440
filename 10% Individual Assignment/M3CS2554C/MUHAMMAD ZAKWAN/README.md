@@ -124,4 +124,18 @@ https://youtu.be/w56v21HV2TE
 # 🗒️ CONCLUSION
 The [JSONPlaceholder](https://jsonplaceholder.typicode.com/) performs efficiently under normal load but shows signs of latency and instability under heavy load, highlighting the need for backend optimization and better load management.
 
+# 📔 REFERENCES
+- (2025). Youtu.be. https://youtu.be/6fqzZf5FLgg?si=C4oFtMNESvZN5mXJ
+- JSONPlaceholder - Fake online REST API for testing and prototyping. (n.d.). <br> Jsonplaceholder.typicode.com. https://jsonplaceholder.typicode.com/
+- Apache Software Foundation. (2019). Apache JMeterTM. Apache.org. https://jmeter.apache.org/
+- Ubuntu. (2019). Get Ubuntu | Download | Ubuntu. Ubuntu. https://ubuntu.com/download
+- GeeksforGeeks. (2024, February 14). How to Use JMeter for Performance and Load Testing? GeeksforGeeks. <br> https://www.geeksforgeeks.org/software-testing/how-to-use-jmeter-for-performance-and-load-testing/
+
+‌
+‌
+‌
+‌
+‌
+
+
 <h1 align="right">By: Muhammad Zakwan (CDCS2554C)</h1>
