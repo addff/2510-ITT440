@@ -1,7 +1,5 @@
 # 🔥 Web Application Soak Testing with Vegeta
 
-![Funny GIF](https://tenor.com/view/troll-face-gif-14876602961769273903)
-
 ---
 
 ## 📋 Assignment Details
