@@ -90,7 +90,11 @@ Why We Do Performance Testing
 
 ## Result of load Test where the number of users ramps up (Graph)
 
+Using Cloud Grafana
 ![Screenshot 2025-11-01 135811](https://github.com/user-attachments/assets/ac34b07e-99c3-4b13-9712-38170125a2c9)
+Using Local Grafana
+![st](https://github.com/user-attachments/assets/6cf0cdad-962d-4e00-8e2a-8c2da13eb463)
+
 
 
 ## 📊 Result of Stress Test (Table)
@@ -129,10 +133,11 @@ Why We Do Performance Testing
 
 ## Result of Stress Test (Graph)
 
-
-
-
+Using Cloud Grafana
 ![Screenshot 2025-11-01 133907](https://github.com/user-attachments/assets/92f2db85-f68e-482f-9f75-f0450f739807)
+Using Local Grafana
+![st](https://github.com/user-attachments/assets/178a9365-823f-44ea-81e6-83ce97d011f3)
+
 
 
 
