@@ -101,18 +101,18 @@ scenarios:
 | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------- |
 | **Total Requests Sent**            | 5,760      | Total number of HTTP requests executed during the test.                               |
 | **Requests per Second**            | ~30/sec    | Indicates stable throughput at moderate concurrency.                                  |
-| **Virtual Users Created**          | 960      | Number of concurrent simulated users.                                                 |
-| **Virtual Users Completed**        | 0     | Almost all users successfully completed their sessions.                               |
-| **Virtual Users Failed**           | 960          | Minimal failures, likely due to transient connection resets.                          |
-| **HTTP 4xx Errors (404)**          | 1920      | Most requests hit non-existent endpoint — indicates misconfiguration or invalid path. |
-| **Connection Errors (ECONNRESET)** | 960          | Occurred under heavy concurrency, minor network/socket resets.                        |
-| **Minimum Response Time**          | 15 ms     | Fastest response recorded.                                                            |
-| **Maximum Response Time**          | 82 ms   | Longest response observed during peak load.                                           |
-| **Average (Mean) Response Time**   | 17 ms     | Average response time remained well under 300 ms.                                     |
-| **95th Percentile (p95)**          | 49 ms     | 95% of requests completed in under 0.5 seconds.                                       |
-| **99th Percentile (p99)**          | 95 ms     | Small number of outlier requests during high concurrency.                             |
-| **Average Session Length**         | 174 ms   | Average duration per virtual user session.                                            |
-| **Downloaded Bytes**               | 68mb         | No response body due to 404 responses.                                                |
+| **Virtual Users Created**          | 960        | Number of concurrent simulated users.                                                 |
+| **Virtual Users Completed**        | 0          | Almost all users successfully completed their sessions.                               |
+| **Virtual Users Failed**           | 960        | Minimal failures, likely due to transient connection resets.                          |
+| **HTTP 4xx Errors (404)**          | 1920       | Most requests hit non-existent endpoint — indicates misconfiguration or invalid path. |
+| **Connection Errors (ECONNRESET)** | 960        | Occurred under heavy concurrency, minor network/socket resets.                        |
+| **Minimum Response Time**          | 15 ms      | Fastest response recorded.                                                            |
+| **Maximum Response Time**          | 82 ms      | Longest response observed during peak load.                                           |
+| **Average (Mean) Response Time**   | 17 ms      | Average response time remained well under 300 ms.                                     |
+| **95th Percentile (p95)**          | 49 ms      | 95% of requests completed in under 0.5 seconds.                                       |
+| **99th Percentile (p99)**          | 95 ms      | Small number of outlier requests during high concurrency.                             |
+| **Average Session Length**         | 174 ms     | Average duration per virtual user session.                                            |
+| **Downloaded Bytes**               | 68mb       | No response body due to 404 responses.                                                |
 
 ```
 
