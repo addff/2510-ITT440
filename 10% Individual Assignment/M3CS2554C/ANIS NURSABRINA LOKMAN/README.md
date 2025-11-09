@@ -1,85 +1,126 @@
-# 🧠 Web Perfomance Testing on JMeter
-* ANIS NURSABRINA LOKMAN 
-* 2025900087
-* ITT440 - NETWORK PROGRAMMING
 
-## 📘 1. Introduction
-This project focuses on **evaluating the performance of a Moodle-based web application** through **load testing** and **stress testing** using **Apache JMeter**.  
-The objective is to identify how the system behaves under normal, heavy, and extreme traffic conditions by measuring response time, throughput, and server stability.
+# 🧪 Stress Testing Report – Moodle Website
 
----
 
-## 💡 2. What is Load and Stress Testing?
 
-| Test Type | Description | Purpose |
-|------------|--------------|----------|
-| **Load Testing** | Simulates a specific number of concurrent users accessing the system to measure performance under multiple users. | Determines the maximum operating capacity of the system under normal conditions. |
-| **Stress Testing** |Test the robustness of the system under extreme load and varying data amounts. | Identifies performance bottlenecks, failure points, and recovery ability. |
+**Name:** Sabrina Lokman  
+**Student ID:** 202xxxxxxx  
+**Course Code:** ITTxxx – Web Performance Testing  
+**Tool Used:** Apache JMeter  
+**Testing Type:** Stress Testing  
+**Target Website:** Moodle (Demo Site)  
+**Date:** November 2025  
 
----
 
-## ⚙️ 3. Tool Selection
 
-![JMeter Logo](https://jmeter.apache.org/images/jmeter.png)
+## 🧰 1. Objective
+The objective of this stress test is to evaluate the performance, stability, and breaking point of the Moodle website when subjected to a heavy number of concurrent users.  
+This test aims to identify bottlenecks, response delays, and potential resource exhaustion when the server is under maximum stress.
 
-### 🧰 Apache JMeter
-**JMeter** is an open-source software testing tool developed  to load test functional behaviour and measure performance by Apache. It is widely used for testing web applications, APIs, and databases.
 
-#### 🔹 Reasons for Choosing JMeter:
-- Supports **HTTP/HTTPS** requests, ideal for testing Moodle web applications.
-- Can simulate **multiple virtual users** concurrently.
-- Provides **detailed reports** (response time, throughput, error %).
-- Compatible with **Windows, Linux, and macOS**.
-- Easy to integrate with **Moodle** for web/API testing.
 
-#### 🔹 Target Application:
-- **System Under Test (SUT):** Moodle (Learning Management System)
-- **URL:** `https://moodle.com/`
-- **Tested Modules:** Login Page, Product Page, Service Page.
+## ⚙️ 2. Test Configuration
+| Configuration | Description |
+|----------------|--------------|
+| **Tool** | Apache JMeter 5.6.3 |
+| **Target** | Moodle Online Learning Management System |
+| **Number of Threads (Users)** | 300 concurrent users |
+| **Ramp-up Period** | 30 seconds |
+| **Loop Count** | 1 |
+| **Sampler Type** | HTTP Requests (Main page, Login page, Service page) |
+| **Listeners Used** | Graph Results, View Results Tree, Summary Report, Response Time Graph |
 
 ---
 
-## 🧩 4. Test Environment and Configuration
-
-| Component | Specification |
-|------------|----------------|
-| **Testing Tool** | Apache JMeter 5.6.3 |
-| **Operating System** | Windows 11 (64-bit) |
-| **Target Server** | Moodle Web Application (Localhost) |
-| **Protocol Used** | HTTP / HTTPS |
-| **Thread Group** | 100 Virtual Users |
-| **Ramp-Up Period** | 30 seconds |
-| **Loop Count** | 5 iterations |
-
----
-
-## 🧪 5. Methodology
-
-1. **Setup JMeter:**
-   - Install Apache JMeter.
-   - Launch `jmeter.bat` (Windows) 
-   
-2. **Create Test Plan:**
-   - Add **Thread Group** → set 100 users, ramp-up 30 sec, loop 5.
-   - Add **HTTP Request Defaults** → set Moodle base URL.
-   - Add **HTTP Request Samplers** → e.g., `/login/index.php`, `/my/`, `/mod/assign/view.php`.
-   - Add **Listeners** → View Results Tree, Summary Report, Aggregate Graph.
-
-3. **Run Load Test:**
-   - Simulate 100 concurrent users logging in and navigating Moodle.
-   - Monitor average response time, throughput, and error rate.
-
-4. **Run Stress Test:**
-   - Gradually increase user load (e.g., 100 → 200 → 500 users).
-   - Observe server response degradation and possible failure points.
-
-5. **Capture Results:**
-   - Export data as `.jtl` or `.csv` file.
-   - Analyze graphs for **bottlenecks** or **server timeout**.
+## 🧩 3. Test Plan Setup
+The test plan in JMeter consisted of:
+- A **Thread Group** configured with 300 users, simulating high-traffic access to the Moodle website.  
+- **Three HTTP Samplers** to simulate requests:
+  1. Main Page (`https://moodle.com/`)
+  2. Login Page (`https://moodle.com/login/`)
+  3. Service Page (`https://moodle.com/services/`)
+- Several **Listeners** were added to collect and visualize the test data, including:
+  - View Results Tree
+  - Summary Report
+  - Graph Results
+  - Response Time Graph
 
 ---
 
-## 🧮 6. Example JMeter Test Script (Code Snippet)
+## 📊 4. Results Summary
+| Page | Response Time (Start) | Response Time (End) | Observation |
+|------|-----------------------|---------------------|--------------|
+| **Main Page** | 1400 ms | 1100 ms | Stable performance |
+| **Login Page** | 900 ms | 900 ms | Consistent and efficient |
+| **Service Page** | 4100 ms | 5000 ms | Increased response time – potential bottleneck |
 
-```xml
-??
+**Average Throughput:** Stable  
+**Error Rate:** None detected  
+**Performance Trend:** Gradual degradation under heavy load, especially on service page.
+
+---
+
+## 🧾 5. Sample Output Data
+
+### 🖼️ a. Response Time Graph
+![Response Time Graph](images/response_time_graph.png)
+
+> The graph shows response times for each request during the 30-second stress test.  
+> The main and login pages maintained stable performance, while the service page showed increasing response time.
+
+---
+
+### 🖼️ b. Summary Report Output
+![Summary Report](images/summary_report.png)
+
+> The summary report lists the average, min, max response times, number of samples, and throughput values.  
+> The service page displayed the highest latency and reduced throughput under high user load.
+
+---
+
+### 🖼️ c. Graph Results Viewer
+![Graph Results](images/graph_results.png)
+
+> The Graph Results window demonstrates consistent trends with rising latency for the service page, confirming performance degradation under stress.
+
+---
+
+## 🔍 6. Analysis
+The stress test revealed that the Moodle website could maintain stable performance for basic operations (main and login pages) even under 100 concurrent users.  
+However, as load persisted, the service page experienced a noticeable increase in response time from **4.1 seconds to 5.0 seconds**, indicating resource exhaustion or server-side bottlenecks.
+
+This behavior suggests that Moodle’s heavier modules require more server processing power or database optimization.
+
+---
+
+## 🧠 7. Interpretation
+| Observation | Interpretation |
+|--------------|----------------|
+| Stable response for login & main pages | Server handles light operations efficiently |
+| Gradual increase in service page response time | Indication of bottleneck and high CPU/DB usage |
+| Performance drops after ~80 concurrent users | Server nearing its stress threshold |
+| No major request failures | Application remained stable under stress |
+
+---
+
+## 💡 8. Recommendations
+1. Optimize backend queries or add caching for the service module.  
+2. Increase memory and CPU allocation for the web server.  
+3. Implement load balancing for high-traffic environments.  
+4. Regularly perform stress and load tests to track performance trends.  
+
+---
+
+## 📈 9. Conclusion
+The Moodle demo website performed reliably under moderate load but showed signs of degradation as the number of users increased.  
+Response times remained stable for lighter requests but rose significantly for resource-intensive operations, confirming a performance bottleneck under stress conditions.  
+
+The test successfully identified the website’s performance limit and provided insights for future optimization and scaling strategies.
+
+---
+
+## 👩‍💻 10. Version Verification
+To confirm JMeter installation and version:
+
+```bash
+"C:\Program Files\apache-jmeter-5.6.3\bin\jmeter.bat" --version
