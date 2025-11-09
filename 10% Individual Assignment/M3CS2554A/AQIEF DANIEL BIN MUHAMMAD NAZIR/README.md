@@ -158,6 +158,13 @@ This confirms that the optimization process effectively improved the overall rel
 
 ---
 
+## 🎥 Project Walkthrough Video
+
+Watch my full demonstration of the smoke test execution and analysis here:  
+👉 
+
+---
+
 ## 📸 Smoke Test
 
 ## 🖥️ k6 Smoke Test Execution
