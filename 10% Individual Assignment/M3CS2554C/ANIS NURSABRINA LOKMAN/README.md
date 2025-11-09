@@ -48,7 +48,7 @@ The test plan in JMeter consisted of:
 ## 🧾 Sample Output Data
 
 ### 🖼️ Response Time Graph
-![Response Time Graph](images/response_time_graph.png)
+![Response Time Graph](10% Individual Assignment/M3CS2554C/ANIS NURSABRINA LOKMAN/Summaryreport.png.png)
 
 > The graph shows response times for each request during the 30-second stress test.  
 > The main and login pages maintained stable performance, while the service page showed increasing response time.
