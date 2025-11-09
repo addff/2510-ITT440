@@ -2,18 +2,13 @@
 # 🧪 Stress Testing Report – Moodle Website
 
 
-
-**Name:** ANIS NURSABRINA LOKMAN
-**Student ID:** 2025900087
-
-**Course Code:** ITT440 - NETWORK PROGRAMMING
-
-**Tool Used:** Apache JMeter
-
+**Name:** Sabrina Lokman  
+**Student ID:** 202xxxxxxx  
+**Course Code:** ITTxxx – Web Performance Testing  
+**Tool Used:** Apache JMeter  
 **Testing Type:** Stress Testing  
-**Target Website:** Moodle  
-**Date:** 9 NOVEMBER 2025
-
+**Target Website:** Moodle (Demo Site)  
+**Date:** November 2025  
 
 
 ## 🧰 1. Objective
