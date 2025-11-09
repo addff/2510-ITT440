@@ -7,7 +7,7 @@
 **Course Code:** ITT440 - Network Programming  
 **Tool Used:** Apache JMeter  
 **Testing Type:** Stress Testing  
-**Target Website:** Moodle 
+**Target Website:** Moodle (Online Learning Management System)
  
 
 
@@ -21,12 +21,12 @@ This test aims to identify bottlenecks, response delays, and potential resource 
 | Configuration | Description |
 |----------------|--------------|
 | **Tool** | Apache JMeter 5.6.3 |
-| **Target** | Moodle Online Learning Management System |
+| **Target** | Moodle |
 | **Number of Threads (Users)** | 300 concurrent users |
 | **Ramp-up Period** | 30 seconds |
 | **Loop Count** | 1 |
 | **Sampler Type** | HTTP Requests (Main page, Login page, Service page) |
-| **Listeners Used** | Graph Results, View Results Tree, Summary Report, Response Time Graph |
+| **Listeners Used** | Graph Results, Summary Report, Response Time Graph |
 
 ---
 
@@ -38,7 +38,6 @@ The test plan in JMeter consisted of:
   2. Login Page (`https://moodle.com/login/`)
   3. Service Page (`https://moodle.com/services/`)
 - Several **Listeners** were added to collect and visualize the test data, including:
-  - View Results Tree
   - Summary Report
   - Graph Results
   - Response Time Graph
@@ -72,11 +71,11 @@ The test plan in JMeter consisted of:
 ---
 
 ## 📝 Results Summary
-| Page | Response Time (Start) | Response Time (End) | Observation |
+| Page | Minimum Response Time | Maximum Response Time | Observation |
 |------|-----------------------|---------------------|--------------|
-| **Main Page** | 1400 ms | 1100 ms | Stable performance |
-| **Login Page** | 900 ms | 900 ms | Consistent and efficient |
-| **Service Page** | 4100 ms | 5000 ms | Increased response time – potential bottleneck |
+| **Main Page** | ~900 ms | ~1400 ms | Stable performance |
+| **Login Page** | ~800 ms | ~900 ms | Consistent and efficient |
+| **Service Page** | ~4200 ms | ~5900 ms | Increased response time – potential bottleneck |
 
 **Average Throughput:** Stable  
 **Error Rate:** None detected  
