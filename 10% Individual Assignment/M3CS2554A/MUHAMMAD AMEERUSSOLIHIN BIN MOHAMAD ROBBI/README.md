@@ -102,6 +102,40 @@ The test expected the server should maintain stability and return valid HTTP 200
 #### 🔺 50% failed (405 responses).
 ---
 ## 📊 Raw Data
+<table align="center">
+  <tr>
+    <th>Chart</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="1200" height="800" alt="response_time_distribution" src="https://github.com/user-attachments/assets/fc59c0af-890d-4910-8c79-fd8bdc16b81c" />
+    </td>
+    <td>
+      <b>Response Time Distribution (ms)</b><br>
+      The results show an increasing trend in response time as the percentile rises. This indicates that under sudden load, some requests experienced delays, but the overall response pattern remained predictable and stable.
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img width="1200" height="800" alt="throughput_chart" src="https://github.com/user-attachments/assets/c359aa05-3809-419b-a7e2-cfc5f500bf34" />
+" />
+    </td>
+    <td>
+      <b>TThroughput Chart (Requests per Second)</b><br>
+      The throughput remained steady around 14.88 requests/second, indicating that the server infrastructure could maintain consistent request handling capacity during the spike.
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img width="1000" height="1000" alt="request_success_rate" src="https://github.com/user-attachments/assets/ee0c85f9-12fc-4d31-90b6-2cefac36ebe6" />
+    </td>
+    <td>
+      <b>Request Success Rate (OK vs KO)</b><br>
+      Half of the requests (50%) succeeded, while the other half failed with HTTP 405 (Method Not Allowed) errors.
+    </td>
+  </tr>
+</table>
+
+---
 
 ## 🧬 Analysis
 ### a. Functional Behavior
