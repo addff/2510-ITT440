@@ -108,7 +108,7 @@ scenarios:
           - 200
           - 250
           - 400
-          -500
+          - 500
 
    ```
 write and save the code 
