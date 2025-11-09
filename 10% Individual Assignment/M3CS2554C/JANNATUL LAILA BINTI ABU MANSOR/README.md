@@ -13,56 +13,56 @@
 
 ## 1.0 INTRODUCTION
 
-<p align="justify"> Web application performance is a crucial factor in determining user satisfaction and business success in today's digital environment.  This report uses stress testing techniques to provide a thorough performance analysis of the Joomla Launch website (https://launch.joomla.org/).  Stress testing helps find breaking points and performance degradation before they affect actual users by assessing how a system responds to extreme load conditions.  In order to evaluate the application's responsiveness, stability, and resource management under pressure, this study uses GTMetrix to simulate high user traffic. </p>
+<p align="justify"> In the digital world, web application performance plays a crucial role in determining user satisfaction, conversion rates, and overall business success.  User annoyance and abandonment can result from delays of even a few seconds.  Through the use of stress testing, this report provides a thorough performance analysis of the public Joomla demonstration website (https://demo.joomla.org/).  In order to determine a system's breaking point and comprehend performance degradation patterns, stress testing is a non-functional testing method that assesses how a system responds to extreme load, frequently above its typical operating capacity.  This study evaluates the application's responsiveness, stability, and resource management by simulating prolonged high traffic conditions using the GTmetrix performance tool. </p>
  <hr>
  
 ## 2.0 OBJECTIVES
 
 <p align="justify"> This stress testing assignment's main goals are: 
 <ul>
- <li> To use GTMetrix to perform stress testing on https://launch.joomla.org/. </li>
- <li> To assess key performance indicators (KPIs) like Core Web Vitals, error rate, throughput, and response time. </li>
- <li> To locate failure points and performance bottlenecks under heavy load. </li>
- <li> To offer data-based suggestions for web application optimization. </li>
+ <li> To Create and Run a Stress Test: Create and run a systematic stress test strategy against the target Joomla application using the GTmetrix tool. </li>
+ <li> To Create and Test a Hypothesis: Make a claim about the stability of the application under load and support it with empirical evidence. </li>
+ <li> To Find Performance Bottlenecks: Examine important performance indicators to identify problems that are influencing stability, throughput, and response time. </li>
+ <li> To Evaluate Metrics Focused on Users: Measure the real-user experience, assess the Core Web Vitals, Cumulative Layout Shift (CLS), Total Blocking Time (TBT) and Largest Contentful Paint (LCP). </li>
+ <li> To Offer Practical Suggestions: Record results and suggest tangible, research-based fixes to address performance problems that have been identified. </li>
 </ul>
 </p>
  <hr>
 
 ## 3.0 WHAT IS STRESS TESTING
  
-<p align="justify"> One kind of performance testing called stress testing assesses a system's ability to function in harsh circumstances which beyond its typical operating range. Determining the system's resilience, stability, and error-handling skills in the face of extreme traffic spikes, resource depletion, or peak loads is the aim.  In contrast to load testing, which replicates anticipated user loads, stress testing tests the system's limits in order to identify potential failures and breaking points. </p>
+<p align="justify"> Stress testing assesses a system's resilience and error-handling skills under exceptionally high loads, frequently more than it is intended to support. Instead of simulating typical user traffic, the main objective is to test the system's limits in order to: 
+<ul>
+ <li> Find the application's breaking point. </li>
+ <li> observe how the system gets worse when its capacity is used up. </li>
+ <li> Determine how the system bounces back once the load has stabilised. </li>
+ <li> Find configuration problems, memory leaks, or hidden bugs that only show up in severe circumstances. </li>
+</ul>
+By simulating the impact of high server-side resource consumption and competition, GTmetrix is used to repeatedly analyse the page under test conditions. This enables us to see how performance metrics remain stable over several test rounds. </p>
  <hr>
 
 ## 4.0 TOOL SELECTION JUSTIFICATION
 
-<p align="justify"> The tool selected for this analysis is GTMetrix. </p>
-<p align="justify"> 
-<ol>
-    <li> Easy to Use: web-based and accessible; no installation needed. </li>
-    <li> Comprehensive Reporting: Offers waterfall charts, Core Web Vitals, and comprehensive performance metrics. </li>
-    <li> Real-Browser Testing: This method mimics real-user circumstances by using real Chrome browsers. </li>
-    <li> Global Test Servers: Enables testing from various geographical locations, such as Seattle, Washington. </li>
-    <li> Free Tier Availability: Ideal for personal and academic use. </li>
-  </ol> 
- While not a traditional stress testing tool like JMeter, GTMetrix can simulate repeated loads and analyze performance degradation, making it a practical choice for this study. </p>
+<p align="justify"> The tool selected for this analysis is GTMetrix. </p> 
+<ol> 
+ <li> Accessibility and Usability: GTmetrix is a web-based software as a service platform that doesn't require complicated local setup or installation, so a broad spectrum of users can use it. This guarantees consistent test execution from a controlled location and removes variables associated with test environment setup. </li>
+ <li> Comprehensive Reporting: Offers waterfall charts, Core Web Vitals, and comprehensive performancExtensive Performance Analysis. GTmetrix combines server-level performance data with real-world browser timings using Google Lighthouse to present a comprehensive picture of performance. Core Web Vitals, which are industry standards for user experience, are among the many metrics it provides. </li>
+ <li> Professional Reporting: To diagnose the sequence and impact of resource loading, the tool produces comprehensive, visual reports with waterfall charts. Presenting findings to a professional audience requires this. </li>
+ <li> Stress Testing Capability: GTmetrix enables continuous testing and monitoring over time, despite not being a conventional load runner that virtualises thousands of users. Multiple, consecutive test rounds are used as a stand-in for stress testing in this analysis, exposing trends in degradation and performance consistency. </li>
+ <li> Industry Recognition: GTmetrix is a widely recognized and trusted tool in the web performance community, lending credibility to the analysis and its findings. </li> </p> </ol>
  <hr>
 
  ## 5.0 TEST ENVIRONMENT SETUP
  
 <p align="justify"> The test environment was set up to create a baseline before carefully introducing stressors.
- <ol>
-    <li> Testing Tool: GTMetrix (Web-based) </li>
-    <li> Test Server Location: Seattle, WA, USA </li>
-    <li> Browser: Chrome 125.0.0.0 </li>
-    <li> Lighthouse Version: 12.3.0 </li>
-    <li> Target Application URL: https://launch.joomla.org/ </li>
-    <li> Network Throttling: Simulated (Default GTMetrix settings) </li>
-    <li> Type of Test: Stress testing using performance trend tracking and repeated analysis </li>
-  </ol>
-   </p>
-
-<p align="center">
-<img width="954" height="685" alt="INTRO PIC" src="https://github.com/user-attachments/assets/d8c62d79-c185-46f4-afe0-dae28eaa5a43" /> </p>
+<ol>
+    <li> Testing Tool: GTMetrix </li>
+    <li> Test Server Location: GTmetrix's Vancouver, Canada server. </li>
+    <li> Browser: Google Chrome </li>
+    <li> Connection Speed: Cable (5Mbps down, 1Mbps up). </li>
+    <li> Target Application URL: Public Joomla Demo Site https://launch.joomla.org/ </li>
+    <li> Test Rounds: Three consecutive tests were performed to simulate sustained load and identify trends or degradation, labeled as Round 1, Round 2, and Round 3. </li>
+    <li> Type of Test: Stress testing using performance trend tracking and repeated analysis </li> </ol> </p>
  <hr>
  
 ## 6.0 METHODOLOGY
@@ -73,6 +73,8 @@
     <li> Test Execution: <!-- 2 -->
      <ul>
       <li> Multiple test runs were conducted via GTMetrix. </li>
+      <li> Baseline Establishment: To create a performance baseline for the application, a single initial test (Round 1) was run. </li>
+      <li> Stress Simulation: Two tests (Rounds 2 and 3) were conducted quickly after each other. By repeatedly requesting the page, this methodology creates a stress condition that puts the server under pressure and demonstrates how reliably it can deliver performance. </li> 
       <li> Performance data was collected including: </li>
        <ul>
          <li> Redirect Duration </li>
@@ -85,6 +87,7 @@
          <li> DOM Interactive Time </li>
          <li> Fully Loaded Time </li>
        </ul>
+      <li> The original hypothesis was that, as a feature-rich Content Management System (CMS), the Joomla demo site would perform worse under stress, mainly due to slower Time to Interactive and higher server response times (TTFB) caused by JavaScript. </li> <!-- 3 -->
      </ul>
     </li>
 <BR> <p align="center">
