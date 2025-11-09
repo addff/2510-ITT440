@@ -1,6 +1,6 @@
 # 🔥 Web Application Soak Testing with Vegeta
 
-![Performance Test Banner](#)
+![Funny GIF](https://tenor.com/search/vegeta-dance-gifs)
 
 ---
 
