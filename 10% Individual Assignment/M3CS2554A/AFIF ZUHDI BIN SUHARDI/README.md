@@ -66,6 +66,49 @@ load_test_menu.bat
 vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report -type=json > results.json
 ```
 
+# 📊 Visualizations & Charts
+
+## 🎯 Performance Dashboard
+
+### Latency vs Request Rate Analysis
+![Latency vs RPS](python_charts/latency_vs_rps_scatter.png)
+*Analysis of how response times scale with increasing load*
+
+### Comprehensive Performance Dashboard
+![Performance Dashboard](python_charts/performance_dashboard.png)
+*Multi-faceted view including throughput efficiency, latency distribution, and success rates*
+
+### Progressive Stress Test Analysis
+![Progressive Stress Analysis](python_charts/progressive_stress_analysis.png)
+*Detailed breakdown of system behavior during ramp-up load testing*
+
+### Full Site Stress Comparison
+![Full Site Comparison](python_charts/full_site_comparison.png)
+*Performance comparison across different site endpoints under stress*
+
+## 📈 Response Time Distribution
+![Response Time Distribution](python_charts/response_time_distribution.png)
+*Visualization of mean, P95, P99, min, and max response times across test scenarios*
+
+## ✅ Success Rate Analysis
+![Success Rate](python_charts/success_rate.png)
+*Request success rate distribution across all test runs*
+
+## 🚀 Performance Summary
+![Performance Summary](python_charts/performance_summary.png)
+*Comparison of target vs actual throughput across different load levels*
+
+## Chart Generation Commands
+To regenerate all charts after running tests:
+
+```powershell
+# Generate comprehensive charts
+c:\Python313\python.exe generate_python_charts.py
+
+# Or use the batch file for automatic generation
+generate_all_charts.bat
+```
+
 # 📈 Test Results & Analysis
 
 ## 📊 Raw Test Result Output (Example)
@@ -95,24 +138,6 @@ vegeta attack -rate <RPS> -duration <DURATION> -targets=url.txt | vegeta report 
 | **Success Metrics** | Success Rate | 100% |
 |  | HTTP 200 Count | 300 requests |
 | **Error Analysis** | Error Set | No errors |
-
-## 🖼️ Generated Charts
-
-The test run produced charts saved in the `python_charts/` directory. You can open these PNG files to view visual summaries:
-
-- `python_charts/response_time_distribution.png` — mean, p95, p99, min, max bars
-- `python_charts/success_rate.png` — success vs errors pie chart
-- `python_charts/performance_summary.png` — actual throughput vs target rate
-
-To regenerate charts after running tests:
-
-```powershell
-# Run PowerShell-based test (example)
-.\powershell_test.ps1
-
-# Generate charts from results
-c:\Python313\python.exe c:\tools\generate_charts.py
-```
 
 # 📊 Performance Analysis
 
@@ -197,6 +222,8 @@ The RasoOnline website maintained exceptional performance and stability under st
 - **Interactive Menu System:** User-friendly test selection
 - **Excel Integration:** Automated results collection and reporting
 - **Flexible Configuration:** Customizable rates, durations, and endpoints
+- **Automated Visualization:** Python scripts for chart generation
+- **HTML Dashboard:** Interactive web-based results presentation
 
 ## 🔧 Script Architecture
 ```
@@ -205,8 +232,20 @@ rasoonline-stress-test/
 ├── load_test_menu.bat     # Interactive test menu
 ├── raso_ramp.ps1          # Progressive load testing
 ├── fill_excel.ps1         # Excel results automation
+├── generate_charts.ps1    # PowerShell chart generator
+├── generate_python_charts.py # Python visualization
+├── generate_all_charts.bat # Batch chart generator
 ├── url.txt               # Test endpoints configuration
-└── results.xlsx          # Consolidated test results
+├── results.xlsx          # Consolidated test results
+├── python_charts/        # Generated visualizations
+│   ├── latency_vs_rps_scatter.png
+│   ├── performance_dashboard.png
+│   ├── progressive_stress_analysis.png
+│   ├── full_site_comparison.png
+│   ├── response_time_distribution.png
+│   ├── success_rate.png
+│   └── performance_summary.png
+└── dashboard.html        # Interactive HTML dashboard
 ```
 
 # 📺 References
@@ -214,5 +253,6 @@ rasoonline-stress-test/
 - **Tool:** Vegeta Load Testing Tool (https://github.com/tsenart/vegeta)
 - **Target Website:** https://rasoonline.com/
 - **Test Environment:** Windows PowerShell with Excel COM Automation
-- **YouTube Video:** 
+- **YouTube Video:** [Your Video Link Here]
+```
 
