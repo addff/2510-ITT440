@@ -112,7 +112,33 @@ generate_all_charts.bat
 
 # 📈 Test Results & Analysis
 
-## 📊 Raw Test Result Output 
+## 📊 Raw Test Results (Excel Data)
+
+| **Name** | **Rate** | **Requests** | **SuccessPct** | **MeanMs** | **P95ms** | **P99ms** | **Throughput** | **Errors** |
+|----------|----------|--------------|---------------|------------|-----------|-----------|---------------|------------|
+| Stress Test (RPS 80) | 80.006856 | 9600 | 100 | 32.68 | 0 | 0 | 79.98542 | 0 |
+| Stress Test (RPS 80) | 80.012612 | 9600 | 100 | 29.98 | 0 | 0 | 79.995497 | 0 |
+| Stress Test (RPS 80) | 80.006432 | 9600 | 100 | 29.91 | 0 | 0 | 79.988111 | 0 |
+| *Unnamed Test* | 10.00841 | 1200 | 100 | 31.7 | 0 | 0 | 10.00595 | 0 |
+| Ramp (30 RPS) | 30.031542 | 900 | 100 | 26.35 | 0 | 0 | 6.001722 | 0 |
+| Quick Stress Test | 10.03427 | 300 | 100 | 31.11 | 0 | 0 | 2.004944 | 0 |
+| Stress Test (Single URL, 30 RPS) | 30.044413 | 900 | 100 | 696.03 | 0 | 0 | 29.980628 | 0 |
+| Full Site Stress (10 RPS) | 10.016288 | 600 | 100 | 30.1 | 0 | 0 | 2.00237 | 0 |
+| Full Site Stress (30 RPS) | 30.017521 | 1800 | 100 | 25.01 | 0 | 0 | 6.001227 | 0 |
+| Full Site Stress (60 RPS) | 60.014485 | 3600 | 100 | 28.38 | 0 | 0 | 11.997598 | 0 |
+| Full Site Stress (100 RPS) | 100.011076 | 6000 | 100 | 239.37 | 0 | 0 | 18.494867 | 0 |
+| Progressive Stress (10 RPS) | 10.037438 | 300 | 100 | 109.19 | 0 | 0 | 2.001055 | 0 |
+| Progressive Stress (20 RPS) | 20.037335 | 600 | 100 | 26.22 | 0 | 0 | 4.003982 | 0 |
+| Progressive Stress (30 RPS) | 30.043137 | 900 | 100 | 44.49 | 0 | 0 | 6.000963 | 0 |
+| Progressive Stress (40 RPS) | 40.039791 | 1200 | 100 | 44.45 | 0 | 0 | 7.995294 | 0 |
+| Progressive Stress (50 RPS) | 50.047628 | 1500 | 100 | 27.6 | 0 | 0 | 10.001833 | 0 |
+| Progressive Stress (60 RPS) | 60.036693 | 1800 | 100 | 25.09 | 0 | 0 | 11.997296 | 0 |
+| Progressive Stress (70 RPS) | 70.058074 | 2100 | 100 | 543.53 | 0 | 0 | 13.999456 | 0 |
+| Progressive Stress (80 RPS) | 80.044961 | 2400 | 100 | 31.25 | 0 | 0 | 15.992282 | 0 |
+| Progressive Stress (90 RPS) | 90.047163 | 2700 | 100 | 28.9 | 0 | 0 | 17.993544 | 0 |
+| Progressive Stress (100 RPS) | 100.029089 | 3000 | 100 | 26.21 | 0 | 0 | 19.989418 | 0 |
+| Extended Stress (100 RPS, 30s) | 100.040015 | 3000 | 100 | 541.91 | 0 | 0 | 19.990263 | 0 |
+
 ```json
 {
     "rate": 10,
@@ -233,5 +259,6 @@ The RasoOnline website maintained exceptional performance and stability under st
 - **Test Environment:** Windows PowerShell with Excel COM Automation
 - **YouTube Video:** []
 ```
+
 
 
