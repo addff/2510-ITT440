@@ -86,10 +86,11 @@ The experiment used Liquipedia as reference because Liquipedia is a well-known e
 ---
 ## Raw Data
 
+<img width="666" height="506" alt="image" src="https://github.com/user-attachments/assets/f4264c4d-3658-4cd8-9348-7c64d1f9b2c5" />
 
+<img width="656" height="453" alt="image" src="https://github.com/user-attachments/assets/5233ab7a-a96f-4746-9dd5-8b7e70213605" />
 
-
-
+<img width="700" height="361" alt="image" src="https://github.com/user-attachments/assets/da999181-b9cb-4fce-b6c4-35d540b9988a" />
 
 ---
 ## Result and Analysis
