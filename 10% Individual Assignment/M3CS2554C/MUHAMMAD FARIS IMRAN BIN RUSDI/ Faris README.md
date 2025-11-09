@@ -32,7 +32,7 @@ Stress testing helps developers and organizations ensure that the system can wit
 
 Artillery was chosen for stress testing because it is lightweight, flexible, and easy to use. It can simulate realistic user traffic, identify performance bottlenecks, and generate clear reports. Its support for multiple protocols and integration with the Artillery Cloud Dashboard makes it ideal for analyzing system performance efficiently.
 
---
+---
 
 ## 🧰 Tool Selection
 
