@@ -162,10 +162,15 @@ class WeatherAPIUser(HttpUser):
 * Duration: 5 minutes
 
 **Expected Result:** 
+
 ✅ Response times: 800ms-2 seconds
+
 ✅ Failure rate: 0-2% 
+
 ✅ Stable performance throughout
+
 ✅ CPU/Memory: 40-60% usage
+
 ✅ All endpoints should work normally
 
 ---
@@ -182,9 +187,13 @@ class WeatherAPIUser(HttpUser):
 **Expected Result:** 
 
 ✅ System will start degrading around 200 users
+
 ✅ Response times will exceed 5 seconds
+
 ✅ Failure rate will be 15-25%
+
 ✅ Static assets (images/CSS) may fail completely
+
 ✅ CPU/Memory usage will hit 80-90%
 
 ---
@@ -201,9 +210,13 @@ class WeatherAPIUser(HttpUser):
 **Expected Result:** 
 
 ✅ Consistent response times (1-3 seconds)
+
 ✅ Low failure rate (1-5%)
+
 ✅ No memory leaks over time
+
 ✅ Stable CPU usage (50-70%)
+
 ✅ Gradual performance maintained
 
 ---
@@ -220,9 +233,13 @@ class WeatherAPIUser(HttpUser):
 **Expected Result:** 
 
 ✅ Immediate performance degradation
+
 ✅ Response times: 8-15 seconds
+
 ✅ Failure rate: 40-70%
+
 ✅ System may become unresponsive
+
 ✅ Recovery after spike ends
 
 ---
