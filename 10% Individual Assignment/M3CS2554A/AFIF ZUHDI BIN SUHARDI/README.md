@@ -5,8 +5,7 @@
 # 📋 Assignment Details
 ### - **Course:** ITT440
 ### - **Name:** AFIF ZUHDI BIN SUHARDI
-### - **Matrix Number:** [Your Matrix Number]
-### - **Youtube Video:** [Your YouTube Link]
+### - **Matrix Number:** 2024757603
 
 # 🔍 Introduction
 This project demonstrates **comprehensive stress testing** on RasoOnline.com using the **Vegeta load testing tool**.  
@@ -198,3 +197,4 @@ rasoonline-stress-test/
 - **Target Website:** https://rasoonline.com/
 - **Test Environment:** Windows PowerShell with Excel COM Automation
 - **YouTube Video:** 
+
