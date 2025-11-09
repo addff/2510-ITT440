@@ -185,4 +185,4 @@ Overall, these results indicate that the OpenWeatherMap API is well-suited for r
 - [Postman Learning Center](https://learning.postman.com/)
 
 ## ▶️ EMBEDEED YOUTUBE VIDEO LINK
-[Click here to watch the demo](https://www.youtube.com/)
+[Click here to watch the demo](https://youtu.be/A9ePeeLQO5I?si=Fsy3LHZpUunBpAOW)
