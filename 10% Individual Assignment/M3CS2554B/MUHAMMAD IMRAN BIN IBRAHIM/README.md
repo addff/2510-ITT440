@@ -77,9 +77,24 @@ Why We Do Performance Testing
 | | Data Sent | 114 kB (1.1 kB/s) | Total data uploaded to server |
 | **Cloud** | Grafana Dashboard | Available online | Full results at provided Grafana Cloud URL |
 
+
+## 🚦 Bottleneck Summary Table (Load Test)
+
+| 🚨 **Bottleneck Severity** | 📊 **Metric**  | ⚠️ **Impact**                         | 🔍 **Likely Cause**                                               |
+| -------------------------- | -------------- | ------------------------------------- | ----------------------------------------------------------------- |
+| 🔴 **CRITICAL**            | **Max: 8.6s**  | Users experience **8+ second delays** | Database locks, Memory exhaustion, GC (Garbage Collection) pauses |
+| 🔴 **CRITICAL**            | **p95: 1.12s** | 5% of users wait **>1 second**        | Resource contention, Slow database queries                        |
+| 🟠 **WARNING**             | **p90: 664ms** | 10% of users wait **>0.6s**           | API rate limiting, Connection pooling inefficiency                |
+
+
+
 ## Result of load Test where the number of users ramps up (Graph)
 
+Using Cloud Grafana
 ![Screenshot 2025-11-01 135811](https://github.com/user-attachments/assets/ac34b07e-99c3-4b13-9712-38170125a2c9)
+Using Local Grafana
+![st](https://github.com/user-attachments/assets/6cf0cdad-962d-4e00-8e2a-8c2da13eb463)
+
 
 
 ## 📊 Result of Stress Test (Table)
@@ -105,12 +120,24 @@ Why We Do Performance Testing
 |                         | Data Sent            | **11 MB (8.8 kB/s)**         | Outgoing requests from your test script.                            |
 
 
+## 🚦 Bottleneck Summary Table (Stress Test)
+
+| ⚠️ **Severity** | 📊 **Metric**       | 📈 **Result**                | 💬 **Impact / Cause**            |
+| --------------- | ------------------- | ---------------------------- | -------------------------------- |
+| 🟢 **Normal**   | **Max: 2.43 s**     | Acceptable occasional delay  | Slight slowdown under peak load  |
+| 🟢 **Normal**   | **p95: 282 ms**     | 95% of requests under 0.3 s  | Excellent performance ⚡          |
+| 🟢 **Normal**   | **p90: 275 ms**     | 90% of requests under 0.28 s | Very stable response time        |
+| 🟢 **Normal**   | **Failures: 0.00%** | No failed requests           | System is stable and reliable 💪 |
+
+
+
 ## Result of Stress Test (Graph)
 
-
-
-
+Using Cloud Grafana
 ![Screenshot 2025-11-01 133907](https://github.com/user-attachments/assets/92f2db85-f68e-482f-9f75-f0450f739807)
+Using Local Grafana
+![st](https://github.com/user-attachments/assets/178a9365-823f-44ea-81e6-83ce97d011f3)
+
 
 
 

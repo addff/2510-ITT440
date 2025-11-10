@@ -80,7 +80,7 @@ This combination makes it an excellent tool for both **academic learning** and *
 | Target URL | https://jsonplaceholder.typicode.com |
 | Internet Connection | WiFI Broadband Connection |
 
-This setup was sufficient for performing load testing locally without the need for a dedicated server or cloud infrastructure.
+- This setup was sufficient for performing load testing locally without the need for a dedicated server or cloud infrastructure.
 ---
 ## 🧠 Understanding JSONPlaceholder
 
@@ -382,6 +382,9 @@ This demonstrates that the API can handle **concurrent users effectively**, main
 With a **structured test plan**, **gradual load scaling**, and **proper monitoring**, meaningful insights into API behavior can be achieved which helping developers better understand system performance under pressure.
 
 ---
+
+
+
 
 
 

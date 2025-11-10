@@ -13,87 +13,104 @@
 
 ## 1.0 INTRODUCTION
 
-<p align="justify"> Web application performance is a crucial factor in determining user satisfaction and business success in today's digital environment.  This report uses stress testing techniques to provide a thorough performance analysis of the Joomla Launch website (https://launch.joomla.org/).  Stress testing helps find breaking points and performance degradation before they affect actual users by assessing how a system responds to extreme load conditions.  In order to evaluate the application's responsiveness, stability, and resource management under pressure, this study uses GTMetrix to simulate high user traffic. </p>
+<p align="justify"> In the digital world, web application performance plays a crucial role in determining user satisfaction, conversion rates, and overall business success.  User annoyance and abandonment can result from delays of even a few seconds.  Through the use of stress testing, this report provides a thorough performance analysis of the public Joomla demonstration website (https://demo.joomla.org/).  In order to determine a system's breaking point and comprehend performance degradation patterns, stress testing is a non-functional testing method that assesses how a system responds to extreme load, frequently above its typical operating capacity.  This study evaluates the application's responsiveness, stability, and resource management by simulating prolonged high traffic conditions using the GTMetrix performance tool. </p>
  <hr>
  
 ## 2.0 OBJECTIVES
 
 <p align="justify"> This stress testing assignment's main goals are: 
 <ul>
- <li> To use GTMetrix to perform stress testing on https://launch.joomla.org/. </li>
- <li> To assess key performance indicators (KPIs) like Core Web Vitals, error rate, throughput, and response time. </li>
- <li> To locate failure points and performance bottlenecks under heavy load. </li>
- <li> To offer data-based suggestions for web application optimization. </li>
+ <li><p align="justify"><strong> To Create and Run a Stress Test: Create and run a systematic stress test strategy against the target Joomla application using the GTMetrix tool. </li></strong>
+ <li><p align="justify"><strong> To Create and Test a Hypothesis: Make a claim about the stability of the application under load and support it with empirical evidence. </li></strong>
+ <li><p align="justify"><strong> To Find Performance Bottlenecks: Examine important performance indicators to identify problems that are influencing stability, throughput, and response time. </li></strong>
+ <li><p align="justify"><strong> To Evaluate Metrics Focused on Users: Measure the real-user experience, assess the Core Web Vitals, Cumulative Layout Shift (CLS), Total Blocking Time (TBT) and Largest Contentful Paint (LCP). </li></strong>
+ <li><p align="justify"><strong> To Offer Practical Suggestions: Record results and suggest tangible, research-based fixes to address performance problems that have been identified. </li></strong>
 </ul>
 </p>
  <hr>
 
 ## 3.0 WHAT IS STRESS TESTING
  
-<p align="justify"> One kind of performance testing called stress testing assesses a system's ability to function in harsh circumstances which beyond its typical operating range. Determining the system's resilience, stability, and error-handling skills in the face of extreme traffic spikes, resource depletion, or peak loads is the aim.  In contrast to load testing, which replicates anticipated user loads, stress testing tests the system's limits in order to identify potential failures and breaking points. </p>
+<p align="justify"> Stress testing assesses a system's resilience and error-handling skills under exceptionally high loads, frequently more than it is intended to support. Instead of simulating typical user traffic, the main objective is to test the system's limits in order to: 
+<ul>
+ <li><p align="justify"><strong> Find the application's breaking point. </li></strong>
+ <li><p align="justify"><strong> observe how the system gets worse when its capacity is used up. </li></strong>
+ <li><p align="justify"><strong> Determine how the system bounces back once the load has stabilised. </li></strong>
+ <li><p align="justify"><strong> Find configuration problems, memory leaks, or hidden bugs that only show up in severe circumstances. </li></strong>
+</ul></p>
+<p align="justify"><strong>By simulating the impact of high server-side resource consumption and competition, GTMetrix is used to repeatedly analyse the page under test conditions. This enables us to see how performance metrics remain stable over several test rounds. </p></strong>
  <hr>
 
 ## 4.0 TOOL SELECTION JUSTIFICATION
 
-<p align="justify"> The tool selected for this analysis is GTMetrix. </p>
-<p align="justify"> 
-<ol>
-    <li> Easy to Use: web-based and accessible; no installation needed. </li>
-    <li> Comprehensive Reporting: Offers waterfall charts, Core Web Vitals, and comprehensive performance metrics. </li>
-    <li> Real-Browser Testing: This method mimics real-user circumstances by using real Chrome browsers. </li>
-    <li> Global Test Servers: Enables testing from various geographical locations, such as Seattle, Washington. </li>
-    <li> Free Tier Availability: Ideal for personal and academic use. </li>
-  </ol> 
- While not a traditional stress testing tool like JMeter, GTMetrix can simulate repeated loads and analyze performance degradation, making it a practical choice for this study. </p>
+<p align="justify"><strong> The tool selected for this analysis is GTMetrix.</p></strong> 
+<ol> 
+ <li><p align="justify"><strong>Accessibility and Usability: GTMetrix is a web-based software as a service platform that doesn't require complicated local setup or installation, so a broad spectrum of users can use it. This guarantees consistent test execution from a controlled location and removes variables associated with test environment setup. </li></strong>
+ <li><p align="justify"><strong>Comprehensive Reporting: Offers waterfall charts, Core Web Vitals, and comprehensive performancExtensive Performance Analysis. GTMetrix combines server-level performance data with real-world browser timings using Google Lighthouse to present a comprehensive picture of performance. Core Web Vitals, which are industry standards for user experience, are among the many metrics it provides. </li></strong>
+ <li><p align="justify"><strong>Professional Reporting: To diagnose the sequence and impact of resource loading, the tool produces comprehensive, visual reports with waterfall charts. Presenting findings to a professional audience requires this. </li></strong>
+ <li><p align="justify"><strong>Stress Testing Capability: GTMetrix enables continuous testing and monitoring over time, despite not being a conventional load runner that virtualises thousands of users. Multiple, consecutive test rounds are used as a stand-in for stress testing in this analysis, exposing trends in degradation and performance consistency. </li></strong>
+ <li><p align="justify"><strong> Industry Recognition: GTMetrix is a widely recognized and trusted tool in the web performance community, lending credibility to the analysis and its findings. </li></strong> </p> </ol>
  <hr>
 
  ## 5.0 TEST ENVIRONMENT SETUP
  
-<p align="justify"> The test environment was set up to create a baseline before carefully introducing stressors.
- <ol>
-    <li> Testing Tool: GTMetrix (Web-based) </li>
-    <li> Test Server Location: Seattle, WA, USA </li>
-    <li> Browser: Chrome 125.0.0.0 </li>
-    <li> Lighthouse Version: 12.3.0 </li>
-    <li> Target Application URL: https://launch.joomla.org/ </li>
-    <li> Network Throttling: Simulated (Default GTMetrix settings) </li>
-    <li> Type of Test: Stress testing using performance trend tracking and repeated analysis </li>
-  </ol>
-   </p>
-
-<p align="center">
-<img width="954" height="685" alt="INTRO PIC" src="https://github.com/user-attachments/assets/d8c62d79-c185-46f4-afe0-dae28eaa5a43" /> </p>
+<p align="justify"><strong> The test environment was set up to create a baseline before carefully introducing stressors.</strong>
+<ol>
+    <li><p align="justify"><strong> Testing Tool: GTMetrix </li></strong>
+    <li><p align="justify"><strong> Test Server Location: GTMetrix's Vancouver, Canada server. </li></strong>
+    <li><p align="justify"><strong> Browser: Google Chrome </li></strong>
+    <li><p align="justify"><strong> Connection Speed: Cable (5Mbps down, 1Mbps up). </li></strong>
+    <li><p align="justify"><strong> Target Application URL: Public Joomla Demo Site https://launch.joomla.org/ </li></strong>
+    <li><p align="justify"><strong> Test Rounds: Three consecutive tests were performed to simulate sustained load and identify trends or degradation, <br> labeled as Round 1, Round 2, and Round 3. </li></strong>
+    <li><p align="justify"><strong> Type of Test: Stress testing using performance trend tracking and repeated analysis </li></strong> </ol> </p>
  <hr>
  
 ## 6.0 METHODOLOGY
 
 <p align="justify">
  <ol>
-    <li> Target Selection: The publicly accessible Joomla Launch site was chosen. </li> <!-- 1 -->
-    <li> Test Execution: <!-- 2 -->
+    <li><p align="justify"><strong> Target Selection: The publicly accessible Joomla Launch site was chosen. </li></strong> <!-- 1 -->
+    <li><p align="justify"><strong> Test Execution: <!-- 2 -->
      <ul>
-      <li> Multiple test runs were conducted via GTMetrix. </li>
-      <li> Performance data was collected including: </li>
+      <li><p align="justify"><strong> Multiple test runs were conducted via GTMetrix. </li></strong>
+      <li><p align="justify"><strong> Baseline Establishment: To create a performance baseline for the application, a single initial test (Round 1) was run. </li></strong>
+      <li><p align="justify"><strong> Stress Simulation: Two tests (Rounds 2 and 3) were conducted quickly after each other. By repeatedly requesting the page, this methodology creates a stress condition that puts the server under pressure and demonstrates how reliably it can deliver performance. </li></strong> 
+      <li><p align="justify"><strong> Performance data was collected including: </li></strong>
        <ul>
-         <li> Redirect Duration </li>
-         <li> Time to First Byte (TTFB) </li>
-         <li> DOM Content Loaded Time </li>
-         <li> Connection Duration </li>
-         <li> First Paint </li>
-         <li> Onload Time </li>
-         <li> Backend Duration </li>
-         <li> DOM Interactive Time </li>
-         <li> Fully Loaded Time </li>
+         <li><p align="justify"><strong> Redirect Duration </li></strong>
+         <li><p align="justify"><strong> Time to First Byte (TTFB) </li></strong>
+         <li><p align="justify"><strong> DOM Content Loaded Time </li></strong>
+         <li><p align="justify"><strong> Connection Duration </li></strong>
+         <li><p align="justify"><strong> First Paint </li></strong>
+         <li><p align="justify"><strong> Onload Time </li></strong>
+         <li><p align="justify"><strong> Backend Duration </li></strong>
+         <li><p align="justify"><strong> DOM Interactive Time </li></strong>
+         <li><p align="justify"><strong> Fully Loaded Time </li></strong>
        </ul>
+      <li><p align="justify"><strong> The original hypothesis was that, as a feature-rich Content Management System (CMS), the Joomla demo site would perform worse under stress, mainly due to slower Time to Interactive and higher server response times (TTFB) caused by JavaScript. </li></strong> <!-- 3 -->
      </ul>
-    </li>
-<BR> <p align="center">
-<img width="954" height="685" alt="BROWSER TIMING" src="https://github.com/user-attachments/assets/6946ea31-4153-4bb0-beee-28f6d5109818" /> </p>
-  
+    </li></strong>
+<BR>
+ROUND 1 <BR>
 <p align="center">
-<img width="954" height="685" alt="PERFORMANCE" src="https://github.com/user-attachments/assets/39af9551-714b-4e48-a2a1-6fc7755aff6b" /> </p>
-    <li> Stress simulation: Despite GTMetrix's inability to support conventional multi-user stress tests, load was simulated through repeated runs and performance analysis under cached and uncached conditions. </li> <!-- 3 -->
-   <li> Data Collection: Metrics were recorded from GTMetrix reports and Lighthouse audits. </li>
+<img width="954" height="685" alt="BROWSER TIMING 1" src="https://github.com/user-attachments/assets/34484dd2-a943-4448-aca1-bec29c2323e2"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 1" src="https://github.com/user-attachments/assets/72729dab-469d-4af0-a57a-d19d035b6c03" /> </p>
+
+ROUND 2 <BR>
+<p align="center">
+<img width="954" height="685" alt="BROWSER TIMING 2" src="https://github.com/user-attachments/assets/b228f941-dbe0-4daf-ac0e-8b5cf8168e69"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 2" src="https://github.com/user-attachments/assets/bd7fb3df-d4fe-407a-a802-f370ed694ad1" /> </p>
+
+ROUND 3 <BR>
+<p align="center">
+<img width="954" height="685" alt="BROWSER TIMING 3" src="https://github.com/user-attachments/assets/08af0c5e-c7d9-42c8-b1a1-7892d3c0ce94"/> </p>
+<p align="center">
+<img width="954" height="685" alt="PERFORMANCE 3" src="https://github.com/user-attachments/assets/557b4b48-9413-4964-bc85-354890fe78bb" /> </p> 
+
+   <li><p align="justify"><strong> Stress simulation: Despite GTMetrix's inability to support conventional multi-user stress tests, load was simulated through repeated runs and performance analysis under cached and uncached conditions. </li></strong> <!-- 3 -->
+   <li><p align="justify"><strong> Data Collection: Metrics were recorded from GTMetrix reports and Lighthouse audits. </li></strong> <!-- 4 -->
  </ol>
 </p>
 <hr>
@@ -101,64 +118,134 @@
 ## 7.0 PERFORMANCE DATA ANALYSIS
 
 ### 7.1 Overall Scoring
-<p align="justify">
+<p align="justify"> Throughout the three test rounds, the overall GTMetrix grade fluctuated, suggesting performance instability under low stress:
 <ul> 
- <li> Performance Scoring: 67% </li>
- <li> Structure Score: 79% </li>
- <li> Fully Loaded Time: 8.7s </li>
-</ul> </p>
-
+ <li><p align="justify"><strong> Round 1: B (92%) </li></strong>
+ <li><p align="justify"><strong> Round 2: B (94%) </li></strong>
+ <li><p align="justify"><strong> Round 3: B (89%) </li></strong>
+</ul> 
+Following a slight improvement in Round 2, this regression in Round 3 indicates that the application's performance is brittle and susceptible to being adversely affected by repeated loads, even from a single user. </p>
+ROUND 1 <br>
 <p align="center">
-<img width="954" height="685" alt="GRADE" src="https://github.com/user-attachments/assets/462b02a3-78fc-4f1a-bc58-452e6ac86abd" /> </p>
+<img width="954" height="685" alt="GRADE 1" src="https://github.com/user-attachments/assets/7959a16a-0691-4c8e-ad40-6ab634244eca" /> </p>
+ROUND 2 <br>
+<p align="center">
+<img width="954" height="685" alt="GRADE 2" src="https://github.com/user-attachments/assets/88049193-3b0f-4070-a4c5-33c6ba0de7d6" /> </p>
+ROUND 3 <br>
+<p align="center">
+<img width="954" height="685" alt="GRADE 3" src="https://github.com/user-attachments/assets/91b98430-145b-4f03-b433-9f8eaf7c2998" /> </p>
 
 ### 7.2 Core web Vitals (User Experience Metrics)
 <p align="justify">
 <ul> 
- <li> Largest Contentful Paint (LCP): 2.5s </li>
- <li> Total Blocking Time (TBT): 236ms </li>
- <li> Cumulative Layout Shift (CLS): 0 </li>
+ <li><p align="justify"><strong> In Round 3, the Largest Contentful Paint (LCP) regressed from 1.3s which is good, in Round 1 to 1.6s shows that it needs some improvement. This suggests that when under stress, the main content renders more slowly. </li></strong>
+ <li><p align="justify"><strong> Total Blocking Time (TBT): Exhibited notable fluctuations. After improving from 121 ms in Round 1 to 86 ms in Round 2, it deteriorated to 125 ms in Round 3. This indicates main thread blocking and uneven JavaScript execution. </li></strong>
+ <li><p align="justify"><strong> Regardless of load conditions, Cumulative Layout Shift (CLS) remained at a perfect 0 throughout all rounds, demonstrating exceptional visual stability. </li></strong>
 </ul> 
-The page is visually stable (excellent CLS score) and loads its main content acceptably. Interactivity is crucial, though, because the high TBT suggests that the page is unresponsive for an extended period of time after loading.</p>
+</p>
+ROUND 1 <br>
 <p align="center">
-<img width="954" height="685" alt="WEB VITALS" src="https://github.com/user-attachments/assets/a982f35f-9ec2-4579-980b-c41427bd6d2b" /> </p>
+<img width="954" height="685" alt="WEB VITALS 1" src="https://github.com/user-attachments/assets/c2c3b76c-07bd-42c0-bd65-48aa0307bf78" /> </p>
+
+ROUND 2 <BR>
+<p align="center">
+<img width="954" height="685" alt="WEB VITALS 2" src="https://github.com/user-attachments/assets/e8c6ba37-7d9a-478a-8a48-283138cc60b7" /> </p>
+
+ROUND 3 <BR>
+<p align="center">
+<img width="954" height="685" alt="WEB VITALS 3" src="https://github.com/user-attachments/assets/52109649-97fb-400a-aa5a-ae2a54a183d0" /> </p>
 <hr>
 
 ## 8.0 RESULT INTERPRETATION
 
-<p align="justify"> The stress test revealed several performance issues:
+<p align="justify"> The findings support the original theory. With a "Fast to Show, Slow to Use" profile, the Joomla demo site clearly shows performance degradation under stress. The page's interactivity (TTI) is subpar and gets worse in the final test, even though it is still visually stable (CLS). The main conclusions are:
 <ol>
- <li> Slow LCP: showing that the main content is being rendered slowly. </li>
- <li> High TBT: suggesting that the main thread be blocked by a poorly optimied JavaScript execution </li>
- <li> Long FUlly Loaded Time: 8.7s, this indicate there are elements that use a lot of resources and the slow server response. </li>
+ <li><p align="justify"><strong> Slow Interactivity: Throughout all tests, the Time to Interactive (TTI) remained extremely high (~4 seconds), and in Round 3, it deteriorated to 4.2 seconds. </li></strong>
+ <li><p align="justify"><strong> JavaScript Bottleneck: Client-side script execution is identified as the main bottleneck, and the high and erratic Total Blocking Time (TBT) is the direct cause of the slow TTI. </li></strong>
+ <li><p align="justify"><strong> Structural Deficiencies: An excessive amount of HTTP requests (more than 150 per page) is one of the underlying architectural problems that are reflected in the consistently low "Structure" score (averaging 78%). </li></strong>
 </ol>
-Under repeated process, the site showed a very much consistent degradation in performance metrics, especially in TBT and LCP which indicates a poor stress tolerance.
 </p>
 <hr>
 
 ## 9.0 IDENTIFICATION OF BOTTLENECKS AND FAILURE POINTS
+![photo_4_2025-11-09_20-52-00](
 
-<p align="justify"> 
+<p align="justify"> The Waterfall Chart from the last stress test (Round 3), which is displayed below, provides a clear visual representation of the performance bottlenecks found in this analysis. The primary and secondary bottlenecks, as well as the possible server-side failure point, are directly demonstrated by this single chart.</p>
+ROUND 1 <BR>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/118e626f-94e7-426e-8adc-40bf266f776b" /> </p>
+ ROUND 2 <BR>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/0a3a0463-9182-4fa3-a09b-d0c2edd0f38f" /> </p>
+ ROUND 3 <BR>
+ <p align="center"> <img width="954" height="685" alt="waterfall chart" src="https://github.com/user-attachments/assets/4f919137-7e5d-4d14-8c8f-5ff92e71ebe9" /> </p>
+ 
+<p align="justify"> Waterfall Chart from Round 3 stress test, highlighting the key bottlenecks:
+ <ul>
+  <li> Large, blocking JavaScript. </li>
+  <li> High volume of requests. </li>
+  <li> Large, unoptimized images. </li>
+ </ul>
 <ol>
- <li> Backend Duration: 1.3s, this shows delays in server-side processing. </li>
- <li> Large Image Files: several images over 100KB contribute to slow loading. </li>
- <li> Render-Blocking Resources: CSS and JavaScript files delaying page rendering. </li>
- <li> Third-Party scripts: Google TAg MAnager and reCAPTCHA add a very significant overhead. </li>
+ <li><p align="justify"><strong> Primary Bottleneck: Excessive and Blocking JavaScript </li></strong>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>long TTI (~4s) and high TBT (~120ms). Two sizable Google Tag Manager scripts (about 229 KB in total) and several jQuery libraries were regularly displayed in the Waterfall Chart as loading ahead of schedule and preventing the main thread from running.</td>
+   <td>fter the page first paints, users are unable to interact with it for more than 4 seconds, which results in a subpar user experience.</td>
+  </tr>
+ </table>
+ <li><p align="justify"><strong> Secondary Bottleneck: High Number of HTTP Requests </li></strong>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>152-155 requests are made for each page load. The Structure score (77–79%) was continuously low.</td>
+   <td>The Fully Loaded Time (a fixed 7.9s) rises with each request, adding overhead and needlessly taxing the server and network.</td>
+  </tr>
+ </table>
+ <li><p align="justify"><strong> Potential Failure Point: Server-Side Performance </li></strong>
+ <table>
+  <tr>
+   <th>EVIDENCE</th>
+   <th>IMPACT</th>
+  </tr>
+  <tr>
+   <td>The average Time to First Byte (TTFB) was 450 ms, which is slower than optimal. Server-side resource contention is also suggested by the Round 3 regression in LCP and FCP.</td>
+   <td>Every subsequent stage of the page loading process is delayed by slower server response times.</td>
+  </tr>
+ </table>
 </ol>
 </p>
-<p align="center">
-<img width="954" height="685" alt="REQUEST" src="https://github.com/user-attachments/assets/e537c371-0aab-468a-912d-7e398bbce802" /> </p>
 <hr>
 
 ## 10.0 SUMMARY
 
-<p align="justify"> The GTMetrix stress test of https://launch.joomla.org/ revealed a notable performance snags under load, especially in Largest Contentful Paint (LCP) and Total Blocking Time (TBT). Render-blocking Scripts and resource-heavy content cause the application to perform poorly under stress, resulting in a less than ideal user experince. Overall it is recommended to enhance server response times, postponing non-essential JavaScript and optimizing images. Under high-load circumstances, these modification would improve stability and website smooth opration. </p>
+<p align="justify"> The target Joomla application's serious performance flaws were successfully found by this stress test analysis. Despite having a stable visual design, the website has serious problems with interactivity because of poorly optimised JavaScript and an ineffective page structure with excessive requests. Under the strain of repeated testing, the performance was found to be unstable and regressed. The following top suggestions are put forth to address these problems:
+<ul>
+ <li><p align="justify"><strong> Defer Non-Critical JavaScript: To avoid main thread blocking, load analytics and third-party scripts asynchronously. </li></strong>
+ <li><p align="justify"><strong> Reduce HTTP Requests: To cut down on the overall number of requests, combine CSS/JS files and make use of image sprites. </li></strong>
+ <li><p align="justify"><strong> Optimise images by converting big PNG files to more contemporary WebP formats. </li></strong>
+ <li><p align="justify"><strong> Improve TTFB and offload the delivery of static assets by implementing caching and a CDN. </li></strong>
+</ul>
 
-
+Even with higher load conditions, the Joomla demo site can provide a faster, more dependable, and consistent user experience by putting these changes into practice. </p>
 <hr>
 
+## PRESENTATION LINK
+
+https://youtu.be/DIq83zXCypQ?si=lYWstGQSQYtb2sEm
+<HR>
+<HR>
+<HR>
+
+
 <!-- [ <p align="justify">  </p> ]paragraph -->
-<!-- [ <ul> <li>  </li>  </ul> ] bullet points --> 
-<!-- <ol> <li>  </li>  </ol> numeric points -->
+<!-- [ <ul> <li><p align="justify"><strong>  </li></strong>  </ul> ] bullet points --> 
+<!-- <ol> <li><p align="justify"><strong>  </li></strong>  </ol> numeric points -->
 <!-- [ <hr> section devider ] [ <br> enter ] -->
 
 <!-- 

@@ -21,6 +21,8 @@ This test helps identify how the application handles simultaneous requests, whet
 
 ---
 
+<img width="720" height="244" alt="image" src="https://github.com/user-attachments/assets/8a0042e0-e19f-4b52-83a3-80cd185d4d18" />
+
 ## 🧩 Tool Selection Justification
 **Apache JMeter** was chosen for this test because:
 - It is a **free, open-source, and industry-standard** performance testing tool.  
@@ -56,7 +58,7 @@ This API returns a list of users and is ideal for testing simultaneous GET reque
 | **Timer** | Synchronizing Timer (forces all users to send requests together) |
 | **Assertion** | Response Code = 200 |
 | **Listener** | Summary Report |
-| **System Used** | Windows 10, 8GB RAM, Intel Core i5 |
+| **System Used** | Windows 10, 8GB RAM, Ryzen 5 |
 | **Network** | Stable 50 Mbps Internet connection |
 
 ---
@@ -121,14 +123,17 @@ To further optimize performance under concurrency:
 ---
 
 ## 🧾 Summary
-
 This project demonstrates an **advanced concurrency test** using **Apache JMeter** on the public **ReqRes API**.  
 The test simulated **100 concurrent users** performing both **GET** and **POST** requests to evaluate the API’s ability to handle simultaneous traffic.  
 
 Results showed stable performance with an **average response time of 180–250 ms**, **zero errors**, and consistent throughput of around **12–15 requests per second**.  
 The findings confirm that the ReqRes API maintained excellent stability and responsiveness under concurrent load, proving the effectiveness of JMeter for realistic performance testing.
 
+---
 
-## 🧮 Visual Results
-Include your JMeter result screenshots here:
+## 🧾 Video Demonstration
+https://youtu.be/d-I5MVYkadg
+
+
+
 

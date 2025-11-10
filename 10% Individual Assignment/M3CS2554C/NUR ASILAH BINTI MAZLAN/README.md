@@ -1,12 +1,26 @@
-# Stress Testing on QuickPizza Using Grafana K6
+# Stress Testing on QuickPizza Using Grafana Cloud K6  
 
-## **Abstract**
+**NAME:** NUR ASILAH BINTI MAZLAN<br> <br>
+**STUDENT ID:** 2025160559<br> <br>
+**GROUP:** CDCS2554C
+
+---
+## **What is Stress Testing?**
 <p align="justify">
-This article details the results from a web application stress test on the QuickPizza demo site using Grafana Cloud K6. The purpose of the experiment was to test how the system behaved under progressively increasing concurrent user loads, with the goal of demonstrating performance stability, identifying potential bottlenecks, and observing how the system responded under pressure. This testing was done completely within the Grafana Cloud K6 web app interface rather than running K6 on a local device via Visual Studio Code or Windows Command Prompt to ease the setup time and also in a way to see results in real time. The K6 cloud stress test was initiated by ramping up virtual users (VU) from 1 to 50 concurrent users, which was increased to 75 and 100 users. That was the maximum limit of concurrent users allowed under the Grafana Cloud free-tier plan. The results indicated response times were stable during the test, but one HTTP request timed out due to simulated login credentials being used in the performance test. Overall the system managed concurrent sessions well. 
+Stress testing is a form of non-functional performance testing used to evaluate how a system behaves under extreme conditions or heavy user load. The main purpose is to determine the stability, reliability, and robustness of an application when it operates beyond its normal capacity. Unlike load testing, which measures performance under expected traffic levels, stress testing pushes the system to its limits to identify potential points of failure.  
+<p align="justify">
+Through stress testing, testers can observe how the application recovers after failure, monitor its response time, and detect bottlenecks that may lead to performance degradation or crashes. This testing method provides valuable insights into system resilience, ensuring that the application can maintain functionality during unexpected surges in demand or hardware limitations. Ultimately, stress testing helps improve scalability planning, system architecture, and user experience by highlighting weaknesses before they affect real-world users.
 
 ## 1. Introduction
 <p align="justify">
 The performance of web applications is fundamentally important to user satisfaction and operational reliability. As applications scale, they must withstand increased traffic without sacrificing responsiveness or stability. Stress testing is one type of non-functional testing that observes how an application performs under extreme conditions. For example, the load will be gradually increased until the system is near or has exceeded its expected limits.
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e20d20e7-ec91-4434-a4b8-cca882a0e610" width="600">
+  <br>
+  <strong>Figure 1.1 </strong><em>QuickPizza Website</em>
+</p>
+
 <p align="justify">
 For purposes of the experiment, the QuickPizza demo website was chosen as the target system. The demo site provided static and dynamic content such as menu listings, news pages, and login forms. Thus, it was fitting for replicating realistic browsing and transaction activity. Grafana Cloud K6 is an open-source, cloud-based performance testing platform which was used to assess the website’s reaction as the number of simulated users increased. 
 
@@ -45,6 +59,25 @@ This configuration enabled controlled load escalation and sustained stress condi
 
 
 ## 5. Methodology and Execution
+Test execution was conducted by writing the script into the Grafana Cloud K6 Script Editor and clicking ‘Run Test’. Real time metrics were served on the Grafana dashboards showing total requests, the failure rate, and response duration.
+
+### 5.1 Test Configuration Summary
+<div align="center">
+
+| **Parameter** | **Configuration** |
+|----------------|-------------------|
+| Test Type | Stress Test |
+| Tool Used | Grafana Cloud K6 |
+| Total Duration | 4 minutes |
+| Virtual Users (VU) Range | 50 → 75 → 100 |
+| Thresholds | p(95) < 2000 ms, failure rate < 5% |
+| Endpoints Tested | `/`, `/news.php`, `/contacts.php`, `/login` |
+
+<strong>Table 5.1 </strong><em>Summary of Test Configuration</em>
+
+</div>
+
+### 5.2 Test Script Code
 ```js
 import http from 'k6/http';
 import { sleep } from 'k6';
@@ -73,25 +106,8 @@ export default function () {
 ```
 The script simulates a typical user flow visiting the homepage, reading a news section, checking contact details, and then attempting a login. This utilized intentionally invalid credentials to simulate authentication handling under load.
 
-Test execution was conducted by writing the script into the Grafana Cloud K6 Script Editor and clicking ‘Run Test’. Real time metrics were served on the Grafana dashboards showing total requests, the failure rate, and response duration.
-
-### 5.1 Test Configuration Summary
-
-| **Parameter** | **Configuration** |
-|----------------|-------------------|
-| Test Type | Stress Test |
-| Tool Used | Grafana Cloud K6 |
-| Total Duration | 4 minutes |
-| Virtual Users (VU) Range | 50 → 75 → 100 |
-| Thresholds | p(95) < 2000 ms, failure rate < 5% |
-| Endpoints Tested | `/`, `/news.php`, `/contacts.php`, `/login` |
-
-### 5.2 Script Snippet
-
-
 ## 6. Results and Raw Data
-//pic here
-<p align="justify">!
+<p align="justify">
 After performing the stress test on Grafana Cloud K6, a comprehensive array of performance metrics was generated. The platform automatically presented the output using numerous visualization and analysis panels such as Graph, Cloud Insights, HTTP Summary, Thresholds, and Profile. All of these panels together, show how the QuickPizza test site performed when put under a gradually increasing load.
 
 ### 6.1 Graph Overview
@@ -121,11 +137,13 @@ The Cloud Insights panel of Grafana gave a succinct overview of system health an
   <strong>Figure 6.3 </strong><em>All thresholds passed</em>
 </p>
 
+<div align="center">
+  
 | **Metric** | **Threshold Condition** | **Observed Result** | **Status** |
 |-------------|--------------------------|----------------------|-------------|
 | HTTP Request Duration (p95) | < 2000 ms | ~3.6 ms | ✅ Passed |
 | HTTP Failure Rate | < 5 % | ~0.01 % | ✅ Passed |
-
+</div>
 Both defined thresholds were satisfied, indicating that the system maintained the targeted performance level throughout the test.
 
 ### 6.4 HTTP Summary
@@ -145,32 +163,27 @@ The HTTP summary indicates that all requests were successfully completed except 
 - Failed requests: **1 (HTTP 403 on /login)** – expected
 - Both thresholds passed ✅
 
-//delete later
-To conclude an observation, QuickPizza showed stable operation and fast responses across the various endpoints. The Cloud Insights health indicator was green throughout the testing session, which confirmed no resource exhaustion or queuing of requests. All numeric thresholds were met and with only one failed HTTP request, it is confirmed that error-handling logic was also functioning as intended during load. 
-
 ## 7. Analysis and Interpretation
 <p align="justify">
 The collected data confirms that the QuickPizza demo site performed reliably under stress. As virtual users increased, there was no significant rise in latency or failure rate. The system maintained efficient throughput and quickly responded to all GET requests.
 
-### 7.1 Response Time Stability
-<p align="justify">
-The graph showed that response times maintained a flat trend line which leads us to believe the web server operated with consistent processing capacity. Even under peak load, the P95 value of 3.65 ms held far below 4 seconds threshold, showcasing an efficient backend processing capability.
+<div align="center">
 
-### 7.2 Throughput and Scalability Capability
-<p align="justify">
-Throughput followed the number of users ramped and held a steady state at 682 RPS approximately. No sharp spikes or dips inferred that QuickPizza performed well at handling concurrency and Grafana’s load generators load balanced effectively over the test period. 
+| **Aspect Analyzed** | **Observation** | **Interpretation** |
+|:--------------------|:----------------|:-------------------|
+| **Response Time Stability** | Response times remained consistently low with a stable P95 trend throughout all stages of the test. | The server processed requests efficiently even as concurrent users increased, showing strong backend optimization. |
+| **Throughput and Scalability** | Throughput scaled linearly with virtual users, peaking around 682 RPS without fluctuations. | Indicates that the QuickPizza site can handle additional load without performance degradation. |
+| **Failure and Error Handling** | Only one HTTP 403 request failed during the `/login` simulation with invalid credentials. | Confirms proper error-handling logic and stable authentication response under stress. |
+| **Resource Utilization** | No latency spikes or throttling behavior were detected in Grafana Cloud metrics. | Suggests that system resources remained within safe operating ranges during the test. |
+| **Grafana Analysis Insights** | Grafana reported all thresholds as “Passed” with average request time remaining constant. | The overall test health was stable, validating strong performance consistency under load. |
 
-### 7.3 Failure and Error Handling
-<p align="justify">
-The one failed HTTP 403 request observed was not unexpected from the `/login` endpoint confirming authentication logic was acting in the intended mode rather than exhibiting a performance error. The Logs tab confirmed no connection timeouts nor any unexpected 5xx server errors occurred. 
+<strong>Table 7.1 </strong><em>Summary of Performance Analysis and Interpretation</em>
 
-### 7.4 Resource Utilization Perspective
-<p align="justify">
-Since the test occurred in Grafana’s cloud environment, CPU and memory usage at the server were not available as the major perspective. However, there were no latency spikes or throttling behaviour that would indicate that the requested infrastructure operated within safe performance ranges. 
+</div>
 
-### 7.5 Insights from Grafana's Analysis Panel
 <p align="justify">
-The Analysis tab in Grafana aggregated the run to be “Healthy”, with all thresholds listed as “Passed”. Average request time and data transfer remain unchanged and confirm that the system can sustain moderate to heavy traffic.
+From the analysis summarized in Table 7.1, it can be concluded that the QuickPizza demo site performed reliably under stress conditions. The consistent response times, steady throughput, and near-zero failure rate all indicate that the system is well-optimized for moderate-to-high concurrency. No evidence of instability or resource saturation was observed, suggesting that the application architecture can sustain its performance level effectively within the tested limits.
+</p>
 
 ## 8. Recommendations and Best Practices
 - **Increase Test Duration:** Extend test duration beyond four minutes to capture long-term stability trends.  
@@ -196,4 +209,12 @@ From this assignment, I learned how to create load profiles, interpret response 
 ## 11. Video Demonstration
 A short walkthrough video showcasing the test execution, configuration steps, and the result visualization is available on : 
 
-👉 [**Watch on YouTube**](https://www.youtube.com/watch?v=CDNLb47zqJQ) 
+👉 [**Watch here on YouTube**](https://www.youtube.com/watch?v=CDNLb47zqJQ) 
+
+## 12. References
+
+- Grafana Labs. (2024). *Grafana Cloud k6 Documentation.* Retrieved from [https://grafana.com/docs/grafana-cloud/testing/k6/](https://grafana.com/docs/grafana-cloud/testing/k6/)
+
+- Grafana Labs. (2024). *Test.k6.io – Demo Website for Load Testing.* Retrieved from [https://test.k6.io/](https://test.k6.io/)
+
+- Isaiah, A. (2025, March 3). _Introduction to Modern Load Testing with Grafana k6._ Better Stack Community. Retrieved from [https://betterstack.com/community/guides/testing/grafana-k6/](https://betterstack.com/community/guides/testing/grafana-k6/)

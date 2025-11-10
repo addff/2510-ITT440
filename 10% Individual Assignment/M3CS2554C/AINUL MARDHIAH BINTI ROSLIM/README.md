@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/27b67417-2968-4809-aaa3-82fc21498634" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
+
 # 🔥Can It Handle the Heat? A Load Test Article by Ainul's Network Programming 101 ✨
 
 ## 🎯 Executive Summary: Gatling Load Test Baseline
@@ -144,43 +148,131 @@ In addition, I can get the overall reports documentation to analyse the **Global
 
 In Global Gatling Documentation : -
 
-<img width="764" height="275" alt="image" src="https://github.com/user-attachments/assets/4988fb63-17b8-4cf6-892b-9c4ce7a25a9d" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4988fb63-17b8-4cf6-892b-9c4ce7a25a9d" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response time distribution
-<img width="763" height="280" alt="image" src="https://github.com/user-attachments/assets/b23321ad-00aa-47af-a1ab-e6deac220f29" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b23321ad-00aa-47af-a1ab-e6deac220f29" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response time percentiles
-<img width="763" height="282" alt="image" src="https://github.com/user-attachments/assets/e682bbd9-46d3-4d8c-a700-53f351b9dc4f" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e682bbd9-46d3-4d8c-a700-53f351b9dc4f" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Requests / sec
-<img width="762" height="282" alt="image" src="https://github.com/user-attachments/assets/ed61e7c0-4627-403f-9cfc-8c104f3977fb" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ed61e7c0-4627-403f-9cfc-8c104f3977fb" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### Response / sec
-<img width="761" height="281" alt="image" src="https://github.com/user-attachments/assets/5b373167-d4ac-4fa6-8fc9-8f86b376c5b1" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5b373167-d4ac-4fa6-8fc9-8f86b376c5b1" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 
 In Details bar graph for : -
 
 ### T01_GET_Login_Page
-<img width="767" height="298" alt="T01_GET_Login_Page" src="https://github.com/user-attachments/assets/63aa8840-c1a7-475a-9f40-87d7e9efb6ba" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/63aa8840-c1a7-475a-9f40-87d7e9efb6ba" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### T02_POST_Login_And_Access_Secure
-<img width="765" height="295" alt="T02_POST_Login_And_Access_Secure" src="https://github.com/user-attachments/assets/0450e2ad-9bf2-42e6-bb25-ee07f868e241" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0450e2ad-9bf2-42e6-bb25-ee07f868e241" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
 ### T03_POST_Login_And_Access_Secure Redirect 1
-<img width="763" height="290" alt="T03_POST_Login_And_Access_Secure Redirect 1" src="https://github.com/user-attachments/assets/f3c27aa3-82b7-4aa9-b88e-8ef230582974" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f3c27aa3-82b7-4aa9-b88e-8ef230582974" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>
 
-## ○ Interpretation of results.
+---
+## 📊 So, What can I say about the Findings...(Interpretation of results)
 
-## ○ Identified bottlenecks.
+### 1.0 Response Time (Latency)
 
-## ○ Recommendations for improvement.
+**○ Response Time Ranges :** The majority of request which was *75-80%* fell into the **Green** range by the indicating under 800 ms meanwhile, a smaller significant, portion which was *20-25%* situated into the **Yellow or Orange** range.
 
-## ○ Final conclusions.
+**○ In depth - explanation :** The initial GET Login Page request is the slowest, with an average of **1.13 seconds** and a poor maximum time of nearly **5 seconds**. Nevertheless, the subsequent POST requests which was the actual acces or login are very fast, averaging around under **420 ms**.
 
+### 2.0 Throughput & Load Profile 
+
+**○ Number of Users Strated per Second & Concurrent Users :** The test employed an infrequent, **spiky load pattern**. The "Number of users started per second" indicated short burts of users foloowed by periods of zero users starting. The "Number of concurrent users" also confirming that this was a **very light load test**, with a peak of only **3 concurrent users** that I assigned for the simulation.
+
+**○ In depth - explanation :** In my opinion, my improvised system's throuput is kinda moderate or we could said easy to achieve the excellent because it succesfully served every request given the minimal load. The number of concurrent users was low, which is suitable and appropriately for such a simple functional verification load test.
+
+### 3.0 Error Rate
+
+**○ Assertion Rate**
+| Metric | Value | Threshold Met | Interpretation |
+| :--- | :--- | :--- | :--- |
+| **Success Rate (OK %)** | 100% | Yes | All system requests completed without any functional failures. |
+| **Failed Rate (KO %)** | 0% | Yes | Zero errors were recorded during the simulation. |
+| **Global Failed Items (%)** | ≤ 1.0% | Yes | The overall success criteria for the test were met. |
+
+**○ In depth - explanation :** I kinda think my system is **functionally stable** and quite robust under this light load. There are no indication of application errors, connection failures, or functional issues. 
+
+---
+## ⚠️ Can I find the Obstruction ?! (Identified bottlenecks)
+
+**Client-Side Bottleneck (Inference)** 
+I have find a slight or maybe the main problems in my simulation for the `https://the-internet.herokuapp.com`. The data **clearly points** to a bottlenck in the `/T01 GET Login Page` transaction. 
+
+| Metric | Observation | Hypothesizing |
+| :--- | :--- | :--- |
+| **Average Response Time** | **1136 ms** (1.13 seconds) | This is **significantly slower** than subsequent transactions (385 ms and 413 ms), consistently causing the largest delay in the user flow. |
+| **Maximum Response Time** | **4890 ms** (4.89 seconds) | A maximum time near **5 seconds** for a simple GET request is a major performance concern and indicates a very poor worst-case user experience.
+
+**○ In depth - surmise :** The first request to load the login page is the **application's slowest transaction** and is acting as a transactional bottleneck for the user flow. Poosible causes include heavy initial server processing, slow database queries for session setup, or large static content loading.
+
+---
+## 🚨Now it's time for advocate (Recommendations for improvement) ##
+
+The goal is to bring the average response time for the initial Login Page GET REQUEST **down below 500 ms** to match the performance of subsequent successful transactions. In addition, i think the slow load time could be due to several issues on the server handling this request. So I guess I should start analyzing the **server-side logs** and running a **code profiler** on the execution path for this specific request (`/T01 GET Login Page`). 
+
+**Recommendation on server-side logs** : Aggressively investigate and optimize the `/T01 GET Login Page` request.
+
+○ I should bring the average response time for this request **below 500 ms** too ensure fast,consistent user entry point and also look for code inefficiences, slow database calls such as session setup, configuration loading), or unnecessarily large page assets contributing to the **1136** ms average.
+
+**Recommendation on code profiler** : I think even when it is still functionally stable, my test needs to inforce performance requirements in the future.
+
+○ I would add **Response Time Assertions** to my test script. For instance, add a rule or coding that forces the test to fail if the **90th percentile reponse time** for any core transaction exceeds a specific Service Level Objective like 15 seconds. This ensures future runs won't pass if the performance degrades.
+
+---
+## ‼️The Summarization Of My Verdiction (Final conclusions)
+
+I think at the end of this experimental test performance of website application and Analysis, I can assure you that it is **Stable, But Slow to Start**. The system also can also be indicated by the color such as when it is currently **Green** 🟩 for **Functional stability** but **Yellow** 🟨 for Perfformance readines.
+
+The **Positive Outcome** that I could get was the test achieved a *100%* **success rate** with **zero errors** under light load, confirming functional stability.
+
+The **Critical Weakness** is that the `/T01 GET Login Page` transaction is a **transactional bottleneck**, averaging *1.13* **seconds** and peaking near *5* **seconds**. This is I think the single biggest performance risk to the user experimence.
 
 ---
 ## 🎥 Wanna see a video? Link below ! (Video Demonstration)
 
 <a href="https://youtu.be/Zpucm2vnlpQ" target="_blank">Visit the video at my YouTube channel</a>
 
+---
+# 🍀That's all for now, Thank You for reading my humble Article 💖
+
+Individual Assignment : Comprehensive Web Application Performance Testing & Analysis
+
+Edited By : Ainul Mardhiah binti Roslim
+
+Matric No : 2024553785
+
+Class Registered : M3CS2554C
+
+Code Subject : ITT440 
+
+Subject Name : Network Programming
+
+Checked By : Sir Shahadan bin Saad
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ff6d5f4-f091-470e-8cc1-ae73e6aefb0b" alt="Your GIF's Alt Text" width="Optional_Width_in_px_or_%" />
+</p>

@@ -16,14 +16,13 @@
 ---
 
 ## 🧾 1. INTRODUCTION
-Web performance testing is essential for ensuring that a program can handle sudden spikes in user traffic without failure. This project focuses on conducting spike testing of web performance using **k6**, an open-source performance testing tool, and visualizing the results using **InfluxDB** and **Grafana**.
-The primary goal of this project is to assess how the target web application, **AutomationInTesting**, responds to a sudden surge of 1000 virtual users (VUs) and how it recovers afterwards. The performance test measures **request rate**, **active virtual users**, and **stability under high traffic situations**.
+Web performance testing is essential for verifying that a program can manage sudden increases in user traffic without failure. This project involves spike testing of web performance using  **k6**, an open-source performance testing tool, and visualizing the results using **InfluxDB** and **Grafana**. The primary goal is to analyze how the target web application, **AutomationInTesting**, responds to a rapid virtual load of 1000 virtual users (VUs) and its recovery process.
 
 ---
 
 
 ## 📌 2. WHAT IS SPIKE TESTING ?
-Spike testing is a type of performance test that examines how a system reacts when the number of users or requests increases sharply and then decreases rapidly over a short period. The objective is to identify whether the system can handle unexpected traffic spikes, recover from overload conditions, and maintain acceptable response times without crashing or data loss.
+Spike testing is performance testing that checks how a system responds when the number of users or requests sharply increases and then drops quickly over a short time. The goal is to see if the system can handle sudden traffic spikes, recover from overloads, and keep acceptable response times without crashing or losing data.
 Through spike testing, developers and testers can observe system stability, scalability limits, and potential resource constraints, such as CPU usage, memory consumption, and request handling efficiency.
 
 ---
@@ -137,7 +136,7 @@ C:\Users\ADMIN\Desktop> k6 run --out influxdb=http://localhost:8086/k6 spike_tes
 Data gathering uses a local InfluxDB database. Grafana connected through the port `http://localhost:3000`. Test script executed using Windows Command Prompt.
 
 **Grafana Dashboard URL:**  
-[http://localhost:3000/d/df2p8k24gscu8e/k6-spike-test-31-10?orgId=1&from=now-24h&to=now](http://localhost:3000/d/df2p8k24gscu8e/k6-spike-test-31-10?orgId=1&from=now-24h&to=now)
+[http://localhost:3000/d/df2p8k24gscu8e/k6-spike-test-31-10?orgId=1&from=now-24h&to=now]
 
 ---
 
@@ -152,7 +151,7 @@ The spike test was conducted using the k6 load testing tool to evaluate the perf
 <img width="940" height="350" alt="image" src="https://github.com/user-attachments/assets/df5d38f2-7094-48e1-9f8e-ce667bb9214e" />
 </p>
 
-The test scenario began with a gradual warm-up of 50 virtual users, followed by a rapid spike to 1,000 users within 10 seconds, sustained for 30 seconds, and then reduced to zero during the recovery phase. The resulting graph shows that the number of active virtual users increased sharply and maintained stability at 1,000 before decreasing, while the request rate peaked at approximately **117 requests per second** with minor fluctuations during the high-load period. This behaviour demonstrates that the website successfully handled a sudden surge in concurrent users and recovered efficiently once the load was removed.
+The test scenario started with a gradual ramp-up of 50 virtual users, then quickly spiked to 1,000 users within 10 seconds, maintained that level for 30 seconds, and then dropped to zero during the recovery phase. The resulting graph shows that the number of active virtual users rises sharply and remains steady at 1,000 before decreasing, while the request rate peaks at about **117 requests per second** with a minor error during the high-load period. This behavior demonstrates that the website effectively handled a sudden spike in concurrent users and recovered efficiently once the load decreased.
 
 ---
 
@@ -161,7 +160,9 @@ The test scenario began with a gradual warm-up of 50 virtual users, followed by 
 <img width="940" height="373" alt="image" src="https://github.com/user-attachments/assets/ec232175-dc99-4a08-9fbd-094000caa934" />
 </p>
 
-The graph shows the relationship between the request rate and error rate during the spike test. The request rate increased sharply, peaking at about **1,600 requests per second**, while the error rate briefly rose to around **37%** during the highest load. After the spike, both metrics dropped quickly, showing the system’s ability to recover. The average request rate was **140 requests per second**, with a total of **2,653 requests** and an average error rate of **1.48%**. This indicates that the system handled the sudden traffic surge effectively and returned to normal performance after the load decreased.
+The graph shows the relationship between the request rate and error rate during the spike test. The request rate increased sharply, peaking at about **1,600 requests per second**, while the error rate briefly increased to around **37%** during the highest load.
+After the spike, both metrics dropped quickly, showing the system’s ability to recover. The average request rate was 140 requests per second, with a total of **2,653 requests** and an average error rate of **1.48%**. This indicates that the system can handle the sudden traffic effectively and return to normal performance after the load decreases.
+
 
 ---
 
@@ -230,17 +231,17 @@ Based on the spike test results, the following actions are recommended:
    Continuously track CPU, memory, and network usage using tools like Grafana to identify potential hardware or performance bottlenecks.
 
 3. **Repeat Tests with Realistic Scenarios:**  
-   Conduct additional spike and stress tests, including common user actions (login, browsing, posting) to better simulate real-world traffic and understand system behaviour under varied workloads.
+   Conduct additional spike and stress tests, including common user actions (login, browsing, posting) to better simulate real-world traffic and understand system behaviour under different workloads.
 
 ---
 
 ### 🧾 **10. CONCLUSION**
 
-The spike test demonstrated that the website could handle sudden traffic surges up to **1,000 virtual users** with minimal errors, although temporary delays were observed during peak load. This indicates that, while the system is generally stable, there are moments of strain that could impact the user experience under extreme conditions.
+The spike test showed that the website could handle sudden traffic surges of up to 1,000 virtual users with minimal errors, although temporary delays occurred during peak load. This suggests that, while the system is generally stable, some errors could affect the user experience under extreme conditions.
 
 Through this exercise, I gained practical experience in conducting performance testing using **K6** and monitoring tools like **Grafana**. I learned how to interpret key metrics such as average response time, total requests, error rates, and resource utilisation, which are essential for understanding how a system behaves under stress.  
 
-I also realised the importance of realistic testing scenarios, including varied user actions, to uncover potential bottlenecks that simple spike tests might not reveal.
+I also realised the importance of realistic testing scenarios, including various user actions, to uncover potential bottlenecks that simple spike tests might overlook.
 Additionally, the test highlighted the value of **proactive monitoring** and **scalability planning**. By observing system behaviour during high traffic, I identified areas of the backend that might require optimisation, such as slow API endpoints or inefficient database queries.
 
 Overall, this experience enhanced my technical skills in performance evaluation, taught me how to critically analyse and interpret test data, and emphasised best practices for ensuring the reliability and scalability of web applications in real-world scenarios.
@@ -264,5 +265,7 @@ Overall, this experience enhanced my technical skills in performance evaluation,
 
 ---
 
-### 🎥 **VIDEO DEMONSTRATION (TO BE EMBEDDED)**
+### 🎥 **VIDEO DEMONSTRATION**
+[🎥 Watch the Video Demonstration on YouTube](https://youtu.be/OCTLjkpVJVg)
+
 

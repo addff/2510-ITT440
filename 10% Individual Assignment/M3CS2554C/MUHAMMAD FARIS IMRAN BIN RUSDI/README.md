@@ -1,4 +1,4 @@
-# 🧪 Website Stress Testing Using Artillery.io
+# 🧪 Website Stress Testing Using Artillery
 
 ### NAME: **MUHAMMAD FARIS IMRAN BIN RUSDI**
 ### STUDENT ID: 2025137413
@@ -9,8 +9,11 @@
 
 ## 🧩 Introduction
 
+   <img width="1024" height="277" alt="image" src="https://github.com/user-attachments/assets/4d351fb5-5bc2-4d1f-85f7-942a62064738" n/>
+
+
 This project focuses on **Stress Testing a web API** using **Artillery.io** to analyze its performance, stability, and reliability under extreme load conditions.
-The main goal is to identify the **breaking point** of the system — how much traffic it can handle before performance starts to degrade.
+The main goal is to identify the **breaking point** of the system , how much traffic it can handle before performance starts to degrade.
 
 Stress testing helps developers and organizations ensure that the system can withstand unexpected spikes in user requests and still maintain acceptable performance levels.
 
@@ -22,6 +25,12 @@ Stress testing helps developers and organizations ensure that the system can wit
 * To identify **response degradation**, **timeouts**, and **failure rates** under stress.
 * To observe how the system behaves beyond its operational limits.
 * To document findings using **data, charts, and summaries** for future optimization.
+
+---
+
+🧪 Why Artillery for Stress Testing
+
+Artillery was chosen for stress testing because it is lightweight, flexible, and easy to use. It can simulate realistic user traffic, identify performance bottlenecks, and generate clear reports. Its support for multiple protocols and integration with the Artillery Cloud Dashboard makes it ideal for analyzing system performance efficiently.
 
 ---
 
@@ -61,39 +70,55 @@ Stress testing helps developers and organizations ensure that the system can wit
 2. **Create a YAML Test File**
    
     nano name file.yml
-     
-   ```yaml
-   config:
-     target: "https://pokeapi.co/api/v2"
-     phases:
-       - duration: 60
-         arrivalRate: 10
-         name: "Warm up"
-       - duration: 60
-         arrivalRate: 30
-         name: "Moderate load"
-       - duration: 90
-         arrivalRate: 50
-         name: "Stress test"
-       - duration: 60
-         arrivalRate: 100
-         name: "Break point"
-   scenarios:
-     - name: "Get Pokemon Info"
-       flow:
-         - get:
-             url: "/pokemon/1"
+   
+    Put the configuration below into file
+```yaml
+  config:
+    target: "https://pokeapi.co"        # Base URL of the API
+    phases:
+      - name: "Warm-up"
+        duration: 60                     # seconds
+        arrivalRate: 10                  # 10 new users per second
+      - name: "Moderate load"
+        duration: 60
+        arrivalRate: 30                  # 30 users/sec
+      - name: "Stress test"
+        duration: 90
+        arrivalRate: 60                  # 60 users/sec, pushes beyond normal limits
+      - name: "Break point"
+        duration: 60
+        arrivalRate: 100                 # 100 users/sec, likely to cause failures
+
+    defaults:
+      headers:
+        Accept: "application/json"
+
+  scenarios:
+    - name: "Get Pokemon Info"
+      flow:
+        - get:
+            url: "/api/v2/pokemon/{{ id }}"
+      variables:
+        id:
+            - 1
+            - 4
+            - 7
+            - 25
+            - 150
+            - 200
+            - 250
+            - 400
+            - 500
+
    ```
-    write and save the code 
-4. **Run the Test**
+   write and save the code 
+
+3. **Run the Test**
 
    ```bash
    artillery run stress-test.yml --record --key <API KeyS>
 
-
-   ```
-
-5. **View Results**
+4. **View Results**
 
    * In the terminal (real-time stats)
    * On [Artillery Cloud Dashboard](https://app.artillery.io/)
@@ -180,3 +205,8 @@ Improvements could include:
 * Implementing **caching** or **load balancing**.
 * Optimizing backend queries.
 * Deploying **distributed servers** to handle peak traffic efficiently.
+
+---
+
+## Video Demonstration
+Here link for video demontration https://youtu.be/FzWspnh26HI

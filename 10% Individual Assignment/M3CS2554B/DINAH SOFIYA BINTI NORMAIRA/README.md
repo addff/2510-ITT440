@@ -57,6 +57,62 @@ It uses JavaScript for scripting, providing a simple yet powerful way to define 
 
 ### 4.1 Installation Steps
 
+Below are the key installation commands executed in **PowerShell**:
+
+powershell
+# 1️⃣ Install Chocolatey (Windows package manager)
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# Install K6
+choco install k6 -y
+
+# Check Installation
+k6 version
+
+## ✅ Output Example
+
+![Installation Output](output_installation%20step.png)
+
+## ⚙️ Step 3 — Install Node.js
+
+# Download and install Node.js (LTS version recommended)
+https://nodejs.org/en/download/
+
+# After installation, verify the version
+ node -v
+ npm -v
+
+## ✅ Output Example
+
+ v24.11.0
+ 11.6.1
+ 
+ ## 🧩Install Python
+ # Download Python (3.14 or latest stable)
+https://www.python.org/downloads/
+
+# During setup, make sure to:
+☑️ Check "Add Python to PATH"
+☑️ Check "pip" (Python package installer)
+
+## ✅ Check Installation:
+python --version
+pip --version
+
+## ✅ Install Required Libraries:
+pip install matplotlib pandas
+
+## ✅ Output Example
+Successfully installed matplotlib pandas
+
+### 📊 Graph Generation (Python)
+![Code Graph](graph%20code.png)
+
+
+
 ## 5. Test Scenario & Methodology
 
 **Spike Test Objective:**  
@@ -91,16 +147,80 @@ During this test, K6 rapidly increased virtual users to 200 within 10 seconds, m
 
 ## 7. Test Results & Observations
 
+---
 
+### 🧩 Test 1 — 50 Virtual Users
+**Scenario:** Light spike load for 1 minute.
 
-### Example K6 Summary Output:
+#### ▶️ Running Test
+![Running Test 50 VUs](running_50.png)
 
+#### 🧾 Test Output
+![Result Output 50 VUs](result_50.png)
+
+#### 📊 Graph Results
+- ⏱ **Response Time**
+  ![Response Time 50](response_time_50.png)
+- 📈 **Requests Per Second**
+  ![Requests Per Second 50](requests_per_second_50.png)
+- ⚠️ **Failure Rate**
+  ![Failure Rate 50](failure_rate_50.png)
+
+---
+
+### 🧩 Test 2 — 100 Virtual Users
+**Scenario:** Moderate spike load for 2 minutes.
+
+#### ▶️ Running Test
+![Running Test 100 VUs](running_100.png)
+
+#### 🧾 Test Output
+![Result Output 100 VUs](result_100.png)
+
+#### 📊 Graph Results
+- ⏱ **Response Time**
+  ![Response Time 100](response_time_100.png)
+- 📈 **Requests Per Second**
+  ![Requests Per Second 100](requests_per_second_100.png)
+- ⚠️ **Failure Rate**
+  ![Failure Rate 100](failure_rate_100.png)
+
+---
+
+### 🧩 Test 3 — 200 Virtual Users
+**Scenario:** Heavy spike load for 3 minutes.
+
+#### ▶️ Running Test
+![Running Test 200 VUs](running_200.png)
+
+#### 🧾 Test Output
+![Result Output 200 VUs](result_200.png)
+
+#### 📊 Graph Results
+- ⏱ **Response Time**
+  ![Response Time 200](response_time_200.png)
+- 📈 **Requests Per Second**
+  ![Requests Per Second 200](requests_per_second_200.png)
+- ⚠️ **Failure Rate**
+  ![Failure Rate 200](failure_rate_200.png)
+
+---
+
+### 📊 Summary Table
+
+| Test | Virtual Users | Avg Response (ms) | p95 (ms) | Failure Rate | Requests/sec |
+|------|----------------|------------------|-----------|---------------|---------------|
+| Test 1 | 50 | 246 | 500 | 0.00% | ~13 RPS |
+| Test 2 | 100 | 540 | 1100 | 0.01% | ~25 RPS |
+| Test 3 | 200 | 1456 | 8779 | 0.22% | ~85 RPS |
+
+---
 
 ### 📌 Key Observations
-- ✅ **Stable Load Handling:** Shopist.io performed well up to ~150 users.  
-- ⚠️ **Latency Increased:** 95th percentile response time rose above 2s after 180 users.  
-- 🚫 **Minor Failures:** 0.01% failure rate from timeouts during peak load.  
-- 📈 **Throughput:** Maintained around 200 requests per second during the spike.  
+✅ **Stable Load Handling:** Shopist.io performed well up to ~150 users.  
+⚠️ **Latency Increased:** 95th percentile response time rose above 2s after 180 users.  
+🚫 **Minor Failures:** 0.01% failure rate from timeouts during peak load.  
+📈 **Throughput:** Maintained around 200 requests per second during the spike.  
 
 ---
 
@@ -140,6 +260,46 @@ The findings validate the hypothesis that **Shopist.io’s performance decreases
 
 ## 11. 🎥 Video Demonstration
 
-###
+This video provides a complete walkthrough of the **Comprehensive Web Application Performance Testing & Analysis Using K6 on Shopist.io** project.
+
+### 🎯 Demonstration Includes:
+- Step-by-step **installation of Chocolatey, Node.js, and Python**
+- Running **K6 Spike Test scripts** for 50, 100, and 200 Virtual Users
+- Executing the **Python Graph Generator** to visualize performance results
+- Explanation of the **Response Time**, **Requests per Second**, and **Failure Rate** graphs
+- Final summary of findings and conclusions
+
+---
+
+### ▶️ Watch the Presentation
+[![Watch the video](https://img.youtube.com/vi/PqRt-iVkirA/0.jpg)](https://youtu.be/PqRt-iVkirA)
+
+> 🔗 *Click the image above to open the full demonstration video on YouTube.*
+
+---
+
+## 12. References
+
+1. Grafana Labs. *K6 Load Testing Tool Documentation.*  
+   https://k6.io/docs/
+
+2. Node.js Foundation. *Node.js Downloads.*  
+   https://nodejs.org/en/download/
+
+3. Python Software Foundation. *Python 3.14 Documentation.*  
+   https://www.python.org/doc/
+
+4. Chocolatey Software. *Installing K6 on Windows using Chocolatey.*  
+   https://community.chocolatey.org/packages/k6
+
+5. Shopist.io. *E-commerce Demo Website.*  
+   https://shopist.io
+
+6. Pandas Development Team. *Pandas User Guide.*  
+   https://pandas.pydata.org/
+
+7. Matplotlib Developers. *Matplotlib Visualization Library.*  
+   https://matplotlib.org/stable/
+
 
 

@@ -1,11 +1,14 @@
 # Web Application Spike Testing using Artillery  
+<img width="866" height="288" alt="image" src="https://github.com/user-attachments/assets/061dacc4-1a30-4ca0-9608-7edbe365548a" />
+
+
 **By:** MUHAMMAD FAIZZUDDIN TAN BIN ISKANDAR HASAN TAN  
 **Class:** M3CS2554A  
 **Course Code:** ITT440 (10% Individual Assignment)  
 
 ---
 
-## 🎯 Title & Objective
+## Title & Objective
 
 **Title:** Comprehensive Web Application Spike Testing & Analysis using Artillery  
 
@@ -15,7 +18,7 @@ This test aims to evaluate how the system reacts to **sudden bursts of high user
 
 ---
 
-## ⚙️ Reasoning of using Artillery
+## Reasoning of using Artillery
 
 Artillery is an **open-source performance testing framework** designed for modern web systems and APIs.  
 It allows users to easily create test scenarios using **YAML configuration files** and provides detailed, real-time insights through **Artillery Cloud**.  
@@ -23,7 +26,7 @@ The tool is particularly effective for **spike load simulations**, as it can rap
 
 ---
 
-## 🧪 Test Type & Hypothesis
+## Test Type & Hypothesis
 
 **Test Type:** Spike Testing  
 
@@ -33,7 +36,7 @@ The system is expected to handle short spikes efficiently, with average response
 
 ---
 
-## 🌐 Target Application Description  
+## Target Application Description  
 
 **Target URL:** [https://demo.opencart.com](https://demo.opencart.com)  
 
@@ -43,7 +46,7 @@ The public demo website is a realistic test environment that simulates typical o
 
 ---
 
-## 🧩 Test Plan (YAML Configuration)
+## Test Plan (YAML Configuration)
 
 Below is the YAML configuration file used in this spike test:
 
@@ -89,7 +92,7 @@ scenarios:
       - get:
           url: "/"
 ```
-## ⚙️ Test Execution
+## Test Execution
 
 **Command Used:**
 
@@ -108,7 +111,7 @@ The test results and metrics were captured and visualized through the **Artiller
 
 ---
 
-### 📊 Load Summary Analysis
+### Load Summary Analysis
 <img width="1397" height="456" alt="load summary" src="https://github.com/user-attachments/assets/869a8fc8-957c-4904-94f1-2a542a6ab42d" />
 
 The load summary illustrates how the system handled a rapid increase and decrease in user traffic during the spike test.  
@@ -118,7 +121,7 @@ The graph clearly depicts three phases — warm-up, spike, and recovery — with
 
 
 
-## 📈 Spike Load Behavior (Active Users vs Request Rate)
+## Spike Load Behavior (Active Users vs Request Rate)
 <img width="1394" height="371" alt="spike load behaviour" src="https://github.com/user-attachments/assets/02435bcb-d9ec-42ce-bdb8-d1dd859a16ab" />
 
 **Explanation:**  
@@ -128,7 +131,7 @@ As the spike ended, both metrics dropped steadily, confirming that the load scen
 
 ---
 
-## ⚙️ Response Time Trend (Mean & 95th Percentile)
+## Response Time Trend (Mean & 95th Percentile)
 <img width="1391" height="370" alt="responed time trend" src="https://github.com/user-attachments/assets/66164657-9a98-43aa-ad91-75c9afe81e05" />
 
 
@@ -139,7 +142,7 @@ This behavior indicates that the OpenCart demo server maintained responsiveness 
 
 ---
 
-## 📊 Results (Artillery Spike Test)
+## Results (Artillery Spike Test)
 
 | Metric | Value | Description |
 |---------|--------|-------------|
@@ -155,7 +158,7 @@ This behavior indicates that the OpenCart demo server maintained responsiveness 
 
 ---
 
-## 🧠 Summary of Results
+## Summary of Results
 
 - The **OpenCart demo website** handled a short traffic spike of up to 30 users/sec.  
 - During the spike, several requests failed (403 and timeout errors) due to server-side rate limiting.  
@@ -164,7 +167,7 @@ This behavior indicates that the OpenCart demo server maintained responsiveness 
 
 ---
 
-## 🔍 Analysis & Discussion
+## Analysis & Discussion
 
 The **spike phase** created an intense, short burst of user traffic.  
 This caused a temporary rise in latency and an increase in failed requests — expected behavior for public demo environments.  
@@ -177,14 +180,22 @@ Overall, the spike test demonstrated that OpenCart can **sustain performance und
 
 ## 💡 Recommendations
 
-1. Host the test on a **private OpenCart instance** to avoid public API rate limits.  
-2. Increase spike duration (e.g., 2–3 minutes) for deeper observation of system bottlenecks.  
-3. Implement **caching or load balancing** for better scalability under high concurrency.  
-4. Perform **stress and soak tests** next to assess long-term endurance and capacity limits.
+1. Implement **caching or load balancing** to enhance scalability under high concurrency.  
+   - ⚙️ **Reason:** Reduces repeated database queries and distributes user traffic efficiently.  
+   - 🚀 **Impact:** Improves response time and prevents performance degradation during heavy load.  
+
+2. Perform **stress and soak tests** to evaluate long-term stability and endurance.  
+   - ⏱️ **Reason:** Identifies memory leaks, performance drops, or failures over extended use.  
+   - 🧩 **Impact:** Ensures consistent reliability even under sustained or extreme load.  
+
+3. Optimize **server configuration and resource allocation** to handle future scalability.  
+   - 🧠 **Reason:** Adjusting CPU, RAM, and concurrent connection limits allows better handling of high spikes.  
+   - 📈 **Impact:** Enhances system resilience and prepares the environment for larger-scale traffic.
+
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 The spike test successfully simulated a sudden surge in user traffic on the OpenCart demo website.  
 While rate limiting caused some temporary failures, the system maintained stability, with rapid recovery and minimal response delays for successful requests.  
@@ -192,10 +203,10 @@ These results demonstrate that OpenCart exhibits **good resilience and quick rec
 
 ---
 
-## 🎥 YouTube Demo Link
+## YouTube Demo Link
 
 📺 **Watch my Artillery test execution and cloud dashboard analysis here:**  
-[Insert your YouTube demo link here]
+[https://youtu.be/M4Cn-RuRyJU]
 
 ---
 

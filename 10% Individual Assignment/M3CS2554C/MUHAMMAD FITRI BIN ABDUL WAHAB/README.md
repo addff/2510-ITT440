@@ -136,7 +136,7 @@ Step 4 — View Results
 
 |  <img width="1435" height="942" alt="image" src="https://github.com/user-attachments/assets/6e09223a-84f1-443a-ab40-bda039c7cb55" />  |
 |---|
-|  Graph Analysis  |  
+|  Graph Analysis:  |  
 |  <img width="1451" height="598" alt="image" src="https://github.com/user-attachments/assets/8eebc302-a28d-4d0a-8b0d-1cb495cf5cce" />  |
 
 
@@ -144,18 +144,23 @@ Step 4 — View Results
 
 |  <img width="1357" height="808" alt="hloatest result" src="https://github.com/user-attachments/assets/4eb7aa32-718a-4788-ae8a-d0e010b687e7" />  |
 |---|
-|  Graph Analysis  |  
+|  Graph Analysis:  |  
 |  <img width="1448" height="597" alt="image" src="https://github.com/user-attachments/assets/990a8d8a-a0c9-4c53-8cb6-e8edc7b8ce2b" />  |
 
-## ⚖️ Performance Comparison (Normal Load vs Heavy Load)
+## ⚖️ Performance Comparison (Normal Load vs Heavy Load)  
+
+|  Graph:  |
+|---|
+|  <img width="1465" height="726" alt="graph compare" src="https://github.com/user-attachments/assets/b580cd35-c241-4e86-8b69-5912fbeb34e1" />  |
+
 
 | Test Condition | Normal Load Test | Heavy Load Test |
 |---|---|---|
 | **Virtual Users (VUs)** | **50 VUs** | **100 VUs** |
 | **Test Duration** | 30 seconds | 30 seconds |
-| **P95 Response Time** | **~888 ms** | **~10,158 ms (≈10s)** |
-| **Peak Request Rate (RPS)** | ~36 req/s | ~43 req/s |
-| **Total Requests Made** | ~1,000 requests | ~121 requests |
+| **P95 Response Time** | **888 ms** | **42,087 ms (42 seconds)** |
+| **Peak Request Rate (RPS)** | 36 req/s | 43 req/s |
+| **Total Requests Made** | 1,000 requests | 530 requests |
 | **HTTP Failure Rate** | 0 failures | 0 failures |
 | **Performance Behavior** | Stable and responsive | Severe slowdown, high latency |
 | **Scalability Observation** | System handles moderate traffic well | System struggles with heavy concurrency |
@@ -166,7 +171,7 @@ Step 4 — View Results
 
 | Issue | Observation | Impact |
 |------|-------------|--------|
-| **Response Time Increased** | Response time rose from ~888 ms (50 VU) to ~10s (100 VU). | Slower user experience under heavier traffic. |
+| **Response Time Increased** | Response time rose from 888 ms (50 VU) to 10s (100 VU). | Slower user experience under heavier traffic. |
 | **Throughput Decreased** | Fewer requests were completed during the heavy test. | System cannot handle many concurrent users efficiently. |
 | **Possible Backend Resource Limits** | Server performance drops when load increases. | Indicates CPU / Memory / Database constraints. |
 | **No Caching Detected** | Same data fetched repeatedly without caching. | Increases unnecessary server work. |
@@ -187,5 +192,16 @@ Step 4 — View Results
 
 ## 🏁 Conclusion  
 
-Based on the results, the performance threshold of the FakeStoreAPI appears to be around 50 concurrent users. At this level, the system operates efficiently with quick response times and stable throughput. However, when the load increases to 100 concurrent users, the response time deteriorates sharply. This indicates limited scalability and suggests that the system may require optimization or resource scaling to support heavier traffic loads.
+Based on the results, the performance threshold of the FakeStoreAPI appears to be around 50 concurrent users. At this level, the system operates efficiently with quick response times and stable throughput. However, when the load increases to 100 concurrent users, the response time deteriorates sharply. This indicates limited scalability and suggests that the system may require optimization or resource scaling to support heavier traffic loads.  
+
+---
+## 🎥 Demonstration Video
+Below is the link for the demonstration video for the load testing  
+https://youtu.be/k5N3uuRyptU?si=Bwy-XnpSgZuY4_R7  
+
+## 📔 References  
+Grafana Labs. (n.d.). Grafana k6 | Open source load testing tool. Retrieved November 9, 2025, from https://grafana.com/oss/k6/  
+Moradian, M. (2019, June 17). Beginner’s guide to load testing with k6 [Blog post]. Medium. https://medium.com/swlh/beginners-guide-to-load-testing-with-k6-85ec614d2f0d  
+Grafana Labs. (2021, August 26). How to do performance testing with k6 [Video]. YouTube. https://youtu.be/ghuo8m7AXEM  
+
 

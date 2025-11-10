@@ -2,7 +2,7 @@
 
 **Name:** MUHAMMAD SYAZWAN AZLI BIN ZULKIFLE
 
-**Class:** M3CDCS2553C
+**Class:** M3CDCS2554C
 
 **Student ID:** 2025118371
 
@@ -139,19 +139,44 @@ locust -f locustfile.py
 
 The API demonstrated good scalability at this user load. After an initial warm-up period, the system stabilized and maintained consistent response times while sustaining steady throughput. The overall performance is acceptable for this load level.
 
+The response time graph shows two main phases:
+
+Initial Phase: Response times were higher, with the 95th percentile around 400-600ms and average times around 200-300ms.
+Stable Phase: Performance improved significantly as both the average and 95th percentile response times dropped to approximately 200ms and remained consistent.
+
+A brief spike occurred where response times jumped to 750ms, likely due to a network delay or specific heavy request, before immediately returning to normal levels.
+
 **PHASE 2 (50 USERS)**
 <img width="1489" height="615" alt="image" src="https://github.com/user-attachments/assets/39266b68-058d-460d-a1f2-bea2062c26ac" />
+
+At 50 concurrent users (5x increase from Phase 1), the API maintained strong performance with response times comparable to the 10-user test. The system scaled efficiently, achieving 5x higher throughput while keeping response times stable at around 150-200ms during peak performance.
+
+Response time behavior mirrored the 10-user test with similar patterns:
+
+Initial Phase: The 95th percentile response times peaked at approximately 500ms (purple line) with average response times around 200-250ms (yellow line) during the user ramp-up period.
+
+Stable Phase: After initial stabilization, both metrics converged significantly. The 95th percentile dropped below 200ms while average response times maintained around 150ms, demonstrating excellent performance optimization under sustained load.
+
+End Phase Spike: Similar to the previous test, a performance spike occurred with the 95th percentile reaching approximately 400ms before the test concluded.
 
 **PHASE 3 (150 USERS)**
 <img width="1490" height="634" alt="image" src="https://github.com/user-attachments/assets/e08b0927-996d-4f5a-9cbd-9933c8b5e789" />
 
+At 150 concurrent users, the API demonstrates scalability limitations. While throughput increased to nearly 100 RPS, response times showed significant volatility with multiple degradation periods. The average response time of 252ms (shown at 7:29 AM) and 95th percentile reaching 400+ ms indicates performance is acceptable but nearing capacity thresholds. This load level represents the upper boundary of comfortable operation for this API configuration
+
+Response time analysis reveals concerning performance degradation at this load level:
+
+Initial Phase: During user ramp-up, the 95th percentile response times spiked dramatically to 700-800ms (purple line) with average response times climbing to 300-350ms (yellow line). This represents a significant increase compared to lower load phases.
+
+Stable Phase: After initial stabilization, performance improved considerably. The 95th percentile dropped to approximately 100ms while average response times decreased to 50-100ms, indicating the system adapted to the sustained load.
+
+Late Phase Degradation: A second performance spike occurred with the 95th percentile rising to 350-400ms and average response times increasing to around 250ms, suggesting the system approached capacity limits.
 
 | Users | Avg Response Time | 95th Percentile | RPS | Failure Rate | Status |
-|-------|------------------|-----------------|-----|--------------|--------|
-| 10    | ~150ms          | 200ms          | 15  | 0%           | ✅ Excellent |
-| 50    | ~220ms          | 350ms          | 65  | 0%           | ✅ Acceptable |
-| 150   | ~450ms          | 800ms          | 140 | 2%           | ❌ Poor |
-
+|-------|-------------------|-----------------|-----|--------------|--------|
+| 10    | ~200ms            | 500ms           | 6   | 0%           | ✅ Excellent |
+| 50    | ~150ms            | 500ms           | 30  | 0%           | ✅ Excellent |
+| 150   | ~252ms            | 700ms           | 97  | 0%           | ⚠️ Acceptable |
 
 
 ### Key Findings
@@ -187,3 +212,6 @@ The scalability testing of ReqRes API using Locust revealed that:
 3. **Capacity Limit:** Beyond 150 users, the API shows significant performance issues with increased error rates
 4. **Recommendation:** For production use, limit concurrent users to 75-100 for optimal user experience
 
+## ⭐  Video Demonstration
+
+https://youtu.be/2sFKieRNAow

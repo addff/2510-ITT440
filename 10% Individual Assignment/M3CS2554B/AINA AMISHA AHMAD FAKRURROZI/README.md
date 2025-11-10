@@ -162,8 +162,16 @@ class WeatherAPIUser(HttpUser):
 * Duration: 5 minutes
 
 **Expected Result:** 
-<img width="1000" height="350" alt="total_requests_per_second_1762026353" src="https://github.com/user-attachments/assets/44676e46-5f91-4d46-97d0-7cdb07feeed0" />
-<img width="1000" height="350" alt="response_times_(ms)_1762026353" src="https://github.com/user-attachments/assets/4f71f9b8-00f4-4959-91c5-5050f2e1b4ac" />
+
+✅ Response times: 800ms-2 seconds
+
+✅ Failure rate: 0-2% 
+
+✅ Stable performance throughout
+
+✅ CPU/Memory: 40-60% usage
+
+✅ All endpoints should work normally
 
 ---
 
@@ -178,8 +186,15 @@ class WeatherAPIUser(HttpUser):
 
 **Expected Result:** 
 
-<img width="1000" height="350" alt="total_requests_per_second_1762026545" src="https://github.com/user-attachments/assets/caa5d6f1-9834-4fab-8dc8-df8f8a822124" />
-<img width="1000" height="350" alt="response_times_(ms)_1762026545" src="https://github.com/user-attachments/assets/1d51e952-25e1-4c5f-bf81-14a85ab24a43" />
+✅ System will start degrading around 200 users
+
+✅ Response times will exceed 5 seconds
+
+✅ Failure rate will be 15-25%
+
+✅ Static assets (images/CSS) may fail completely
+
+✅ CPU/Memory usage will hit 80-90%
 
 ---
 
@@ -194,8 +209,15 @@ class WeatherAPIUser(HttpUser):
 
 **Expected Result:** 
 
-<img width="1000" height="350" alt="total_requests_per_second_1762026728" src="https://github.com/user-attachments/assets/2e4d7dcf-c6ce-4442-b732-33d47c42478d" />
-<img width="1000" height="350" alt="response_times_(ms)_1762026728" src="https://github.com/user-attachments/assets/cbf1dc63-68d6-4989-b248-27e9fd6c0ce5" />
+✅ Consistent response times (1-3 seconds)
+
+✅ Low failure rate (1-5%)
+
+✅ No memory leaks over time
+
+✅ Stable CPU usage (50-70%)
+
+✅ Gradual performance maintained
 
 ---
 
@@ -210,8 +232,15 @@ class WeatherAPIUser(HttpUser):
 
 **Expected Result:** 
 
-<img width="1000" height="350" alt="total_requests_per_second_1762026840" src="https://github.com/user-attachments/assets/48e72e3e-41ac-4c8d-a63c-cb03d3c3b997" />
-<img width="1000" height="350" alt="response_times_(ms)_1762026840" src="https://github.com/user-attachments/assets/20027efa-419f-4366-892c-bd3f7b8f2169" />
+✅ Immediate performance degradation
+
+✅ Response times: 8-15 seconds
+
+✅ Failure rate: 40-70%
+
+✅ System may become unresponsive
+
+✅ Recovery after spike ends
 
 ---
 
@@ -229,7 +258,8 @@ class WeatherAPIUser(HttpUser):
 ## 7. Results & Observations
 
 ### 🧭 Load Test
-
+<img width="1000" height="350" alt="total_requests_per_second_1762026353" src="https://github.com/user-attachments/assets/44676e46-5f91-4d46-97d0-7cdb07feeed0" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026353" src="https://github.com/user-attachments/assets/4f71f9b8-00f4-4959-91c5-5050f2e1b4ac" />
 <img width="1257" height="642" alt="image" src="https://github.com/user-attachments/assets/eeaacabb-b44d-473b-ad79-28bcc24697c2" />
 
 ### 📌 Key Observations
@@ -244,6 +274,8 @@ class WeatherAPIUser(HttpUser):
 
 ### 💣 Stress Test
 
+<img width="1000" height="350" alt="total_requests_per_second_1762026545" src="https://github.com/user-attachments/assets/caa5d6f1-9834-4fab-8dc8-df8f8a822124" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026545" src="https://github.com/user-attachments/assets/1d51e952-25e1-4c5f-bf81-14a85ab24a43" />
 <img width="927" height="712" alt="image" src="https://github.com/user-attachments/assets/80816778-971b-4831-b354-dfd611d86ae4" />
 
 ## 📌 Key Observations
@@ -272,6 +304,8 @@ class WeatherAPIUser(HttpUser):
 
 ### ⏳ Soak Test
 
+<img width="1000" height="350" alt="total_requests_per_second_1762026728" src="https://github.com/user-attachments/assets/2e4d7dcf-c6ce-4442-b732-33d47c42478d" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026728" src="https://github.com/user-attachments/assets/cbf1dc63-68d6-4989-b248-27e9fd6c0ce5" />
 <img width="1108" height="762" alt="image" src="https://github.com/user-attachments/assets/ee74e044-978f-4124-9dd2-5759e12e78bf" />
 
 ## 📌 Key Observations
@@ -301,6 +335,8 @@ class WeatherAPIUser(HttpUser):
 
 ### ⚡ Spike Test
 
+<img width="1000" height="350" alt="total_requests_per_second_1762026840" src="https://github.com/user-attachments/assets/48e72e3e-41ac-4c8d-a63c-cb03d3c3b997" />
+<img width="1000" height="350" alt="response_times_(ms)_1762026840" src="https://github.com/user-attachments/assets/20027efa-419f-4366-892c-bd3f7b8f2169" />
 <img width="1386" height="687" alt="image" src="https://github.com/user-attachments/assets/90ae1e4a-44a7-46b0-b88a-dd8cf301410a" />
 
 ## 📌 Key Observations
