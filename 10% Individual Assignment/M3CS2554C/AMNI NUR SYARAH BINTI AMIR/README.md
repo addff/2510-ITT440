@@ -82,7 +82,7 @@ System performance monitored using `btop` during execution.
 CPU usage peaked moderately, RAM usage remained stable, and no bottlenecks were observed.
 
 Image:
-![K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/Screenshot%202025-11-09%20181734.png)
+[K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/ss-test1.png)
 
 
 ### 🧪 Test 2: 100 VUs with Staged Duration
@@ -107,7 +107,7 @@ K6 test executed with ramping stages from 10 to 100 virtual users. Total iterati
 *Min:* 12.01s | *Max:* 60.00s | *p(90):* 59.99s | *p(95):* 60.00s  
 
 Image:
-![K6 test output screenshot]
+[K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/Screenshot%202025-11-09%20181734.png)
 
 ## 📋 Summary
 
