@@ -82,7 +82,7 @@ System performance monitored using `btop` during execution.
 CPU usage peaked moderately, RAM usage remained stable, and no bottlenecks were observed.
 
 Image:
-![K6 test output screenshot](https://github.com/AI75-25/2510-ITT440/blob/patch-1/ss-test1.png)
+![K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/Screenshot%202025-11-09%20181734.png)
 
 
 ### 🧪 Test 2: 100 VUs with Staged Duration
@@ -106,6 +106,9 @@ K6 test executed with ramping stages from 10 to 100 virtual users. Total iterati
 *Average response time:* 19.53s  
 *Min:* 12.01s | *Max:* 60.00s | *p(90):* 59.99s | *p(95):* 60.00s  
 
+Image:
+![K6 test output screenshot]
+
 ## 📋 Summary
 
 To summarize, load testing helps determine how a system performs under real-world user demand. It simulates multiple users accessing a website or application at the same time to measure key performance metrics such as response time, throughput, and error rate.
@@ -121,5 +124,3 @@ remains stable, responsive and scalable even as user traffic grows.
 (https://youtu.be/imcvgSbj9X0?si=nyoeNcgskXAI3FkC)
 *Data received:** 20 MB | *Data sent:* 17 kB
 
-Image:
-![K6 test output screenshot](https://github.com/AI75-25/2510-ITT440/blob/patch-1/Screenshot%202025-11-09%20181734.png)
