@@ -62,6 +62,7 @@ WordPress used to create and manage websites.
 In this project, it acts as the web application being tested under simulated user load to observe the server performance.
 
 ### 🧪 Test 1: 10 VUs with 50s Duration
+
 **Command:**
 *export const options = {
   vus: 10,
@@ -81,7 +82,7 @@ K6 test completed with 100 iterations, 0 failed requests, and consistent respons
 System performance monitored using `btop` during execution.  
 CPU usage peaked moderately, RAM usage remained stable, and no bottlenecks were observed.
 
-Image:
+**Image:**
 ![K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/ss-test1.png)
 
 
@@ -106,7 +107,7 @@ K6 test executed with ramping stages from 10 to 100 virtual users. Total iterati
 *Average response time:* 19.53s  
 *Min:* 12.01s | *Max:* 60.00s | *p(90):* 59.99s | *p(95):* 60.00s  
 
-Image:
+**Image:**
 ![K6 test output screenshot](https://raw.githubusercontent.com/AI75-25/2510-ITT440/79bf2f34b96e06a4fee6b0852dcc45c78bdba2c1/Screenshot%202025-11-09%20181734.png)
 
 ## 📋 Summary
