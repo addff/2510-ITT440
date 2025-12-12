@@ -3,7 +3,7 @@
 ### Load Test
 Try This:
 1. [Gatling](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINUL%20MARDHIAH%20BINTI%20ROSLIM "AINUL MARDHIAH BINTI ROSLIM") [(Video)](https://www.youtube.com/watch?v=Zpucm2vnlpQ "Video1")
-2. [Vegeta](https://github.com/AMIRUL-sys/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20AZIM%20BIN%20AZLI "MUHAMMAD AZIM BIN AZLI") [(Video)](https://www.youtube.com/watch?v=ChZh3fb80Do "Video1)
+2. [Vegeta](https://github.com/AMIRUL-sys/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20AZIM%20BIN%20AZLI "MUHAMMAD AZIM BIN AZLI") [(Video)](https://www.youtube.com/watch?v=ChZh3fb80Do "Video1")
 
 ### Stree Test
 Basic Try:
