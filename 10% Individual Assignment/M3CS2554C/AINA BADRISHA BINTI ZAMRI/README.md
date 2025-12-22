@@ -468,7 +468,11 @@ Overall, this assignment gave me hands-on exposure to real testing practices and
 
 📽️ *A walkthrough video of the test setup, execution, and Grafana visualization.*
 
-**➡️ [Watch the Demonstration Video](https://youtu.be/QF5iE5gthgw)** 
+➡️ [Watch the Demonstration Video](https://youtu.be/QF5iE5gthgw)
+
+📽️ *Demonstration of running k6 test from VS Code and visualising results in Grafana Cloud.*
+
+➡️ [Watch the VS Code & Grafana Cloud Demo](https://youtu.be/SECOND_YOUTUBE_LINK)
 
 ---
 
