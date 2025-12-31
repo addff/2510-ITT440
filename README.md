@@ -16,7 +16,7 @@ Lets Test using this:
 
 ### Soak Test
 Lets Test using this:
-1. [Artillery.io]([https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/SITI%20NURFATIHAH%20BINTI%20ABDUL%20RAHMAN "SITI NURFATIHAH BINTI ABDUL RAHMAN") [(Video)](https://youtu.be/N2pUHLQ1Kt0?si=AwFdzE3TWMdEfprh "Video1")
+1. [Artillery.io](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/SITI%20NURFATIHAH%20BINTI%20ABDUL%20RAHMAN "SITI NURFATIHAH BINTI ABDUL RAHMAN") [(Video)](https://youtu.be/N2pUHLQ1Kt0?si=AwFdzE3TWMdEfprh "Video1")
 
 ### Basic APDEX Report from Load Test
 1. [Apache JMeter™](https://github.com/AMIRUL-sys/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20AMIRUL%20HAFIZ%20BIN%20IBRAHIM "MUHAMMAD AMIRUL HAFIZ BIN IBRAHIM") [(Video)](https://www.youtube.com/watch?v=CXaZtI_fI2g "Video1")
