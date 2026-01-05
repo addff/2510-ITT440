@@ -13,6 +13,7 @@ Basic Try:
 ### Spike Test
 Lets Test using this:
 1. [Artillery.io](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20FAIZZUDDIN%20TAN%20BIN%20ISKANDAR%20HASAN%20TAN "MUHAMMAD FAIZZUDDIN TAN BIN ISKANDAR HASAN TAN") [(Video)](https://www.youtube.com/watch?v=M4Cn-RuRyJU "Video1")
+2. [Grafana](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/NADHRAH%20UMAIRAH%20BINTI%20FAHMI "NADHRAH UMAIRAH BINTI FAHMI") [(Video)](https://youtu.be/OCTLjkpVJVg "Video1")
 
 ### Soak Test
 Lets Test using this:
