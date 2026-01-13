@@ -442,7 +442,3 @@ docker-compose --profile all up --build
 # Validate docker-compose.yml
 docker-compose config
 ```
-
-
-
-</div>
