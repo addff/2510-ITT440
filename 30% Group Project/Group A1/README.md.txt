@@ -3,40 +3,6 @@
 # 🚀 ITT440 Network Programming Project
 ## Docker-Based Distributed Client-Server System with Real-Time Web Dashboard
 
-<div align="center">
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-
-**A complete distributed system demonstrating multi-language socket programming, containerization, and real-time data visualization**
-
-[Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Usage](#-usage) • [API](#-rest-api) • [Screenshots](#-screenshots)
-
-</div>
-
----
-
-## 📋 Table of Contents
-- [About](#-about)
-- [Features](#-features)
-- [Technologies](#-technologies)
-- [Architecture](#-architecture)
-- [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Usage](#-usage)
-- [User Control](#-user-control)
-- [REST API](#-rest-api)
-- [Monitoring](#-monitoring)
-- [Troubleshooting](#-troubleshooting)
-- [Team](#-team)
-
----
-
 ## 📖 About
 
 This project is a comprehensive demonstration of **distributed systems**, **socket programming**, and **containerization** developed for the ITT440 Network Programming course. It showcases a multi-container architecture where Python and C socket servers communicate with clients through a MySQL database, all orchestrated with Docker Compose and monitored through a real-time Flask web dashboard.
