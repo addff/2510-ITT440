@@ -1,9 +1,4 @@
 # Docker Socket-Based Client–Server System
-
-
-#ITT440
-## Group Members
-
 #Source Code
 # 🚀 ITT440 Network Programming Project
 ## Docker-Based Distributed Client-Server System with Real-Time Web Dashboard
@@ -482,67 +477,6 @@ docker-compose --profile all up --build
 docker-compose config
 ```
 
----
 
-## 📸 Screenshots
-
-### Web Dashboard
-![Dashboard Screenshot](screenshots/dashboard.png)
-*Real-time monitoring dashboard with live charts and statistics*
-
-### phpMyAdmin Interface
-![phpMyAdmin Screenshot](screenshots/phpmyadmin.png)
-*Database management interface showing user_tracking table*
-
-### Container Logs
-![Logs Screenshot](screenshots/logs.png)
-*Live server logs showing real-time updates*
-
----
-
-## 👥 Team
-
-**Course:** ITT440 - Network Programming  
-**Institution:** [Your University Name]  
-**Semester:** [Semester/Year]
-
-**Team Members:**
-- **Afif** - Python Server Development
-- **Syahmi** - Python Client Development  
-- **Irfan** - Web Dashboard & API
-- **Hairiel** - C Server Development
-- **Faiz** - C Client Development
-
----
-
-## 📄 License
-
-This project is developed for educational purposes as part of the ITT440 Network Programming course.
-
----
-
-## 🙏 Acknowledgments
-
-- Course Instructor: [Instructor Name]
-- Docker Documentation
-- Flask Documentation
-- MySQL Documentation
-- Bootstrap & Chart.js Communities
-
----
-
-## 🔗 Links
-
-- **Repository:** [GitHub Link]
-- **Documentation:** [USER_CONTROL.md](USER_CONTROL.md)
-- **Issues:** [GitHub Issues]
-
----
-
-<div align="center">
-
-**⭐ Star this repository if you found it helpful!**
-
-Made with ❤️ by ITT440 Team
 
 </div>
