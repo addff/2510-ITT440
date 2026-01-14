@@ -1,0 +1,22 @@
+services:
+    ali_client_py:
+        build: ./py-client-ali
+        container_name: kontena_ali_client_python
+        volumes:
+            - "./py-client-ali:/ali"
+        networks: 
+            - sir
+    ali_server_c:
+        build: ./c-server-ali
+        container_name: kontena_ali_server_c
+        volumes:
+            - "./c-server-ali:/ali"
+        ports:
+            - 5001:5001
+        networks: 
+            - sir
+
+networks:
+    sir:
+        driver: bridge
+   
