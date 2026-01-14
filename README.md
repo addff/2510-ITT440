@@ -8,7 +8,7 @@ Try This:
 
 ### Scalability
 Basic Try:
-1. [Grafana K6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINA%20BADRISHA%20BINTI%20ZAMRI "AINA BADRISHA BINTI ZAMRI") [(Video)](https://www.youtube.com/watch?v=QF5iE5gthgw "Video1") [(Video)](https://www.youtube.com/watch?v=r_okG-tzhPQ "Video2")
+1. [Grafana K6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINA%20BADRISHA%20BINTI%20ZAMRI "AINA BADRISHA BINTI ZAMRI") [(Video1)](https://www.youtube.com/watch?v=QF5iE5gthgw "Video1") [(Video2)](https://www.youtube.com/watch?v=r_okG-tzhPQ "Video2")
 
 ### Stress Test
 Basic Try:
