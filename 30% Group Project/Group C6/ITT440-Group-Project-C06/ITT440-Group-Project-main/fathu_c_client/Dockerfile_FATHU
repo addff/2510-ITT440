@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
+
+COPY fathu_c_client.c .
+
+RUN gcc fathu_c_client.c -o fathu_c_client
+
+CMD ["./fathu_c_client"]

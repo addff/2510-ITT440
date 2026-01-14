@@ -1,0 +1,125 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: pointsdb
+    volumes:
+      - ./mysql/init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  py-server:
+    build: ./py_server
+    ports:
+      - "5002:5002"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  py-client:
+    build: ./py_client
+    depends_on:
+      - py-server
+
+  c-server:
+    build: ./c_server
+    ports:
+      - "5003:5003"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  c-client:
+    build: ./c_client
+    depends_on:
+      - c-server
+
+  nazrinserver_c:
+    build:
+      context: nazrin_c_server
+      dockerfile: Dockerfile_nazrinserver_c
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  nazrinclient_c:
+    build:
+      context: ./nazrin_c_client
+      dockerfile: Dockerfile_nazrinclient_c
+    command: ./nazrinclient_c
+    depends_on:
+      - nazrinserver_c
+      
+  fathu-c-server:
+    build:
+      context: ./fathu_c_server
+      dockerfile: Dockerfile_Fathu
+    command: ./fathu_server_c
+    ports:
+      - "5009:5009"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  fathu-c-client:
+    build:
+      context: ./fathu_c_client
+      dockerfile: Dockerfile_FATHU
+    command: ./fathu_c_client
+    depends_on:
+      - fathu-c-server
+
+  mirul_py_server:
+    build: 
+      context: ./mirul_py_server
+      dockerfile: DockerFile
+    container_name: mirul_py_server
+    ports:
+      - "5005:5005"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mirul_py_client:
+    build: 
+      context: ./mirul_py_client
+      dockerfile: DockerFile
+    container_name: mirul_py_client
+    depends_on:
+      - mirul_py_server
+      
+  wafiy-pythonserver:
+    build: ./wafiy-pythonserver
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  wafiy-pythonclient:
+    build: ./wafiy-pythonclient
+    depends_on:
+      - wafiy-pythonserver
+
+  nabil-server:
+    build:
+      context: ./nabil_c_server 
+    ports:
+      - "5001:5001"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  nabil-client:
+    build:
+      context: ./nabil_c_client
+    depends_on:
+      - nabil-server
+     

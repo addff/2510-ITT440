@@ -1,0 +1,11 @@
+FROM gcc:latest
+
+RUN apt-get update && apt-get install -y default-libmysqlclient-dev
+
+WORKDIR /app
+
+COPY nazrinclient_c.c .
+
+RUN gcc nazrinclient_c.c -o nazrinclient_c
+
+CMD ["./nazrinclient_c"]
