@@ -6,6 +6,10 @@ Try This:
 2. [Gatling](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINUL%20MARDHIAH%20BINTI%20ROSLIM "AINUL MARDHIAH BINTI ROSLIM") [(Video)](https://www.youtube.com/watch?v=Zpucm2vnlpQ "Video1")
 3. [Vegeta](https://github.com/AMIRUL-sys/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20AZIM%20BIN%20AZLI "MUHAMMAD AZIM BIN AZLI") [(Video)](https://www.youtube.com/watch?v=ChZh3fb80Do "Video1")
 
+### Scalability
+Basic Try:
+1. [Grafana K6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINA%20BADRISHA%20BINTI%20ZAMRI "AINA BADRISHA BINTI ZAMRI") [(Video)](https://www.youtube.com/watch?v=QF5iE5gthgw "Video1") (https://www.youtube.com/watch?v=r_okG-tzhPQ "Video2")
+
 ### Stress Test
 Basic Try:
 1. [Apache JMeter™](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/ANIS%20NURSABRINA%20LOKMAN "ANIS NURSABRINA LOKMAN") [(Video)](https://www.youtube.com/watch?v=Ba0_LifqMcQ "Video1")
