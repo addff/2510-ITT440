@@ -1,10 +1,1 @@
-# ITT440 Group Project (C6) Semester Oct 2025 - Feb 2026
-## PREPARED FOR: SIR SHAHADAN BIN SAAD
-## Group Members and Student ID
-| Name | Student ID |
-|----- | -----------|
-|  NUR EZZATY BINTI HUSIN  |  2024528299 |
-|  AQIEF DANIEL BIN MUHAMMAD NAZIR |  2024125923 |
-|   MUHAMMAD BIN AZHAR   |   2024783547 |
-| MUHAMMAD HAZIQ BIN AZMAN | 2024752489 |
-
+# ITT440
