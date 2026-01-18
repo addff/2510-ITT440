@@ -496,8 +496,8 @@ docker-compose config
 ## 👥 Team
 
 **Course:** ITT440 - Network Programming  
-**Institution:** [Your University Name]  
-**Semester:** [Semester/Year]
+**Institution:** UITM JASIN
+**Semester:** 4
 
 **Team Members:**
 - **Afif** - Python Server Development
@@ -516,7 +516,7 @@ This project is developed for educational purposes as part of the ITT440 Network
 
 ## 🙏 Acknowledgments
 
-- Course Instructor: [Instructor Name]
+- Course Instructor: SIR SHAHADAN BIN SAAD
 - Docker Documentation
 - Flask Documentation
 - MySQL Documentation
@@ -539,3 +539,4 @@ This project is developed for educational purposes as part of the ITT440 Network
 Made with ❤️ by ITT440 Team
 
 </div>
+
