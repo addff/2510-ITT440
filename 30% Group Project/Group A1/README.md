@@ -117,34 +117,34 @@ This project is a comprehensive demonstration of **distributed systems**, **sock
 ## 🏗️ Architecture
 
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│                       DOCKER NETWORK (project_network)                 │
-│                                                                          │
-│  ┌──────────────┐         ┌──────────────┐         ┌──────────────┐   │
-│  │   Browser    │────────>│ Web Dashboard│────────>│   MySQL DB   │   │
-│  │ localhost:   │         │  Flask API   │         │ user_tracking│   │
-│  │   8080       │         │  Port 8080   │         │   5 users    │   │
-│  └──────────────┘         └──────────────┘         └──────┬───────┘   │
-│                                                             │           │
-│  ┌──────────────┐         ┌──────────────┐                │           │
-│  │  phpMyAdmin  │────────>│              │<───────────────┘           │
-│  │ localhost:   │         │              │                             │
-│  │   8081       │         │              │                             │
-│  └──────────────┘         │              │                             │
-│                           │              │                             │
-│  PYTHON SERVERS (3)       │   Database   │     C SERVERS (2)          │
+┌──────────────────────────────────────────────────────────────────────┐
+│                       DOCKER NETWORK (project_network)               │
+│                                                                      │
+│  ┌──────────────┐         ┌──────────────┐         ┌──────────────┐  │
+│  │   Browser    │────────>│ Web Dashboard│────────>│   MySQL DB   │  │
+│  │ localhost:   │         │  Flask API   │         │ user_tracking│  │
+│  │   8080       │         │  Port 8080   │         │   5 users    │  │
+│  └──────────────┘         └──────────────┘         └─────┬───────┘   │
+│                                                          │           │
+│  ┌──────────────┐        ┌──────────────┐                │           │
+│  │  phpMyAdmin  │───────>│              │<───────────────┘           │
+│  │ localhost:   │        │              │                            │
+│  │   8081       │        │              │                            │
+│  └──────────────┘        │              │                            │
+│                          │              │                            │
+│  PYTHON SERVERS (3)      │   Database   │     C SERVERS (2)          │
 │  ┌──────────────┐        │              │     ┌──────────────┐       │
 │  │ server1:5001 │────────┤              │─────│server_c1:6001│       │
 │  │   (Afif)     │        │              │     │  (Hairiel)   │       │
 │  └──────────────┘        │              │     └──────────────┘       │
-│         ▲                │              │            ▲                │
-│         │                │              │            │                │
+│         ▲                │              │            ▲               │
+│         │                │              │            │               │
 │  ┌──────────────┐        │              │     ┌──────────────┐       │
 │  │ server2:5002 │────────┤              │─────│server_c2:6002│       │
 │  │  (Syahmi)    │        │              │     │   (Faiz)     │       │
 │  └──────────────┘        │              │     └──────────────┘       │
-│         ▲                │              │            ▲                │
-│         │                └──────────────┘            │                │
+│         ▲                │              │           ▲                │
+│         │                └──────────────┘           │                │
 │  ┌──────────────┐                                   │                │
 │  │ server3:5003 │                                   │                │
 │  │  (Irfan)     │                                   │                │
@@ -153,8 +153,8 @@ This project is a comprehensive demonstration of **distributed systems**, **sock
 │         │                                           │                │
 │  PYTHON CLIENTS (3)                    C CLIENTS (2)                 │
 │  client1  client2  client3            client_c1  client_c2           │
-│                                                                        │
-└────────────────────────────────────────────────────────────────────────┘
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ### **Communication Flow**
@@ -223,23 +223,6 @@ Docker/
 - **Docker Compose** (3.8 or higher)
 - **Git** (for cloning)
 - **Web Browser** (Chrome, Firefox, Edge)
-
----
-
-## 📥 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/itt440-network-programming.git
-
-# Navigate to project directory
-cd itt440-network-programming
-
-# Verify Docker is running
-docker --version
-docker-compose --version
-```
-
 ---
 
 ## 🚀 Quick Start
@@ -474,22 +457,8 @@ docker-compose --profile all up --build
 # Validate docker-compose.yml
 docker-compose config
 ```
-
 ---
 
-## 📸 Screenshots
-
-### Web Dashboard
-![Dashboard Screenshot](screenshots/dashboard.png)
-*Real-time monitoring dashboard with live charts and statistics*
-
-### phpMyAdmin Interface
-![phpMyAdmin Screenshot](screenshots/phpmyadmin.png)
-*Database management interface showing user_tracking table*
-
-### Container Logs
-![Logs Screenshot](screenshots/logs.png)
-*Live server logs showing real-time updates*
 
 ---
 
@@ -500,35 +469,17 @@ docker-compose config
 **Semester:** 4
 
 **Team Members:**
-- **Afif** - Python Server Development
-- **Syahmi** - Python Client Development  
-- **Irfan** - Web Dashboard & API
+- **Afif Zuhdi Bin Suhardi**  - Team Leader and Project Plan
+- **Syahmi Isyraf** - Python Client Development  
+- **Hanif Irfan ** - Python Server Development
 - **Hairiel** - C Server Development
-- **Faiz** - C Client Development
-
----
-
-## 📄 License
-
-This project is developed for educational purposes as part of the ITT440 Network Programming course.
+- **Faizudin** - C Client Development
 
 ---
 
 ## 🙏 Acknowledgments
 
 - Course Instructor: SIR SHAHADAN BIN SAAD
-- Docker Documentation
-- Flask Documentation
-- MySQL Documentation
-- Bootstrap & Chart.js Communities
-
----
-
-## 🔗 Links
-
-- **Repository:** [GitHub Link]
-- **Documentation:** [USER_CONTROL.md](USER_CONTROL.md)
-- **Issues:** [GitHub Issues]
 
 ---
 
@@ -536,7 +487,6 @@ This project is developed for educational purposes as part of the ITT440 Network
 
 **⭐ Star this repository if you found it helpful!**
 
-Made with ❤️ by ITT440 Team
-
 </div>
+
 
