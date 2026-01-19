@@ -1,0 +1,88 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: attendance_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: attendance_db
+    ports:
+      - "8081:3306"
+    volumes:
+      - attendance_db_data:/var/lib/mysql
+      - "./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro"
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -uroot -proot --silent"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    networks:
+      - attendance_net
+
+  server_c:
+    build: ./server_c
+    container_name: attendance_server_c
+    environment:
+      DB_HOST: db
+      DB_NAME: attendance_db
+      DB_USER: root
+      DB_PASS: root
+      ATT_USER: student_c
+      PORT: 5001
+      UPDATE_INTERVAL: 30
+    ports:
+      - "5001:5001"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - attendance_net
+
+  server_py:
+    build: ./server_py
+    container_name: attendance_server_py
+    environment:
+      DB_HOST: db
+      DB_NAME: attendance_db
+      DB_USER: root
+      DB_PASS: root
+      ATT_USER: student_py
+      PORT: 5002
+      UPDATE_INTERVAL: 30
+    ports:
+      - "5002:5002"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - attendance_net
+
+  client_c:
+    build: ./client_c
+    container_name: attendance_client_c
+    environment:
+      CLIENT_HOST: server_c
+      CLIENT_PORT: "5001"
+      CLIENT_INTERVAL: "10"
+    depends_on:
+      - server_c
+    networks:
+      - attendance_net
+
+  client_py:
+    build: ./client_py
+    container_name: attendance_client_py
+    environment:
+      CLIENT_HOST: server_py
+      CLIENT_PORT: "5002"
+      CLIENT_INTERVAL: "10"
+    depends_on:
+      - server_py
+    networks:
+      - attendance_net
+
+networks:
+  attendance_net:
+    driver: bridge
+
+volumes:
+  attendance_db_data:
