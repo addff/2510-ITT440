@@ -1,0 +1,10 @@
+FROM debian:bookworm-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    default-libmysqlclient-dev \
+    && rm -rf /var/lib/apt/lists/*
+COPY server.c /app/server.c
+RUN gcc -O2 -o server server.c -lmysqlclient
+EXPOSE 5001
+CMD ["/app/server"]
