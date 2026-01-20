@@ -1,0 +1,6 @@
+FROM debian:bookworm-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y build-essential
+COPY client.c /app/client.c
+RUN gcc -O2 -o client client.c
+CMD ["/app/client"]
