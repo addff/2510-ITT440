@@ -1,0 +1,81 @@
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: assignmentdb
+      TZ: Asia/Kuala_Lumpur
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-prootpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  python-client:
+    build:
+      context: ./python-client
+    container_name: python-client
+    depends_on:
+      python-server:
+        condition: service_started
+    environment:
+      SERVER_HOST: python-server
+      SERVER_PORT: "5002"
+    command: tail -f /dev/null   
+    tty: true                    
+    stdin_open: true 
+
+  python-server:
+    build:
+      context: ./python-server
+    container_name: python-server
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql-db
+      DB_USER: py_server
+      DB_PASS: pypass
+      DB_NAME: assignmentdb
+    ports:
+      - "5002:5002"
+
+  c-client:
+    build:
+      context: ./c-client
+    container_name: c-client
+    depends_on:
+      c-server:
+        condition: service_started
+    environment:
+      SERVER_HOST: c-server
+      SERVER_PORT: "5001"
+    command: tail -f /dev/null   
+    tty: true                    
+    stdin_open: true 
+
+  c-server:
+    build:
+      context: ./c-server
+    container_name: c-server
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql-db
+      DB_USER: c_server
+      DB_PASS: cpass
+      DB_NAME: assignmentdb
+    ports:
+      - "5001:5001"
+
+volumes:
+  mysql_data:
