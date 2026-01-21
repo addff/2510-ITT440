@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Database
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_DATABASE: itt440_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+
+  # Amir's Python Server
+  amir-pyserver:
+    build: ./py_client_server/server/amir/
+    container_name: amir-pyserver
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+
+  # Zul's Python Server
+  zul-pyserver:
+    build: ./py_client_server/server/zul/
+    container_name: zul-pyserver
+    ports:
+      - "5003:5003"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      
+   # Imran's C Server
+  imran-cserver:
+    build: ./c_client_server/server/imran/
+    container_name: imran-cserver
+    ports:
+      - "5002:5002"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+
+  # Meerul's C Server
+  meerul-cserver:
+    build: ./c_client_server/server/meerul/
+    container_name: meerul-cserver
+    ports:
+      - "5004:5004"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      
+  # Amir's Python Client
+  amir-pyclient:
+    build: ./py_client_server/client/amir/
+    container_name: amir-pyclient
+    stdin_open: true 
+    tty: true
+    depends_on:
+      - amir-pyserver
+      
+  # Zul's Python Client
+  zul-pyclient:
+    build: ./py_client_server/client/zul/
+    container_name: zul-pyclient
+    stdin_open: true 
+    tty: true
+    depends_on:
+      - zul-pyserver
+      
+  # Imran's C Client
+  imran-cclient:
+    build: ./c_client_server/client/imran/
+    container_name: imran-cclient
+    stdin_open: true 
+    tty: true
+    depends_on:
+      - imran-cserver
+      
+  # Meerul's C Client
+  meerul-cclient:
+    build: ./c_client_server/client/meerul/
+    container_name: meerul-cclient
+    stdin_open: true 
+    tty: true
+    depends_on:
+      - meerul-cserver
