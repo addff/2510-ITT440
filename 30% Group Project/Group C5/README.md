@@ -1,6 +1,6 @@
 # ITT440 Group Project (C5) Semester Oct 2025 - Feb 2026
 
-#GROUP MEMBERS 
+# GROUP MEMBERS 
 
 | No. | Name | Student ID |
 | :-- | :--- | :--------- |
