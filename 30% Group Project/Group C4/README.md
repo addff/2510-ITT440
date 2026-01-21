@@ -17,4 +17,5 @@
 
 ## 🔑 Database Access  
 ```bash
+MySQL database: assignmentdb
 MySQL Password: rootpass
