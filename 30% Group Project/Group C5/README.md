@@ -9,5 +9,7 @@
 | 3 | NURUL IDAYU BINTI AZMI | 2025156453 |
 | 4 | SITI NUR INSYIRAH BINTI HISHAMUDIN | 2025128335 |
 
-# MySQL Username: root
-# MySQL Password: root
+# MySQL
+Username: root
+Password: root
+
