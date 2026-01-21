@@ -3,12 +3,12 @@
 ## 📅 Academic Session
 **October 2025 – February 2026**
 
-## 👨‍🏫 Project Supervisor
+## 👨‍🏫 Prepared for
 **Sir Shahadan Bin Saad**
 
 ---
 
-## 👥 Project Team Members
+## 👥 Team Members
 
 | Name                               | Student ID |
 |------------------------------------|------------|
