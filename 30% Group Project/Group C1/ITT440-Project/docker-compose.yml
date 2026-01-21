@@ -1,0 +1,140 @@
+services:
+  # 1. Database Container
+  mysql_db:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: itt440_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init:/docker-entrypoint-initdb.d
+      - mysql_data:/var/lib/mysql
+    command: 
+      - --default-time-zone=+08:00
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    networks:
+      - itt440_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Ahmad: C Server
+  c_server_ahmad:
+    build:
+      context: ./servers/c_server_ahmad
+      dockerfile: Dockerfile
+    container_name: c_server_ahmad
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    ports:
+      - "5001:5001"
+    networks:
+      - itt440_network
+
+  # 3. Faris: C Server  
+  c_server_faris:
+    build:
+      context: ./servers/c_server_faris
+      dockerfile: Dockerfile
+    container_name: c_server_faris
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    ports:
+      - "5002:5002"
+    networks:
+      - itt440_network
+
+  # 4. Fitri: Python Server
+  py_server_fitri:
+    build:
+      context: ./servers/py_server_fitri
+      dockerfile: Dockerfile
+    container_name: py_server_fitri
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    ports:
+      - "5003:5003"
+    networks:
+      - itt440_network
+
+  # 5. Lubawi: Python Server
+  py_server_lubawi:
+    build:
+      context: ./servers/py_server_lubawi
+      dockerfile: Dockerfile
+    container_name: py_server_lubawi
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    ports:
+      - "5004:5004"
+    networks:
+      - itt440_network
+
+  # 6. Ahmad: C Client
+  c_client_ahmad:
+    build:
+      context: ./clients/c_client_ahmad
+      dockerfile: Dockerfile
+    container_name: c_client_ahmad
+    depends_on:
+      - c_server_ahmad
+    networks:
+      - itt440_network
+    tty: true
+    stdin_open: true
+
+  # 7. Faris: C Client
+  c_client_faris:
+    build:
+      context: ./clients/c_client_faris
+      dockerfile: Dockerfile
+    container_name: c_client_faris
+    depends_on:
+      - c_server_faris
+    networks:
+      - itt440_network
+    tty: true
+    stdin_open: true
+
+  # 8. Fitri: Python Client
+  py_client_fitri:
+    build:
+      context: ./clients/py_client_fitri
+      dockerfile: Dockerfile
+    container_name: py_client_fitri
+    depends_on:
+      - py_server_fitri
+    networks:
+      - itt440_network
+    tty: true
+    stdin_open: true
+
+  # 9. Lubawi: Python Client
+  py_client_lubawi:
+    build:
+      context: ./clients/py_client_lubawi
+      dockerfile: Dockerfile
+    container_name: py_client_lubawi
+    depends_on:
+      - py_server_lubawi
+    networks:
+      - itt440_network
+    tty: true
+    stdin_open: true
+
+networks:
+  itt440_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
