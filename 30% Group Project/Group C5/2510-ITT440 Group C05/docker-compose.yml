@@ -1,0 +1,191 @@
+version: "3.9"
+
+networks:
+  itt440-network:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: itt440_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: itt440_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql
+    networks:
+      - itt440-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: itt440_phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
+      UPLOAD_LIMIT: 100M
+    ports:
+      - "8080:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - itt440-network
+
+  server-c:
+    build:
+      context: ./server-c
+      args:
+        SERVER_FILE: CServer_insy.c  
+    container_name: itt440_Cserver
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: itt440_db
+      USER_NAME: c_Insyi
+      SERVER_PORT: 5001
+    ports:
+      - "5001:5001"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - itt440-network
+
+  server-c2:
+    build:
+      context: ./server-c
+      args:
+        SERVER_FILE: CServer_nadhrah.c  
+    container_name: itt440_CServer_nadhrah
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: itt440_db
+      USER_NAME: c_nadhrah_2
+      SERVER_PORT: 5002
+    ports:
+      - "5002:5002"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - itt440-network
+
+  client-c:
+    build:
+      context: ./client-c
+      args:
+        CLIENT_FILE: Cclient_insy.c  
+    container_name: itt440_Cclient_insyi
+    environment:
+      SERVER_HOST: server-c
+      SERVER_PORT: 5001
+    depends_on:
+      - server-c
+    networks:
+      - itt440-network
+
+  client-c2:
+    build: 
+      context: ./client-c
+      args:
+        CLIENT_FILE: CClient_nadhrah.c  
+    container_name: itt440_CClient_nadhrah
+    environment:
+      SERVER_HOST: server-c2
+      SERVER_PORT: 5002
+    depends_on:
+      - server-c2
+    networks:
+      - itt440-network
+
+  server-python1:
+    build:
+      context: ./server-python
+      args:
+        SERVER_FILE: Pserver_ayu.py  
+    container_name: itt440_PYserver1
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: itt440_db
+      USER_NAME: py_ayu_1
+      SERVER_PORT: 4001
+    ports:
+      - "4001:4001"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - itt440-network
+      
+  server-python2:
+    build:
+      context: ./server-python
+      args:
+        SERVER_FILE: Pserver_amni.py  
+    container_name: itt440_PYserver2
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: itt440_db
+      USER_NAME: py_amni
+      SERVER_PORT: 4002
+    ports:
+      - "4002:4002"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - itt440-network
+
+  client-python1:
+    build:
+      context: ./client-python
+      args:
+        CLIENT_FILE: Pclient_ayu.py  
+    container_name: itt440_PYclient1
+    environment:
+      SERVER_HOST: server-python1
+      SERVER_PORT: 4001
+    depends_on:
+      - server-python1
+    networks:
+      - itt440-network
+
+  client-python2:
+    build:
+      context: ./client-python
+      args:
+        CLIENT_FILE: Pclient_amni.py  
+    container_name: itt440_PYclient2
+    environment:
+      SERVER_HOST: server-python2
+      SERVER_PORT: 4002
+    depends_on:
+      - server-python2
+    networks:
+      - itt440-network
+
+volumes:
+  mysql-data:
