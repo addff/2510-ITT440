@@ -21,5 +21,5 @@
 
 ## 🔑 Database Access  
 ```bash
-MySQL database: 
-MySQL Password: 
+MySQL database: socket_db
+MySQL Password: rootpassword
