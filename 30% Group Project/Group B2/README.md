@@ -21,5 +21,5 @@
 
 ## 🔑 Database Access  
 ```bash
-MySQL database: itt440_db
-MySQL Password: qwerty
+MySQL database: 
+MySQL Password: 
