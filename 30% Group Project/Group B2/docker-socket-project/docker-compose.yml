@@ -1,0 +1,153 @@
+version: '3.8'
+
+services:
+  # Database Service
+  database:
+    build: ./database
+    container_name: mysql-database
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: socket_db
+    ports:
+      - "3306:3306"
+    networks:
+      - socket-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      
+  # Python Socket Server
+  python-server:
+    build: ./python-server
+    container_name: python-socket-server
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8081:8081"   
+      
+  # Python Socket Server 1
+  python-server1:
+    build: ./python-server1
+    container_name: python-socket-server1
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8083:8083"
+      
+        # Python Socket Server 2
+  python-server2:
+    build: ./python-server2
+    container_name: python-socket-server2
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8085:8085"
+
+  # C Socket Server 
+  c-server:
+    build: ./c-server
+    container_name: c-socket-server
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8080:8080"
+      
+  # C Socket Server 1
+  c-server1:
+    build: ./c-server1
+    container_name: c-socket-server1
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8082:8082"
+      
+      # C Socket Server 2
+  c-server2:
+    build: ./c-server2
+    container_name: c-socket-server2
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - socket-network
+    ports:
+      - "8084:8084"
+
+  # C Socket Client 
+  c-client:
+    build: ./c-client
+    container_name: c-socket-client
+    restart: always
+    depends_on:
+      - c-server
+    networks:
+      - socket-network
+      
+  # C Socket Client 1
+  c-client1:
+    build: ./c-client1
+    container_name: c-socket-client1
+    restart: always
+    depends_on:
+      - c-server1
+    networks:
+      - socket-network
+      
+  # C Socket Client 2
+  c-client2:
+    build: ./c-client2
+    container_name: c-socket-client2
+    depends_on:
+      - c-server2
+    networks:
+      - socket-network
+
+  # Python Socket Client
+  python-client:
+    build: ./python-client
+    container_name: python-socket-client
+    depends_on:
+      - python-server
+    networks:
+      - socket-network
+  
+  # Python Socket Client 1
+  python-client1:
+    build: ./python-client1
+    container_name: python-socket-client1
+    restart: always
+    depends_on:
+      - python-server1
+    networks:
+      - socket-network
+      
+  # Python Socket Client 2
+  python-client2:
+    build: ./python-client2
+    container_name: python-socket-client2
+    depends_on:
+      - python-server2
+    networks:
+      - socket-network
+  
+
+networks:
+  socket-network:
+    driver: bridge

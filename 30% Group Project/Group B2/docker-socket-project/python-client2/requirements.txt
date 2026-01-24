@@ -1,0 +1,1 @@
+# No special requirements for basic socket client
