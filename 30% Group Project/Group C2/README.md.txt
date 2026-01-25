@@ -1,17 +1,19 @@
-#  ITT440 – Group Project
+# 📘 ITT440 – Group Project (C1)
 
+### 🗓️ Academic Session
 **October 2025 – February 2026**
 
-## Prepared for
+### 👩‍🏫 Prepared for
 **Sir Shahadan Bin Saad**
 
 ---
 
-## Team Members
+### 👥 Team Members
+
 | NAME | STUDENT ID |
 | :--- | :--- |
 | AINA BADRISHA BINTI ZAMRI | 2025197759 |
 | NUR ASILAH BINTI MAZLAN | 2025160559 |
-| NURUL’IZZATI BINTI MOHAMMAD ZAKI | 2025395205 |
+| NURUL'IZZATI BINTI MOHAMMAD ZAKI | 2025395205 |
 | ANIS NURSABRINA LOKMAN | 2025900087 |
 | TENGKU SYAURIN ALESSA BINTI TENGKU SAHHIM AFIFI | 2025367681 |
