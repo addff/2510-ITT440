@@ -1,14 +1,14 @@
-# 📘 ITT440 – Group Project (C1)
+# ITT440 – Group Project
 
-### 🗓️ Academic Session
+###  Academic Session
 **October 2025 – February 2026**
 
-### 👩‍🏫 Prepared for
+### Prepared for
 **Sir Shahadan Bin Saad**
 
 ---
 
-### 👥 Team Members
+### Team Members
 
 | NAME | STUDENT ID |
 | :--- | :--- |
