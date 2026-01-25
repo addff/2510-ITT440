@@ -1,4 +1,13 @@
+#  ITT440 – Group Project
 
+**October 2025 – February 2026**
+
+## Prepared for
+**Sir Shahadan Bin Saad**
+
+---
+
+## Team Members
 | NAME | STUDENT ID |
 | :--- | :--- |
 | AINA BADRISHA BINTI ZAMRI | 2025197759 |
