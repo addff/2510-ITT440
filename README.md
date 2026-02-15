@@ -17,7 +17,7 @@ Basic Try:
 ### Spike Test
 Lets Test using this:
 1. [Artillery.io](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20FAIZZUDDIN%20TAN%20BIN%20ISKANDAR%20HASAN%20TAN "MUHAMMAD FAIZZUDDIN TAN BIN ISKANDAR HASAN TAN") [(Video)](https://www.youtube.com/watch?v=M4Cn-RuRyJU "Video1")
-2. [Grafana/k6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/DINAH%20SOFIYA%20BINTI%20NORMAIRA "DINAH SOFIYA BINTI NORMAIRA") [with Influxdb and Grafana/Grafana](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/NADHRAH%20UMAIRAH%20BINTI%20FAHMI "NADHRAH UMAIRAH BINTI FAHMI")  [(Video)](https://youtu.be/PqRt-iVkirA "Video1") [(Video)](https://youtu.be/OCTLjkpVJVg "Video2")
+2. [Grafana/k6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/DINAH%20SOFIYA%20BINTI%20NORMAIRA "DINAH SOFIYA BINTI NORMAIRA") [with Influxdb and Grafana/Grafana](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/NADHRAH%20UMAIRAH%20BINTI%20FAHMI "NADHRAH UMAIRAH BINTI FAHMI")  [(Video1)](https://youtu.be/PqRt-iVkirA "Video1") [(Video2)](https://youtu.be/OCTLjkpVJVg "Video2")
 
 ### Soak Test
 Lets Test using this:
