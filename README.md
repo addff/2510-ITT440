@@ -13,6 +13,7 @@ Basic Try:
 ### Stress Test
 Basic Try:
 1. [Apache JMeter™](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/ANIS%20NURSABRINA%20LOKMAN "ANIS NURSABRINA LOKMAN") [(Video)](https://www.youtube.com/watch?v=Ba0_LifqMcQ "Video1")
+2. [Taurus](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/TUAN%20MUHAMMAD "TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM") [(Video)](https://www.youtube.com/watch?v=kfGyRiLsS1w "Video1")
 
 ### Spike Test
 Lets Test using this:
