@@ -5,7 +5,7 @@ Try This:
 1. [Google Lighthouse](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20DANISH%20AFIQ%20BIN%20SOFIAN "MUHAMMAD DANISH AFIQ BIN SOFIAN") [(Video)](https://www.youtube.com/watch?v=wBcabbEyEXg "Video1")
 2. [Gatling](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/AINUL%20MARDHIAH%20BINTI%20ROSLIM "AINUL MARDHIAH BINTI ROSLIM") [(Video)](https://www.youtube.com/watch?v=Zpucm2vnlpQ "Video1")
 3. [Vegeta](https://github.com/AMIRUL-sys/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554A/MUHAMMAD%20AZIM%20BIN%20AZLI "MUHAMMAD AZIM BIN AZLI") [(Video)](https://www.youtube.com/watch?v=ChZh3fb80Do "Video1")
-4. [Grafana/k6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/MUHAMMAD%20FITRI%20BIN%20ABDUL%20WAHAB "MUHAMMAD FITRI BIN ABDUL WAHAB") [(Video)](https://www.youtube.com/watch?v=k5N3uuRyptU "Video1")
+4. [Grafana/k6](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/MUHAMMAD%20FITRI%20BIN%20ABDUL%20WAHAB "MUHAMMAD FITRI BIN ABDUL WAHAB") [with Ms Excel](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/MUHAMMAD%20NAZRIN%20BIN%20ZULHALIM "MUHAMMAD NAZRIN BIN ZULHALIM")  [(Video1)](https://www.youtube.com/watch?v=k5N3uuRyptU "Video1") [(Video2)](https://www.youtube.com/watch?v=v87tvTjvAgA "Video1")
 
 ### Scalability
 Basic Try:
