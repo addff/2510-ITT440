@@ -15,8 +15,10 @@ Basic Try:
 ### Stress Test
 Basic Try:
 1. [Apache JMeter™](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/ANIS%20NURSABRINA%20LOKMAN "ANIS NURSABRINA LOKMAN") [(Video)](https://www.youtube.com/watch?v=Ba0_LifqMcQ "Video1")
-2. [Taurus](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/TUAN%20MUHAMMAD "TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM") [(Video)](https://www.youtube.com/watch?v=kfGyRiLsS1w "Video1")
-3. [Artillery.io](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/MUHAMMAD%20FARIS%20IMRAN%20BIN%20RUSDI "MUHAMMAD FARIS IMRAN BIN RUSDI") [(Video)](https://www.youtube.com/watch?v=FzWspnh26HI "Video1")
+2. [Artillery.io](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/MUHAMMAD%20FARIS%20IMRAN%20BIN%20RUSDI "MUHAMMAD FARIS IMRAN BIN RUSDI") [(Video)](https://www.youtube.com/watch?v=FzWspnh26HI "Video1")
+3. [Locust](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554C/TENGKU%20SYAURIN%20ALESSA%20BINTI%20TENGKU "TENGKU SYAURIN ALESSA BINTI TENGKU") [(Video)](https://www.youtube.com/watch?v=gKn5ygyEpC0 "Video1")
+4. [Taurus](https://github.com/addff/2510-ITT440/tree/main/10%25%20Individual%20Assignment/M3CS2554B/TUAN%20MUHAMMAD "TUAN MUHAMMAD BAIHAQI' BIN TUAN IBRAHIM") [(Video)](https://www.youtube.com/watch?v=kfGyRiLsS1w "Video1")
+
 
 ### Spike Test
 Lets Test using this:
